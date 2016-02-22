@@ -1,0 +1,779 @@
+﻿<!--
+	element:
+		PopupMode       :     'onclick'
+		DateFormatString:     'yyyy-MM-dd'
+		Nullable        :     'false'
+		OverColor       :     'firebrick'
+		WrongBackColor  :     'pink'
+		WrongForeColor  :     'red'
+		MonthBackColor :     ''
+		MonthForeColor :     'mediumblue'
+		CurrentBackColor:     'darkgreen'
+		CurrentForeColor:     'white'
+		TodayBackColor  :     'lime'
+		TodayForeColor  :     'white'
+		OtherBackColor  :     ''
+		OtherForeColor  :     '#606060'
+	class:
+		lwdpanel
+		lwdpanelhead
+//-->
+<div id="lwdpid_divtablepanel">
+<table id="lwdpid_tablepanel" class="lwdpanel" border="0" style='font-size:9pt;border:1px outset;background-color:#ECF2FF;cursor:default;'>
+	<tr>
+		<td align="center">
+			<table border="0" ID="Table2">
+				<tr>
+					<td id="lwdpid_yprev" style='font-size:9pt;font-family:webdings;color:#30982F;' title='减少一年 ( 热键 - Home )'>7</td>
+					<td><select id="lwdpid_ysel"></td>
+					<td id="lwdpid_ynext" style='font-size:9pt;font-family:webdings;color:#30982F;' title='增加一年 ( 热键 - End )'>8</td>
+				</tr>
+			</table>
+		</td>
+		<td align="center">
+			<table border="0" class="lwdpanelhead" ID="Table1">
+				<tr>
+					<td id="lwdpid_mprev" style='font-size:9pt;font-family:webdings;color:#30982F;' title='减少一个月 (  热键 - PageUp )'>7</td>
+					<td><select id="lwdpid_msel">
+							<option>一月</option>
+							<option>二月</option>
+							<option>三月</option>
+							<option>四月</option>
+							<option>五月</option>
+							<option>六月</option>
+							<option>七月</option>
+							<option>八月</option>
+							<option>九月</option>
+							<option>十月</option>
+							<option>十一月</option>
+							<option>十二月</option>
+						</select></td>
+					<td id="lwdpid_mnext" style='font-size:9pt;font-family:webdings;color:#30982F;' title='增加一个月 ( 热键 - PageDown )'>8</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr height="2">
+		<td align="center" colspan="2">
+			<div style="font-size:0px;border-bottom:1px solid #95C4EC;">&nbsp;</div>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<table id="lwdpid_tabledays" width="210" border="1" bordercolor="#95C4EC"
+				style='border-collapse:collapse;'>
+				<colgroup>
+					<col align="center" style='font-size:9pt;padding-top:3px;width:30px;'></col>
+					<col align="center" style='font-size:9pt;padding-top:3px;width:30px;'></col>
+					<col align="center" style='font-size:9pt;padding-top:3px;width:30px;'></col>
+					<col align="center" style='font-size:9pt;padding-top:3px;width:30px;'></col>
+					<col align="center" style='font-size:9pt;padding-top:3px;width:30px;'></col>
+					<col align="center" style='font-size:9pt;padding-top:3px;width:30px;'></col>
+					<col align="center" style='font-size:9pt;padding-top:3px;width:30px;'></col>
+				</colgroup>
+				<tr>
+					<td id="lwdpid_weeksun" weeknum="0" class='lwdpheadsun' style='font-size:9pt;background-color:#95C4EC;width:30px;height:20px;'
+						title='选择星期天'>日</td>
+					<td id="lwdpid_weekmon" weeknum="1" class='lwdpheadmon' style='font-size:9pt;background-color:#95C4EC;width:30px;height:20px;'
+						title='选择星期一'>一</td>
+					<td id="lwdpid_weektue" weeknum="2" class='lwdpheadtue' style='font-size:9pt;background-color:#95C4EC;width:30px;height:20px;'
+						title='选择星期二'>二</td>
+					<td id="lwdpid_weekwed" weeknum="3" class='lwdpheadwed' style='font-size:9pt;background-color:#95C4EC;width:30px;height:20px;'
+						title='选择星期三'>三</td>
+					<td id="lwdpid_weekthu" weeknum="4" class='lwdpheadthu' style='font-size:9pt;background-color:#95C4EC;width:30px;height:20px;'
+						title='选择星期四'>四</td>
+					<td id="lwdpid_weekfri" weeknum="5" class='lwdpheadfri' style='font-size:9pt;background-color:#95C4EC;width:30px;height:20px;'
+						title='选择星期五'>五</td>
+					<td id="lwdpid_weeksat" weeknum="6" class='lwdpheadsat' style='font-size:9pt;background-color:#95C4EC;width:30px;height:20px;'
+						title='选择星期六'>六</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<button id="lwdpid_btntd" hidefocus="1" onfocus='blur()' style='cursor:hand;border:1px outset;font-size:9pt;padding-top:2px;background-color:#ECF2FF;;' title='选择今天'>今天</button>
+			<button id="lwdpid_btnbl" hidefocus="1" onfocus='blur()' style='cursor:hand;border:1px outset;font-size:9pt;padding-top:2px;background-color:#ECF2FF;;' title='令它为空白'>空白</button>
+		</td>
+		<td align="right">
+			<button id="lwdpid_btnok" hidefocus="1" onfocus='blur()' style='cursor:hand;border:1px outset;font-size:9pt;padding-top:2px;background-color:#ECF2FF;;' title='关闭面板'>确定</button>
+		</td>
+	</tr>
+</table>
+<iframe width="100%" height="139%" style="position:absolute;left:0px;top:0px;z-index:-1;"></iframe>
+</div>
+
+<script language="javascript">
+element.PopupMode="onclick";
+element.DateFormatString="yyyy-MM-dd";
+element.Nullable="true";			//是否允许空
+element.OverColor="";
+element.WrongBackColor="";
+element.WrongForeColor="";
+element.MonthBackColor="";
+element.MonthForeColor="#FF8400";
+element.CurrentBackColor="#75Cf73";
+element.CurrentForeColor="#FFFFFF";
+element.TodayBackColor="#F0FFD6";
+element.TodayForeColor="red";
+element.OtherBackColor="";
+element.OtherForeColor="";
+
+//get the position of a element ( by the scroll offset )
+function LostinetWebGetScrollPostion(e)
+{
+	var b=e.document.body;
+	if(e==b)return {left:0,top:0};
+	with(e.getBoundingClientRect())
+	{
+		return {left:b.scrollLeft+left,top:b.scrollTop+top};
+	}
+}
+//get the position of a element ( by the client offset )
+function LostinetWebGetClientPosition(e)
+{
+	var b=e.document.body;
+	if(e==b)return {left:-b.scrollLeft,top:-b.scrollTop};
+	with(e.getBoundingClientRect())
+	{
+		return {left:left-b.clientLeft,top:top-b.clientTop};
+	}
+}
+//get absolute or relative parent
+function LostinetWebGetStandParent(e)
+{
+	for(var p=e.parentElement;p!=null;p=p.parentElement)
+	{
+		var sp=p.currentStyle.position;
+		if(sp=='absolute'||sp=='relative')
+			return p;
+	}
+	return e.document.body;
+}
+//calc the position of floate that relative to e
+function LostinetWebCalcPosition(floate,e)
+{
+	var epos=LostinetWebGetScrollPostion(e);
+	var spos=LostinetWebGetScrollPostion(LostinetWebGetStandParent(floate));
+	var s=LostinetWebGetStandParent(floate);
+	return {left:epos.left-spos.left-s.clientLeft,top:epos.top-spos.top-s.clientTop};
+}
+//get the best position to put the floate
+function LostinetWebAdjustMirror(floate,e,pos)
+{
+	//c:Client,f:floate,e:e,p:floate's StandParent,m:Mirror
+	var cw=e.document.body.clientWidth;
+	var ch=e.document.body.clientHeight;
+	var fw=floate.offsetWidth;
+	var fh=floate.offsetHeight;
+	var ew=e.offsetWidth;
+	var eh=e.offsetHeight;
+	
+	var ecpos=LostinetWebGetClientPosition(e);
+	var empos={left:ecpos.left+ew/2,top:ecpos.top+eh/2};
+	var pcpos=LostinetWebGetClientPosition(LostinetWebGetStandParent(floate));
+	var fcpos=LostinetWebGetClientPosition(floate);
+	var fmpos={left:pcpos.left+pos.left+fw/2,top:pcpos.top+pos.top+fh/2};
+	
+	//left<-->right
+	if( (fmpos.left<empos.left) ? ((fmpos.left-fw/2<0)&&((empos.left*2-fmpos.left)+fw/2<=cw)) : ((fmpos.left+fw/2>cw)&&((empos.left*2-fmpos.left)-fw/2>=0)) )
+		fmpos.left=empos.left*2-fmpos.left;
+	
+	//top<-->bottom
+	if( (fmpos.top<empos.top) ? ((fmpos.top-fh/2<0)&&((empos.top*2-fmpos.top)+fh/2<=ch)) : ((fmpos.top+fh/2>ch)&&((empos.top*2-fmpos.top)-fh/2>=0)) )
+		fmpos.top=empos.top*2-fmpos.top;
+	
+	pos.left=fmpos.left-pcpos.left-fw/2;
+	pos.top=fmpos.top-pcpos.top-fh/2;
+}
+
+function AddDays(date,value)
+{
+	date.setDate(date.getDate()+value);
+}
+function AddMonths(date,value)
+{
+	date.setMonth(date.getMonth()+value);
+}
+function AddYears(date,value)
+{
+	date.setFullYear(date.getFullYear()+value);
+}
+function IsToday(date)
+{
+	return IsDateEquals(date,new Date());
+}
+function IsThisMonth(date)
+{
+	return IsMonthEquals(date,new Date());
+}
+function IsMonthEquals(date1,date2)
+{
+	return date1.getMonth()==date2.getMonth()&&date1.getFullYear()==date2.getFullYear();
+}
+function IsDateEquals(date1,date2)
+{
+	return date1.getDate()==date2.getDate()&&IsMonthEquals(date1,date2);
+}
+function GetMonthDayCount(date)
+{
+	switch(date.getMonth()+1)
+	{
+		case 1:case 3:case 5:case 7:case 8:case 10:case 12:
+			return 31;
+		case 4:case 6:case 9:case 11:
+			return 30;
+	}
+	//feb:
+	date=new Date(date);
+	var lastd=28;
+	date.setDate(29);
+	while(date.getMonth()==1)
+	{
+		lastd++;
+		AddDays(date,1);
+	}
+	return lastd;
+}
+
+
+function GetHarfYear(date)
+{
+	var v=date.getYear();
+	if(v>9)return v.toString();
+	return "0"+v;
+}
+function GetFullMonth(date)
+{
+	var v=date.getMonth()+1;
+	if(v>9)return v.toString();
+	return "0"+v;
+}
+function GetFullDate(date)
+{
+	var v=date.getDate();
+	if(v>9)return v.toString();
+	return "0"+v;
+}
+function Replace(str,from,to)
+{
+	return str.split(from).join(to);
+}
+function FormatDate(date,str)
+{
+	str=Replace(str,"yyyy",date.getFullYear());
+	str=Replace(str,"MM",GetFullMonth(date));
+	str=Replace(str,"dd",GetFullDate(date));
+	str=Replace(str,"yy",GetHarfYear(date));
+	str=Replace(str,"M",date.getMonth()+1);
+	str=Replace(str,"d",date.getDate());
+	return str;
+}
+function ConvertDate(str)
+{
+	str=(str+"").replace(/^\s*/g,"").replace(/\s*$/g,"");
+	var d;
+	if(/^[0-9]{8}$/.test(str))	// 20040226 -> 2004-02-26
+	{
+		str=str.substr(0,4)+"-"+str.substr(4,2)+"-"+str.substr(6,2)
+	}
+	str=Replace(str,"-","/");
+	d=new Date(str);
+	if(Date.parse(str))
+	{
+		if(str==FormatDate(d,"yyyy/MM/dd")) return d;
+		if(str==FormatDate(d,"yyyy/M/d")) return d;
+	}
+	return null;
+}
+
+var weeknames=new Array('sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat');
+
+//get element's reference
+
+var tablepanel=document.all('lwdpid_divtablepanel');
+var mprev=document.all('lwdpid_mprev');
+var mnext=document.all('lwdpid_mnext');
+var yprev=document.all('lwdpid_yprev');
+var ynext=document.all('lwdpid_ynext');
+var msel=document.all('lwdpid_msel');
+var ysel=document.all('lwdpid_ysel');
+var tabledays=document.all('lwdpid_tabledays');
+var weeksun=document.all('lwdpid_weeksun');
+var weekmon=document.all('lwdpid_weekmon');
+var weektue=document.all('lwdpid_weektue');
+var weekwed=document.all('lwdpid_weekwed');
+var weekthu=document.all('lwdpid_weekthu');
+var weekfri=document.all('lwdpid_weekfri');
+var weeksat=document.all('lwdpid_weeksat');
+var btntd=document.all('lwdpid_btntd');
+var btnok=document.all('lwdpid_btnok');
+var btnbl=document.all('lwdpid_btnbl');
+
+var showed=false;
+
+function onlabel_mouseover()
+{
+	event.srcElement.runtimeStyle.color=element.OverColor||'firebrick'
+}
+function onlabel_mouseout()
+{
+	event.srcElement.runtimeStyle.color=''
+}
+
+function onweeknum_click()
+{
+	var num=parseInt(event.srcElement.weeknum);
+	AddDays(date,num-date.getDay());
+	UpdateAndSync();
+}
+
+function AddD(d)
+{
+	AddDays(date,d)
+	UpdateAndSync();
+}
+function AddM(m)
+{
+	AddMonths(date,m)
+	UpdateAndSync();
+}
+function AddY(y)
+{
+	AddYears(date,y)
+	UpdateAndSync();
+}
+
+function ondate_click()
+{
+	var thedate=event.srcElement.date;
+	if(IsMonthEquals(date,thedate))
+	{
+		date=thedate;
+		SyncToElement();
+		HidePanel();
+	}
+	else
+	{
+		date=thedate;
+		UpdateAndSync();
+	}
+}
+
+var date=new Date();
+var uidate=null;
+
+function UpdateAndSync()
+{
+	UpdateUI();
+	SyncToElement();
+}
+
+function SetWrong()
+{
+	element.runtimeStyle.backgroundColor=element.WrongBackColor||'white'  //日期输入框背景颜色设置
+	element.runtimeStyle.color=element.WrongForeColor||'black'   //日期字体颜色设置
+}
+function SetRight()
+{
+	element.runtimeStyle.backgroundColor=''
+	element.runtimeStyle.color=''
+}
+
+var settingbythis=false;
+function SetElementValue(str)
+{
+	settingbythis=true;
+	try
+	{
+		element.value=str;
+		if(element.fireEvent)
+		{
+			element.fireEvent('onchange');
+		}
+		else if(element.onclick)
+		{
+			element.onclick();
+		}
+	}
+	finally
+	{
+		settingbythis=false;
+	}
+}
+function GetElementValue()
+{
+	return element.value.replace(/^\s*/g,"").replace(/\s*$/g,"");
+}
+
+function SyncToElement()
+{
+	SetRight();
+	SetElementValue(FormatDate(date,element.DateFormatString||"yyyy-MM-dd"));
+}
+function SyncFromElement()
+{
+	var value=GetElementValue();
+	if(element.Nullable=='true'&&value=='')
+	{
+		SetRight();
+		return;
+	}
+	var d=ConvertDate(value);
+	if(d)
+	{
+		date=d;
+		if(showed)
+			UpdateUI();
+		SetRight();
+		return;
+	}
+	SetWrong();
+}
+
+function UpdateUI()
+{
+	if(uidate&&IsDateEquals(date,uidate))return;
+	uidate=new Date(date);
+	
+	if(msel.selectedIndex!=date.getMonth())
+		msel.selectedIndex=date.getMonth();
+	var dc=GetMonthDayCount(date);
+	var ymiddle=parseInt(ysel.options(20).value);
+	if(date.getFullYear()>ymiddle+8||date.getFullYear()<ymiddle-8)
+	{
+		ymiddle=date.getFullYear();
+		ysel.options.length=0;
+		for(var i=ymiddle-20;i<ymiddle+20;i++)
+		{
+			ysel.options.add(new Option(i,i));
+		}
+		ysel.value=ymiddle;
+	}
+	else
+	{
+		if(ysel.value!=date.getFullYear())
+			ysel.value=date.getFullYear();
+	}
+	CreateDays();
+	AdjustPosition();
+}
+
+function CreateDays()
+{
+	while(tabledays.rows.length>1)tabledays.deleteRow(1);
+	var eachday=new Date(date.getFullYear(),date.getMonth(),1);
+	AddDays(eachday,-eachday.getDay());
+	var arr=[];
+	do
+	{
+		var wds=[];
+		for(var i=0;i<7;i++)
+		{
+			wds[i]=new Date(eachday);
+			AddDays(eachday,1)
+		}
+		arr[arr.length]=wds;
+	}
+	while(eachday.getYear()==date.getYear()&&eachday.getMonth()==date.getMonth());
+	
+	for(var t=0;t<arr.length;t++)
+	{
+		var tr=tabledays.insertRow();
+		var wds=arr[t];
+		for(var i=0;i<wds.length;i++)
+		{
+			var td=tr.insertCell();
+			td.style.fontSize='9pt';
+			td.style.fontFamily='fixedsys';
+			
+			var wd=wds[i];
+			
+			var classnames=["lwdpdate","lwdpweek"+weeknames[i],"lwdp"+FormatDate(wd,"yyyyMMdd")];
+			
+			if(IsMonthEquals(wd,date))
+			{
+				classnames[classnames.length]="lwdpthismonth";
+				
+				if(IsToday(wd))
+				{
+					classnames[classnames.length]="lwdptoday";
+				}
+			
+				if(IsDateEquals(wd,date))
+				{
+					classnames[classnames.length]="lwdpcurrent";
+					
+					td.style.backgroundColor=element.CurrentBackColor||'darkgreen'
+					td.style.color=element.CurrentForeColor||'white';
+				}
+				else if(IsToday(wd))
+				{
+					td.style.backgroundColor=element.TodayBackColor||'limegreen'
+					td.style.color=element.TodayForeColor||'white';
+				}
+				else
+				{
+					td.style.backgroundColor=element.MonthBackColor||'';
+					td.style.color=element.MonthForeColor||'mediumblue';
+				}
+			}
+			else
+			{
+				classnames[classnames.length]="lwdpothermonth";
+				
+				td.style.backgroundColor=element.OtherBackColor||'';
+				td.style.color=element.OtherForeColor||'#606060';
+				
+			}
+			
+			td.className=classnames.join(' ');
+
+			td.date=wd;
+			td.innerText=wd.getDate();
+			
+			if(td.currentStyle.disabled!='1')
+			{
+				td.style.cursor='hand';
+				td.onmouseover=onlabel_mouseover;
+				td.onmouseout=onlabel_mouseout;
+				td.onclick=ondate_click;
+			}
+			else
+			{
+				td.disabled=true;
+			}
+		}
+	}
+}
+
+
+function Init_Elements()
+{
+	for(var i=0;i<12;i++)msel.options[i].value=i+1;
+	ysel.options.length=0;
+	var thisyear=new Date().getFullYear();
+	for(var i=thisyear-20;i<thisyear+20;i++)ysel.options.add(new Option(i,i));
+	ysel.value=new Date().getFullYear();
+	
+	
+	function tablepanel.onselectstart()
+	{
+		return event.returnValue=false;
+	}
+	
+	var labels=[mprev,mnext,yprev,ynext,weeksun,weekmon,weektue,weekwed,weekthu,weekfri,weeksat];
+
+	for(var i=0;i<labels.length;i++)
+	{
+		if(labels[i].currentStyle.disabled!='1')
+		{
+			labels[i].style.cursor='hand';
+			labels[i].onmouseover=onlabel_mouseover;
+			labels[i].onmouseout=onlabel_mouseout;
+		}
+	}
+	
+	msel.onchange=
+	ysel.onchange=
+	function FromUIDateOfSelect()
+	{
+		date=new Date(ysel.value,msel.selectedIndex,date.getDate());
+		UpdateAndSync();
+	}
+	
+	var weeknums=[weeksun,weekmon,weektue,weekwed,weekthu,weekfri,weeksat];
+	for(var i=0;i<weeknums.length;i++)
+	{
+		if(weeknums[i].currentStyle.disabled!='1')
+			weeknums[i].onclick=onweeknum_click;
+	}
+
+	mprev.ondblclick=
+	function mprev.onclick()
+	{
+		AddM(-1);
+	}
+	mnext.ondblclick=
+	function mnext.onclick()
+	{
+		AddM(1);
+	}
+	yprev.ondblclick=
+	function yprev.onclick()
+	{
+		AddY(-1);
+	}
+	ynext.ondblclick=
+	function ynext.onclick()
+	{
+		AddY(1);
+	}
+	
+	function btntd.onclick()
+	{
+		date=new Date();
+		UpdateAndSync();
+	}
+	function btnbl.onclick()
+	{
+		SetElementValue("");
+		HidePanel();
+	}
+	function btnok.onclick()
+	{
+		SyncToElement();
+		HidePanel();
+	}
+}
+
+function ShowPanel()
+{
+	if(showed)return;
+	
+	if(element.readOnly)return;
+	
+	showed=true;
+	
+	UpdateUI();
+	
+	element.document.attachEvent('onmousedown',document_onmousedown);
+
+	tablepanel.style.display='';
+
+	AdjustPosition();
+}
+function AdjustPosition()
+{
+	var pos=LostinetWebCalcPosition(tablepanel,element);
+	pos.top=pos.top+element.offsetHeight;
+	
+	LostinetWebAdjustMirror(tablepanel,element,pos);
+	
+	tablepanel.style.left=pos.left;
+	tablepanel.style.top=pos.top;
+}
+function HidePanel()
+{
+	if(!showed)return;
+	showed=false;
+	element.document.detachEvent('onmousedown',document_onmousedown);
+	
+	tablepanel.style.left=0;
+	tablepanel.style.top=0;
+	tablepanel.style.display='none';
+}
+
+function HandleKeyDown(event)
+{
+	var d=date;
+	switch(event.keyCode)
+	{
+		case 13:
+			SyncToElement();
+			HidePanel();
+			return true;
+		case 33:
+		case 34:
+			if(d)
+			{
+				AddMonths(d,event.keyCode*2-33*2-1);
+				date=d;
+				SyncToElement();
+				if(showed)
+					UpdateUI();
+			}
+			return true;
+		case 35:
+		case 36:
+			if(d)
+			{
+				AddYears(d,36*2-event.keyCode*2-1);
+				date=d;
+				SyncToElement();
+				if(showed)
+					UpdateUI();
+			}
+			return true;
+		case 38:
+		case 40:
+			if(d)
+			{
+				AddDays(d,event.keyCode-39);
+				date=d;
+				SyncToElement();
+				if(showed)
+					UpdateUI();
+			}
+			return true;
+	}
+}
+tablepanel.attachEvent('onkeydown',function tablepanel_onkeydown(){
+	var r=HandleKeyDown(event);
+	if(r)
+	{
+		return event.returnValue=false;
+	}
+});
+element.attachEvent('onkeydown',function element_onkeydown(){
+	var r=HandleKeyDown(event);
+	if(r)
+	{
+		return event.returnValue=false;
+	}
+});
+
+element.attachEvent('onpropertychange',function element_onpropertychange(){
+	if(settingbythis)return;
+	if(event.propertyName=='value')
+		SyncFromElement();
+});
+
+function document_onmousedown()
+{
+	var src=event.srcElement;
+	if(element.contains(src))return;
+	if(tablepanel.contains(src))return;
+	HidePanel();
+}
+
+function handlecontentready()
+{
+	Init_Elements();
+	
+	tablepanel.style.position='absolute';
+	tablepanel.style.left=0;
+	tablepanel.style.top=0;
+	tablepanel.style.display='none';
+	tablepanel.style.zIndex=10000;
+	if(element.Nullable!='true')
+		btnbl.style.display='none';
+
+	element.document.body.insertAdjacentElement('afterbegin',tablepanel);
+
+	switch(element.PopupMode)
+	{
+		case "ondblclick":
+			element.attachEvent('ondblclick',element_onpopup);
+			break;
+		case "oncontextmenu":
+			element.attachEvent('oncontextmenu',element_onpopup);
+			break;
+		case "onclick":
+		default:
+			element.attachEvent('onclick',element_onpopup);
+			break;
+	}
+	
+	SyncFromElement();	
+}
+
+function element_onpopup()
+{
+	ShowPanel();
+	if(event.type=='contextmenu')
+		return event.returnValue=false;
+}
+
+</script>
+<public:attach event='oncontentready' onevent='handlecontentready()'></public:attach>

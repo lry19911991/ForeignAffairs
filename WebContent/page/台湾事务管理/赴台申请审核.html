@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>赴台申请审核</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<table width="99%" border="1" class="t1">
+		<table width="99%" border="1" class="t1">
+			<tr>
+				<td>申请单位</td>
+				<td colspan="3"><input type="text" value="有限公司" /></td>
+			</tr>
+			<tr>
+				<td colspan="4">计划信息</td>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<table border="1">
+						<tr>
+							<td>计划编号</td>
+							<td>计划年度</td>
+							<td>出访地区</td>
+							<td>项目名称</td>
+							<td>项目类型</td>
+							<td>是否有副司局级</td>
+							<td>人数</td>
+							<td>计划上报时间</td>
+							<td>操作</td>
+						</tr>
+						<tr>
+							<td>001002003</td>
+							<td>2012</td>
+							<td>台湾</td>
+							<td>项目名称一</td>
+							<td>项目类型一</td>
+							<td>否</td>
+							<td>3</td>
+							<td>2012-5-3</td>
+							<td>
+								<a href="../计划详细.html">查看</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>人员选择</td>
+				<td colspan="3">
+					<table border="1">
+						<tr>
+							<td>序号</td>
+							<td>姓名</td>
+							<td>工作单位</td>
+							<td>职务</td>
+							<td>操作</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>张三</td>
+							<td>工作单位一</td>
+							<td>工程师</td>
+							<td>
+								<a href="../人员详细.html">查看</a>
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>李四</td>
+							<td>工作单位二</td>
+							<td>技术顾问</td>
+							<td>
+								<a href="../人员详细.html">查看</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>审核信息</td>
+				<td colspan="3"><input type="radio" name="radio" />同意<input type="radio" name="radio" />不同意</td>
+			</tr>
+			<tr>
+				<td>审核意见</td>
+				<td colspan="3"><textarea cols="80%" rows="5"></textarea></td>
+			</tr>
+			<tr>
+				<td colspan="4"><input type="button" value="保存" /><input type="button" onclick="jump()" value="取消" /></td>
+			</tr>
+		</table>
+	</table>
+</body>
+</html>
+<script type="text/javascript">
+function jump(){
+	window.open("../赴台申请审核/赴台申请审核列表.html","_self");
+}
+</script>

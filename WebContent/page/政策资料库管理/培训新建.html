@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>资料库详细</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="WebCalendar.js"></script>
+<script type="text/javascript">
+function jump(){
+	window.close();
+}
+function openTZ(){
+	
+	window.showModalDialog("团组.html",window,"dialogWidth=800px;dialogHeight=350px");
+}
+function openRY(){
+	
+	window.showModalDialog("人员树.html",window,"dialogWidth=300px;dialogHeight=600px");
+}
+</script>
+</head>
+
+<body>
+	<div style="padding-top: 10px;">
+	<table width="100%" class="t1">
+		<tr class="a1">
+			<td colspan="4"><img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />培训班信息</td>
+		</tr>
+	</table>
+	<table width="100%" id="tztab"  border="1" class="t1">
+		<tr>
+			<td width="15%">培训班名</td>
+			<td><input type="text" style="width:70%" value="" /></td>
+			<td width="15%">总课时</td>
+			<td><input type="text" style="width:40%" value="" />课时</td>
+		</tr>
+		<tr class="a2">
+			<td>开始时间</td>
+			<td><input type="text" style="width:70%" onclick="return SelectDate(this,'yyyy-MM-dd')" /></td>
+			<td>结束时间</td>
+			<td><input type="text" style="width:70%" onclick="return SelectDate(this,'yyyy-MM-dd')" /></td>
+		</tr>
+		<tr>
+			<td>培训地点</td>
+			<td colspan="3">
+				<input type="text" style="width:70%" value="" />
+			</td>
+		</tr>
+		<tr class="a2">
+			<td>培训内容</td>
+			<td colspan="3">
+				<textarea rows="5" style="width:70%"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				培训老师
+			</td>
+			<td colspan="3">
+				<input type="text" style="width:70%" value="" />
+			</td>
+			
+		</tr>
+		<tr>
+			<td>
+				附件信息
+			</td>
+			<td colspan="3">
+				<input type="file" style="width: 50%;" value="选择附件..."/>
+			</td>
+		</tr>
+		<tr class="a2">
+			<td>发文编号</td>
+			<td>
+				<input type="text" style="width:70%" value="" />
+			</td>
+			<td>发文时间</td>
+			<td><input type="text" style="width:70%" onclick="return SelectDate(this,'yyyy-MM-dd')" /></td>
+		</tr>
+		<tr>
+			<td>发文名称</td>
+			<td colspan="3"><input type="text" style="width:70%" value="" /></td>
+		</tr>
+		<tr class="a2">
+			<td>说明</td>
+			<td colspan="3"><textarea rows="5" style="width:70%"></textarea></td>
+		</tr>
+	</table>
+	
+	<table width="100%" class="t1">
+		<tr class="a1">
+			<td colspan="4"><img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />参与培训人员</td>
+		</tr>
+	</table>
+	<table width="100%" class="t1">
+		<tr>
+			<td>
+				<input type="button" value="添加团组" onclick="openTZ();"/>
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="button" value="添加人员" onclick="openRY();"/>
+			</td>
+		</tr>
+		<tr>
+		<td>
+			<table width="100%" class="t1">
+				<tr class="a2">
+					<td width="8%">序号</td>
+					<td width="12%">团组名称</td>
+					<td width="10%">姓名</td>
+					<td width="15%">部门</td>
+					<td width="10%">出访国家</td>
+					<td width="15%">出访时间</td>
+					<td width="15%">操作</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>美国考察团</td>
+					<td>李勇</td>
+					<td>大屯股份，办公厅</td>
+					<td>美国</td>
+					<td>2012-6-10</td>
+					<td><a href="javascript:void(0);">删除</a></td>
+				</tr>
+				<tr class="a2">
+					<td>2</td>
+					<td>美国技术交流团</td>
+					<td>詹天佑</td>
+					<td>大屯股份，办公厅</td>
+					<td>美国</td>
+					<td>2012-6-11</td>
+					<td><a href="javascript:void(0);">删除</a></td>
+				</tr>
+			</table>
+		</td>
+		</tr>
+	</table>
+	
+	<table width="100%" id="tztab"  border="1" class="t1">
+		<tr>
+			<td align="center" colspan="4">
+				<input type="button" onclick="jump()" value="保存" />
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="button" onclick="jump()" value="返回" />
+			</td>
+		</tr>
+	</table>
+	</div>
+</body>
+</html>
+

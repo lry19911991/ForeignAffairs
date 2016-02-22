@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>PO State Static</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script language="JavaScript" src="js/FusionCharts.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/self.css" />
+<link rel="stylesheet" type="text/css" href="../css/ui.jqgrid.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="../css/jquery-ui-1.8.17.custom.css" />
+<script src="../jqGrid-3.8.2/js/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="../jqGrid-3.8.2/js/i18n/grid.locale-cn.js" type="text/javascript"></script>  
+<script src="../jquery/jquery.jqGrid.min.js" type="text/javascript"></script>
+<script src="../jqGrid-3.8.2/js/jquery.contextmenu.js" type="text/javascript"></script>
+<script src="../jqGrid-3.8.2/js/jquery-ui-1.8.9.custom.min.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="../jqGrid-3.8.2/css/menu/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="../jqGrid-3.8.2/css/menu/contextmenu.css" />
+
+<script language="JavaScript">
+function myJS(flag){
+//pre overdue advance normal
+
+	var data = "<graph showNames='1'   caption='Supplier PO State' decimalPrecision='0'>";
+	
+	if(flag=="pre")
+	{
+		data=data + "<set name='jenny' link='JavaScript:reloadgrid(\"jenny\");'   value='2' /> "
+        + "<set name='kircy' link='JavaScript:reloadgrid(\"kircy\");'   value='3' /> ";
+	}else if(flag=="overdue"){
+		data=data + "<set name='tomas'  link='JavaScript:reloadgrid(\"tomas\");'  value='1' /> "
+        + "<set name='tommy' link='JavaScript:reloadgrid(\"tommy\");'   value='1' /> "
+        + "<set name='hellen'  link='JavaScript:reloadgrid(\"hellen\");'  value='1'/>";
+	}else if(flag=="advance"){
+		data=data + "<set name='tomas'  link='JavaScript:reloadgrid(\"tomas\");'  value='1' /> "
+        + "<set name='tommy'  link='JavaScript:reloadgrid(\"tommy\");'  value='1' /> ";
+	}else{
+		data=data + "<set name='tommy' link='JavaScript:reloadgrid(\"tommy\");'   value='1' /> "
+        +"<set name='hellen'  link='JavaScript:reloadgrid(\"hellen\");'  value='1'/>";
+	}
+      
+
+    data = data + "</graph>"; 
+
+var myChart = new FusionCharts( "swf/FCF_Pie3D.swf", 
+ "myChartId", "350", "260");
+ myChart.setDataXML(data);
+ myChart.render("chartContainer1"); 
+	
+   }
+function reloadgrid(name){
+	var pd = {"filters":"{\"groupOp\":\"AND\",\"rules\":[{\"field\":\"SUPPLIER_NAME\",\"op\":\"cn\",\"data\":\""+name+"\"}]}"};
+	
+	jQuery("#grid").jqGrid('setGridParam',{mtype:"post",url:"../GetPOStatic.call",postData:pd}).trigger("reloadGrid");
+	
+}
+</script>
+
+
+
+<script type="text/javascript">
+var dataId = "";
+//alert(QueryString("page")+" "+QueryString("rows")+" "+QueryString("sidx")+" "+QueryString("sord"));
+jQuery().ready(
+		function() {
+			jQuery("#grid").jqGrid(
+			{
+				url:'../GetPOStatic.call', 
+				datatype : "json",
+			   	sortable: true,
+			   	shrinkToFit:false,
+				height : '140',
+				width:document.body.scrollWidth*0.98,
+				rowNum : 5,
+			   	rowList:[5,10,20,30,100],
+				altRows:true,
+				altclass:'altclass',
+				rownumbers: true,
+				multiselect:false,
+				pgbuttons:true,
+				sortname:'OVERDUE',
+				sortorder: "desc",
+				colNames : ['Modify','Overdue','Po No.','Line No.','Part','Part Desc.','Supplier Code','Supplier Name','Po Qty.','Po Rest Qty.','Ex. Fact Est.','Req Into Store','Adviced Qty.','Received Qty.','Allocated Qty.','Shipped Qty.','Unit Price','Customer'], 
+				colModel : [ 
+				             {name:'Modify',index:'Modify', width:80,align:'center',search:false},  
+				             {name:'OVERDUE',index:'OVERDUE', width:100},
+				             {name:'PO_NO',index:'PO_NO', width:100}, 
+							 {name:'LINE_NO',index:'LINE_NO', width:70},
+							 {name:'PART',index:'PART', width:100}, 
+							 {name:'PART_DESC',index:'PART_DESC', width:120}, 
+							 {name:'SUPPLIER_CODE',index:'SUPPLIER_CODE', width:100}, 
+							 {name:'SUPPLIER_NAME',index:'SUPPLIER_NAME', width:120}, 
+							 {name:'PO_QTY',index:'PO_QTY', width:80}, 
+							 {name:'PO_REST_QTY',index:'PO_REST_QTY',  width:100}, 
+							 {name:'EX_FACT_EST',index:'EX_FACT_EST',  width:120}, 
+							 {name:'REQ_INTO_STORE',index:'REQ_INTO_STORE',  width:120}, 
+							 {name:'ADVICED_QTY',index:'ADVICED_QTY',  width:120}, 
+							 {name:'RECEIVED_QTY',index:'RECEIVED_QTY',  width:120}, 
+							 {name:'ALLOCATED_QTY',index:'ALLOCATED_QTY',  width:120}, 
+							 {name:'SHIPPED_QTY',index:'SHIPPED_QTY',  width:120}, 
+							 {name:'UNIT_PRICE',index:'UNIT_PRICE',  width:120}, 
+							 {name:'CUSTOMER',index:'CUSTOMER',  width:180}
+							 ],
+
+				caption:"Pre Order",
+				pager: "#gridPager",
+				onRightClickRow: function(id){ //右键事件
+					//alert('rightclick');
+					//alert(id);
+					jQuery("#grid").jqGrid('setSelection', id,true );//选中点击的行
+					//showMenu();
+					dataId = id;
+				},
+				toolbar: [true,'top'] ,
+				viewrecords : true,
+				gridComplete:function(data){
+					var ids=jQuery("#grid").getDataIDs();
+					for(var i=0;i<ids.length;i++){
+						var flag=jQuery("#grid").getCell(ids[i],"PO_NO");
+						if(flag=="AHW026690ID" || flag=="BHW026690ID" || flag=="DHW026690ID"){
+							jQuery("#grid").setCell(ids[i],'PO_NO',flag,{background:'#E9936E'});
+						}else if(flag=="KHW026690ID" || flag=="GHW026690ID"){
+							jQuery("#grid").setCell(ids[i],'PO_NO',flag,{background:'#94D00E'});
+						}
+					}
+				}
+			}).navGrid('#gridPager',{add:false,edit:false,del:false},
+					{},
+					{},
+					{},
+					{multipleSearch:true, multipleGroup:true,
+				        closeAfterSearch: true}
+					);
+
+			jQuery("#grid").jqGrid('hideCol',["Modify"]);
+			
+			$("#t_grid").append("<table cellspacing='0' cellpadding='0' border='0'  style='margin-top:2;height:5px;'><tr ><td >&nbsp;&nbsp;&nbsp;&nbsp;<font color='#000000' >Overdue&nbsp;延期:</font>&nbsp;</td><td style='width:10px;background-color:#E9936E;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td >&nbsp;&nbsp;&nbsp;&nbsp;<font color='#000000' >Advance&nbsp;提前:</font>&nbsp;</td><td style='width:10px;background-color:#94D00E;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table>");
+
+			jQuery("#grid").jqGrid('hideCol',["OVERDUE"]);
+
+			
+			jQuery("#grid").jqGrid('filterToolbar',{stringResult: true,searchOnEnter : false});
+
+			jQuery("#grid").jqGrid('navButtonAdd','#gridPager',{
+			    caption: "Columns",
+			    title: "Reorder Columns",
+			    onClickButton : function (){
+			        jQuery("#grid").jqGrid('columnChooser');
+			    }
+			});
+		});
+
+
+
+
+//---------右键菜单--------------------//		
+	$().ready(function() {
+		var option = { 
+			width: 150, 
+			items: [
+				{ text: "Search", icon: "../css/menu/images/icons/ico5.gif", alias: "1-2", action: search },
+				{ text: "Refresh", icon: "../css/menu/images/icons/ico3.gif", alias: "1-3", action: refresh },
+				{ text: "Columns", icon: "../css/menu/images/icons/ico4.gif", alias: "1-4", action: columns }
+			], 
+			onShow: applyrule,
+			onContextMenu: BeforeContextMenu
+		};
+		
+		function search(){
+			
+		}
+		function refresh(){
+			jQuery("#grid").jqGrid().trigger('reloadGrid');
+		}
+		function columns(){
+			jQuery("#grid").jqGrid('columnChooser');
+		}
+		
+		function applyrule(menu) {               
+			if (this.id == "target2") {
+				menu.applyrule({ 
+					name: "target2",
+					disable: true,
+					items: ["1-2", "2-3", "2-4", "1-6"]
+				});
+			}else {
+				menu.applyrule({ 
+					name: "all",
+					disable: true,
+					items: []
+				});
+			}
+		}
+		
+		function BeforeContextMenu() {
+			return this.id != "target3";
+		}
+		
+		$("#grid").contextmenu(option);
+		
+	});
+//---------右键菜单结束--------------------//		
+
+
+</script>
+
+
+
+
+
+
+
+<style type="text/css">td img {display: block;}</style>
+<style type="text/css">
+#chartContainer {
+background: none repeat scroll 0% 0%;
+float:left;
+width:0%;
+}
+
+
+#chartContainer1 {
+background: none repeat scroll 0% 0%;
+float:left;
+width:0%;
+}
+
+</style>
+<!--Fireworks 8 Dreamweaver 8 target.  Created Sat Apr 07 15:01:57 GMT+0800 2012-->
+</head>
+<body   style="padding:0; margin:0" class="defaultBody" >
+<iframe id="topFrame" frameborder="0"  width="100%" height="30px" src="../Public/title.ajax?position=Report—PO State Static" scrolling="no"></iframe>
+<table border="0" cellspacing="0" cellpading="0" style="height:100%;width:100%;">
+<tr  style="height:100%;width:100%;">
+	<td  style="height:100%;width:50%;">
+	<div id="chartContainer">FusionCharts will load here!</div>  
+	<script type="text/javascript">
+		var data = "<graph caption='PO State' xAxisName='State' yAxisName='Num' decimalPrecision='0' formatNumberScale='0'>"
+				 + "<set name='Pre' link='JavaScript:myJS(\"pre\");' value='5' color='AFD8F8' />"
+				 + " <set name='Overdue' link='JavaScript:myJS(\"overdue\");' value='3' color='F6BD0F' />"
+				 + "<set name='Advance' link='JavaScript:myJS(\"advance\");' value='2' color='8BBA00' />"
+				 + " <set name='Normal' value='2' link='JavaScript:myJS(\"normal\");' color='FF8E46' />"
+				 +"</graph>"; 
+	
+		var myChart = new FusionCharts( "swf/FCF_Column3D.swf", 
+		  "myChartId", "350", "260");
+		  myChart.setDataXML(data);
+		  myChart.render("chartContainer"); 
+	</script>    
+	</td>
+	
+	<td  style="height:100%;width:50%;">
+	<div id="chartContainer1">FusionCharts will load here!</div>  
+	<script type="text/javascript">
+		var data = "<graph  caption='Supplier PO State' showNames='1' decimalPrecision='0'>"
+		         + "<set name='jenny' link='JavaScript:reloadgrid(\"jenny\");'  value='2' /> "
+		         + "<set name='kircy'  link='JavaScript:reloadgrid(\"kircy\");' value='3' /> "
+		         + "<set name='mick'  link='JavaScript:reloadgrid(\"mick\");' value='2' /> "
+		         + "<set name='petty'  link='JavaScript:reloadgrid(\"petty\");' value='2' /> "
+		         + "<set name='tomas'  link='JavaScript:reloadgrid(\"tomas\");' value='1' /> "
+		         + "<set name='tommy'  link='JavaScript:reloadgrid(\"tommy\");' value='1' /> "
+		         +"<set name='hellen' link='JavaScript:reloadgrid(\"hellen\");'  value='1'/>"
+		         + "</graph>"; 
+	
+		var myChart = new FusionCharts( "swf/FCF_Pie3D.swf", 
+		  "myChartId", "350", "260");
+		  myChart.setDataXML(data);
+		  myChart.render("chartContainer1"); 
+	</script>    
+	
+	</td>
+</tr>
+</table>
+
+<table id="grid" ></table>
+<div id="gridPager"></div>
+
+</body>
+</html>

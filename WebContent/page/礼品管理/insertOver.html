@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>礼品管理--&gt;礼品入库</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript">
+function backTab(){
+	window.close();
+}
+function zd(id,tit){
+	if(document.getElementById(id).style.display=="none"){
+		document.getElementById(id).style.display="";
+		document.getElementById(tit).src="../images/tit1.gif";
+	}else{
+		document.getElementById(id).style.display="none";
+		document.getElementById(tit).src="../images/tit.gif";
+	}
+}
+</script>
+</head>
+<body>
+<table class="t1" width="99%">
+	<tr class="a1" onclick="zd('d1','tit1')">
+		<td colspan="4"><img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />礼品内容</td>
+	</tr>
+</table>
+<div id="d1">
+	<table width="99%" border="1" class="t1">
+		<tr class="a2" >
+			<td width="15%"><font color="#FF0000">*</font>礼品名称</td>
+		    <td width="35%"><input type="text" style="width:70%" /></td>
+		    <td width="15%"><font color="#FF0000">*</font>分类</td>
+		    <td><select>
+       	   		<option>--请选择--</option>
+       	   		<option>高档礼品</option>
+       	   		<option>中高档礼品</option>
+       	   		<option>中档礼品</option>
+       	   		<option>中低档礼品</option>
+       	   		<option>低档礼品</option>
+       	   </select></td>
+		</tr>
+	<tr class="a2">
+		<td width="15%"><font color="#FF0000">*</font>数量</td>
+		<td width="35%"><input type="text" style="width:70%"  value=""/></td>
+		<td width="15%"><font color="#FF0000">*</font>单价</td>
+		<td width="35%"><input type="text" style="width:70%"  value=""/></td>
+	</tr>
+	<tr>
+		<td width="15%"><font color="#FF0000">*</font>入库日期</td>
+		<td width="35%"><input type="text" style="width:70%"  value="" onclick="WdatePicker();"/></td>
+		<td width="15%"><font color="#FF0000">*</font>总价</td>
+		<td width="35%"><input type="text" style="width:70%"  value=""/></td>
+	</tr>
+	<tr>
+		<td width="15%"><font color="#FF0000">*</font> 备注</td>
+		<td colspan="3"><textarea rows="3" cols="80" title="来访人员备注信息"></textarea>
+	</tr>
+	</table>
+</div>
+
+	<table width="99%" class="t1">
+    <tr align="center">
+    	<td colspan="4">
+        	<input type="button" value="提交"/>
+             &nbsp;
+            <input type="button" value="取消" onclick="backTab();"/>
+        </td>
+    </tr>
+  
+</table>
+</body>
+</html>

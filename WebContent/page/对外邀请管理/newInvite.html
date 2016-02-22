@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新建邀请</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script language="javascript">
+	function openDd(){
+		window.showModalDialog("人员树.html",window,"dialogWidth:300px;dialogHeight:620px:center:yes");
+	}
+	function zd(id,tit){
+		if(document.getElementById(id).style.display=="none"){
+		document.getElementById(id).style.display="block";
+		document.getElementById(tit).src="../images/tit1.gif";
+		}else{
+		document.getElementById(id).style.display="none";
+		document.getElementById(tit).src="../images/tit.gif";
+		}
+	}
+	function country(){
+	window.showModalDialog("../对外邀请管理/显示国家页.html",window,"dialogWidth:800px;dialogHeight:600px:center:yes");
+	}
+</script>
+<script src="../My97DatePicker/WdatePicker.js"></script>
+</head>
+
+<body>
+	<table width="99%" class="t1">
+		<tr class="a1" onclick="zd('d1','tit1')">
+			<td colspan="4"><img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />受邀请人信息</td>
+		</tr>
+	</table>
+	<div id="d1">
+	<table width="99%"  border="1" class="t1">
+		<tr class="a2">
+			<td width="15%"><font color="red">*</font>受邀单位(个人)</td>
+			<td width="35%"><input type="text" /></td>
+			<td width="15%"><font color="red">*</font>邀请来访时间</td>
+			<td width="35%"><input type="text" /></td>
+		</tr>
+		<tr class="a2">
+			<td width="15%"><font color="red">*</font>国家</td>
+			<td colspan="3" width="35%"><input type="text" style="width:70%" value="美国"/>&nbsp;<input type="button" onclick="country()" value="选择国家" /></td>
+			
+		</tr>
+	</table>
+	</div>
+	<table width="99%" class="t1">
+		<tr class="a1" onclick="zd('d2','tit2')">
+			<td colspan="4"><img id="tit2" src="../images/tit1.gif" height="18px" width="18px" align="bottom" /><font color="red">*</font>费用信息</td>
+		</tr>
+	</table>
+	<div id="d2">
+	<table width="99%" border="1" class="t1">
+		<tr class="a2">
+			<td width="15%"><font color="red">*</font>计划费用</td>
+			<td width="35%"><input type="text" />
+            	<select><option>--选择--</option>
+                    <option>￥，人民币元</option>
+                    <option>＄， 美元</option>
+                    <option>€，欧元</option>
+                    <option>￡，英镑</option>
+                </select>
+            
+            </td>
+			<td width="15%"><font color="red">*</font>来源</td>
+			<td width="35%"><select style="size:100px">
+								<option selected="selected">--选择--</option>
+								<option>自筹资金</option>
+								<option>合同资金</option>
+								<option>对方自费</option>
+                                <option>其他</option>
+							</select>
+			</td>
+		</tr>
+	</table>
+	</div>
+	<table width="99%" class="t1">
+		<tr class="a1" onclick="zd('d3','tit3')">
+			<td colspan="4"><img id="tit3" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />接待负责人信息</td>
+		</tr>
+	</table>
+	<div id="d3">
+	<table width="99%" border="1" class="t1">
+		<tr class="a2">
+			<td width="15%"><font color="red">*</font>姓名</td>
+			<td width="35%">
+				<input type="text" />
+				<input type="button" value="选择人员姓名" onclick="openDd()"/>
+			</td>
+			<td width="15%"><font color="red">*</font>单位</td>
+			<td width="35%">
+				<input type="text" />
+			</td>
+		</tr>
+        <tr class="a2">
+			<td width="15%"><font color="red">*</font>部门</td>
+			<td width="35%">
+				<input type="text" />
+			</td>
+			<td width="15%"><font color="red">*</font>科室</td>
+			<td width="35%">
+				<input type="text" />
+			</td>
+		</tr>
+        <tr class="a2">
+			<td width="15%"><font color="red">*</font>电话</td>
+			<td colspan="3" width="35%">
+				<input type="text" />
+			</td>
+		</tr>
+		
+	</table>
+	</div>
+    <table width="99%" class="t1">
+		<tr class="a1" onclick="zd('d5','tit5')">
+			<td colspan="4"><img id="tit5" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />陪同人信息</td>
+		</tr>
+	</table>
+    <div id="d5">
+    	<table width="99%" border="1" class="t1">
+        	<tr class="a2">
+        	<td width="15%">陪同人</td>
+		 <td colspan="3"><textarea name="textarea" cols="70" rows="4"></textarea><input type="button" value="点击选择" onclick="openDd()"/></td>
+            </tr>
+        </table>
+    </div>
+    <table width="99%" class="t1">
+		<tr class="a1" onclick="zd('d4','tit4')">
+			<td colspan="4"><img id="tit4" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />创建人信息</td>
+		</tr>
+	</table>
+	<div id="d4">
+	<table width="99%" border="1" class="t1">
+		<tr class="a2">
+			<td width="15%"><font color="red">*</font>创建人</td>
+			<td width="35%"><input type="text" value="张小虎" /></td>
+			<td width="15%"><font color="red">*</font>电话</td>
+			<td width="35%"><input type="text" value="12345678" /></td>
+		</tr>
+		<tr class="a2">
+			<td width="15%"><font color="red">*</font>单位</td>
+			<td width="35%"><input type="text" value="中国中煤集团" /></td>
+			<td width="15%"><font color="red">*</font>部门</td>
+			<td width="35%"><input type="text" value="行政部" /></td>
+		</tr>
+		<tr class="a2">
+			<td width="15%"><font color="red">*</font>科室</td>
+			<td width="35%"><input type="text" value="行政科" /></td>
+			<td width="15%"><font color="red">*</font>创建时间</td>
+			<td width="35%"><input type="text" value="2012-3-2"  onclick="WdatePicker()"/></td>
+		</tr>
+	</table>
+	</div>
+	<div>
+	<table width="99%" border="1" class="t1">
+		<tr align="center">
+			<td colspan="4">
+				<input type="button" value="提交" />&nbsp;&nbsp;
+				<input type="button" value="保存" />&nbsp;&nbsp;
+				<input type="button" value="清空" />
+			</td>
+		</tr>
+	</table>
+	</div>
+</body>
+	
+</html>

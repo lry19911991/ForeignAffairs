@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+body{font-size:12px; margin:0; padding:0;}
+#all{ background:url(image/bg.jpg); height:635px; width:1000px; margin:0 auto}
+#head{width:1000px; height:88px}
+#main{width:1000px; height:545px}
+#left{width:120px; height:545px; margin-left:20px; float:left}
+.bot_left{width:120px; height:128px}
+#mid{width:32px; height:545px; float:left}
+#right{width:780px; height:560px; float:left}
+.bot_6in1{width:780px; height:149px; margin-left:10px}
+.bot_style{width:130px; height:149px; float:left}
+.daiban a{color:#333333; text-decoration:none}
+.daiban a:hover{color:#003399; text-decoration:underline}
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+	function gb(){
+		window.close();
+	}
+	function showCountry(){
+window.showModalDialog("../对外合作项目管理/显示国家页.html",window,"dialogWidth:800px;dialogHeight:600px:center:yes");
+	
+}
+</script>
+</head>
+
+<body>
+<table width="99%" border="1" class="t1">
+<tr class="a2">
+	<td width="13%"><div align="right">合作单位名称</div></td>
+	<td width="32%"><input type="text" style="width:70%;" value="XX公司" /></td>
+	<td width="19%"><div align="right">所属国家</div></td>
+	<td width="36%"><input type="text" style="width:70%;"  value="美国"/><input type="button" onclick="showCountry()" value="选择" /></td>
+</tr>
+<tr>
+	<td width="13%"><div align="right">姓名</div></td>
+	<td width="32%"><input type="text" style="width:70%;" value="Tom"/></td>
+	<td width="19%"><div align="right">电话</div></td>
+	<td width="36%"><input type="text" style="width:70%;" value="01234567" /></td>
+</tr>
+<tr class="a2">
+	<td><div align="right">邮箱</div></td>
+	<td><input type="text" style="width:70%;" value="American@Gmail.com" /></td>
+	<td><div align="right">传真</div></td>
+	<td><input type="text" style="width:70%;"  value="01234567"/></td>
+</tr>
+<tr>
+	<td><div align="right">部门</div></td>
+	<td><input type="text" style="width:70%;" value="技术部" /></td>
+	<td><div align="right">职位</div></td>
+	<td><input type="text" style="width:70%;" value="软件工程师" /></td>
+</tr>
+<tr>
+	<td colspan="4">
+		<div align="center">
+		  <input type="button" value="确定" />
+		  <input type="button" onclick="gb()" value="返回" />
+        </div></td>
+  </tr>
+</table>
+</body>
+</html>

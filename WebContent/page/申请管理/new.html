@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新建申请</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="WebCalendar.js"></script>
+<script type="text/javascript">
+
+function showAdd(){
+	window.showModalDialog("add.html",window,"dialogWidth=950px;dialogHeight=470px");
+
+}
+function showJH(){
+	window.showModalDialog("../计划管理/pifu.html",window,"dialogWidth=950px;dialogHeight=350px");
+	
+	document.getElementById("jh").value="大屯公司2012年出国计划";
+
+	document.getElementById("cfgj").value="美国";
+	document.getElementById("chuguo").value="2012-4-24";
+	document.getElementById("huiguo").value="2012-4-28";
+}
+
+function backTab(){
+	window.open("tab.html","content");
+}
+function zd(id,tit){
+	if(document.getElementById(id).style.display=="none"){
+		document.getElementById(id).style.display="block";
+		document.getElementById(tit).src="../images/tit1.gif";
+	}else{
+		document.getElementById(id).style.display="none";
+		document.getElementById(tit).src="../images/tit.gif";
+	}
+}
+function bh(){
+		document.getElementById("bh").value="ZM-C-2012-010-01";
+}
+function yincang(id){
+	if(id==1){
+		document.getElementById("pfjh").style.display='';	
+	}else{
+		document.getElementById("pfjh").style.display='none';
+
+		document.getElementById("jh").value="";
+		document.getElementById("cfgj").value="";
+		document.getElementById("chuguo").value="";
+		document.getElementById("huiguo").value="";
+	}	
+}
+function country(){
+	window.showModalDialog("../出国管理/显示国家页.html",window,"dialogWidth:800px;dialogHeight:600px:center:yes");
+
+}
+function dw(){
+	window.showModalDialog("../出国管理/组织机构.html",window,"dialogWidth:300px;dialogHeight:620px:center:yes");
+}
+
+function checkLeader(flag){
+
+	if(flag==1){
+		document.getElementById("leader").style.display="block";
+		
+	}else if(flag==2){
+		document.getElementById("leader").style.display="none";
+	}
+	
+}
+function showNew(){
+	window.showModalDialog("../出国管理/添加人员.html",window,"dialogWidth=950px;dialogHeight=450px");
+}
+</script>
+</head>
+
+<body>
+<table class="t1" width="99%">
+	<tr class="a1" onclick="zd('d1','tit1')">
+		<td colspan="4"><img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />新建出国请示</td>
+	</tr>
+</table>
+<div id="d1">
+<table width="99%" border="1" class="t1">
+	<tr class="a2" >
+    	<td width="15%"><font color="#FF0000">*</font>请示编号</td>
+	  	<td width="35%">
+		<input type="text" style="width:70%" id="bh"/>
+		<input type="button" value="生成" onclick="bh();"/>
+		</td>
+		<td width="15%"><font color="#FF0000">*</font>请示名称</td>
+		<td width="35%"><input type="text" style="width:70%"/></td>
+	</tr>
+	</table>
+	</div>
+	<table width="99%" class="t1">
+        <tr class="a1" onclick="zd('d6','tit6')">
+            <td colspan="4"><img id="tit6" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />填报人信息</td>
+        </tr>
+        </table>
+        <div id="d5">
+        <table width="99%" class="t1">
+        <tr class="a2">
+            <td width="15%"><font color="#FF0000">*</font>填报人</td>
+            <td width="35%"><input type="text" value="林石"/></td>
+            <td width="15%"><font color="#FF0000">*</font>电话</td>
+            <td width="35%"><input type="text" value="13800001111"/></td>
+        </tr>
+        <tr>
+            <td>单位</td>
+            <td><input type="text" value="大屯股份公司" /></td>
+            <td>部门</td>
+            <td><input type="text" /></td>
+        </tr>
+        <tr class="a2">
+            <td>科室</td>
+            <td><input type="text" /></td>
+            <td>填报时间</td>
+            <td><input name="text" type="text" value="2012-04-20" onclick = "return SelectDate(this,'yyyy-MM-dd')" /></td>
+        </tr>
+        </table>
+        </div>
+	<table width="99%" class="t1">
+    <tr class="a1" onclick="zd('d2','tit2')">
+    	<td colspan="4"><img id="tit2" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />计划信息</td>
+    </tr>
+	</table>
+	<div id="d2">
+	<table width="99%" class="t1">
+    <tr>
+    	<td width="15%"><font color="#FF0000">*</font>请示类型</td>
+        <td>
+        	<input name="p" type="radio" checked="checked" onclick="yincang(1)"/>计划内 &nbsp;&nbsp;
+            <input name="p" type="radio" onclick="yincang(2)"/>计划外
+        </td>
+        
+    </tr>
+    <tr id="pfjh" class="a2">
+    	<td><font color="#FF0000">*</font>批复计划名称</td>
+        <td>
+        	 <input id="jh" type="text" style="width:70%" /><input type="button" value="请选择" onclick="showJH();" />
+        </td>
+    </tr>
+    </table>
+    </div>
+	<table width="99%" class="t1">
+    <tr class="a1" onclick="zd('d3','tit3')">
+		<td colspan="4"><img id="tit3" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />出访信息</td>
+	</tr>
+	</table>
+	<div id="d3">
+    <table width="99%" class="t1">
+        <tr>
+           <td width="15%"><font color="#FF0000">*</font>出访国家</td>
+           <td  width="35%">
+                <input id="cfgj" type="text" style="width:65%" /><input type="button" onclick="country()" value="请选择"/>
+           </td>
+           <td width="15%">邀请人</td>
+           <td width="35%"><input type="text" style="width:70%"/></td>
+        </tr>
+         <tr class="a2">
+           <td><font color="#FF0000">*</font>预计出访时间</td>
+           <td>
+               <input id="chuguo" type="text" style="width:70%" onclick = "return SelectDate(this,'yyyy-MM-dd')"/>
+           </td>
+           <td><font color="#FF0000">*</font>预计回国时间</td>
+           <td>
+                <input id="huiguo" type="text" style="width:70%" onclick = "return SelectDate(this,'yyyy-MM-dd')"/>
+           </td>
+        </tr>
+        <tr class="a2">
+            <td>行程路线</td>
+            <td colspan="4"><input type="text"  style="width:88%"/></td>
+        </tr>
+        <tr>
+            <td><font color="#FF0000">*</font>估计费用</td>
+            <td><input type="text"  style="width:70%"/>&nbsp;&nbsp;元</td>
+            <td><font color="#FF0000">*</font>经费来源</td>
+            <td>
+                <select>
+                    <option value="-1">--请选择--</option>
+                    <option value="1">合同支付</option>
+                    <option value="1">公司提供</option>
+                    <option value="1">对方支付</option>
+                    <option value="1">其他</option>
+                </select>
+            </td>
+        </tr>
+<!--        <tr class="a2">-->
+<!--            <td>出访原因</td>-->
+<!--            <td colspan="3">-->
+<!--                <textarea  style="width:88%" rows="3"></textarea>-->
+<!--            </td>-->
+<!--        </tr>-->
+        </table>
+        </div>
+        <table width="99%" class="t1">
+        <tr class="a1" onclick="zd('d4','tit4')">
+            <td colspan="4"><img id="tit4" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />团组信息</td>
+        </tr>
+        </table>
+        <div id="d4">
+        <table width="99%" class="t1">
+        	<tr>
+  	<td colspan="4"><input type="button" value="添加人员" onclick="showNew()" /></td>
+ 			 </tr>
+        <tr class="a2">
+            <td width="15%"><font color="#FF0000">*</font>组团单位</td>
+            <td width="35%"><input type="text" value="大屯股份公司"  style="width:65%"/><input type="button" onclick="dw()" value="请选择" /></td>
+            <td width="15%">
+               <font color="#FF0000">*</font> 团组人数
+            </td>
+            <td width="35%">
+                <input type="text"  style="width:70%"/>
+            </td>
+        </tr>
+<!--        <tr>-->
+<!--            <td>-->
+<!--               <font color="#FF0000">*</font>是否有局副级领导-->
+<!--            </td>-->
+<!--            <td colspan="3">-->
+<!--                <input name="header" type="radio" checked="checked"  onclick="checkLeader(1)"/>是-->
+<!--                <input name="header" type="radio" onclick="checkLeader(2)"/>否-->
+<!--            </td>-->
+<!--           -->
+<!--        </tr>-->
+<!--        <tr id="leader" class="a2">-->
+<!--            <td><font color="#FF0000">*</font>局副级领导名单</td>-->
+<!--            <td colspan="3">-->
+<!--                 <textarea  style="width:80%;"rows="4"></textarea>-->
+<!--                 <input type="button" value="请选择" />-->
+<!--            </td>-->
+<!--        </tr>-->
+     
+        <tr>
+            <td>备注</td>
+            <td colspan="3">
+                <textarea  style="width:88%" rows="3"></textarea>
+            </td>
+        </tr>
+        </table>
+        </div>
+        <table width="99%" class="t1">
+        <tr class="a1" onclick="zd('d5','tit5')">
+            <td colspan="4"><img id="tit5" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />附件信息</td>
+        </tr>
+        </table>
+        <div id="d5">
+        <table width="99%" class="t1">
+        <tr class="a2">
+            <td width="15%">上传附件</td>
+            <td><input type="file" size="45" value="上传附件" /></td>
+        </tr>
+        </table>
+        </div>
+        <table width="99%" class="t1">
+		<tr class="a1" onclick="zd('d6','tit6')">
+			<td colspan="4"><img id="tit6" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />联系人信息</td>
+		</tr>
+		</table>
+		<div id="d6">
+		<table width="99%" class="t1">
+		<tr class="a2">
+			<td width="15%">联系人</td>
+			<td width="35%"><input type="text" style="width:70%;" value="林石"/></td>
+			<td width="15%">电话</td>
+			<td width="35%"><input type="text" style="width:70%;" value="13099998888"/></td>
+		</tr>
+		<tr>
+			<td>传真</td>
+			<td><input type="text" style="width:70%;" value="010-82256791" /></td>
+			<td>邮箱</td>
+			<td><input type="text" style="width:70%;" value="bj_ls@chinacoal.com" /></td>
+		</tr>
+		</table>
+		</div>
+        <table width="99%" class="t1">
+        <tr align="center">
+            <td colspan="4">
+                <input type="button" value="提交"/>
+                 &nbsp;
+                 <input type="button" value="保存"/>
+                 &nbsp;
+                <input type="button" value="取消" onclick="backTab();"/>
+            </td>
+        </tr>
+      
+    </table>
+</body>
+</html>

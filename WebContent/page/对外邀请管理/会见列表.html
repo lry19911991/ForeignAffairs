@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>会见列表</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+body,div,ul,li{
+ padding:0;
+ text-align:center;
+}
+body{
+ font:12px "宋体";
+ text-align:center;
+}
+a:link{
+ color:#00F;
+ text-decoration:none;
+}
+a:visited {
+ color: #00F;
+ text-decoration:none;
+}
+a:hover {
+ color: #c00;
+ text-decoration:underline;
+}
+ul{ list-style:none;}
+
+/*选项卡2*/
+#Tab2{
+width:100%;
+margin:0px;
+padding:0px;
+margin:0 auto;}
+/*菜单class*/
+.Menubox {
+width:100%;
+height:28px;
+line-height:28px;
+}
+.Menubox ul{
+margin:0px;
+padding:0px;
+}
+.Menubox li{
+ background:url(../images/botton0_a.gif);
+ float:left;
+ display:block;
+ cursor:pointer;
+ width:114px;
+ text-align:center;
+ color:#949694;
+ font-weight:bold;
+ border-left:0px solid #CAD9EA;
+ border-top:0px solid #CAD9EA;
+ border-right:0px solid #CAD9EA;
+ padding-right:3px;
+ }
+.Menubox li.hover{
+ padding:0px;
+ /*background:#CAD9EA;*/
+ background:url(../images/botton0_hov.gif);
+ width:114px;
+ color:#739242;
+ font-weight:bold;
+ height:27px;
+ line-height:27px;
+ border-left:0px solid #CAD9EA;
+ border-top:0px solid #CAD9EA;
+ border-right:0px solid #CAD9EA;
+ padding-right:3px;
+}
+.Contentbox{
+ clear:both;
+ margin-top:0px;
+ border:1px solid #CAD9EA;
+ height:400px;
+ text-align:center;
+ padding-top:8px;
+}
+.justify{  
+    height:1.1em;  
+    overflow:hidden;  
+    text-align:justify;  
+    text-justify : distribute-all-lines;  
+}   
+
+-->
+</style>
+<script src="../My97DatePicker/WdatePicker.js"></script>
+<script language="javascript">
+	function setTab(name,cursel,n){
+ 		for(i=1;i<=n;i++){
+  			var menu=document.getElementById(name+i);
+  			var con=document.getElementById("con_"+name+"_"+i);
+  			menu.className=i==cursel?"hover":"";
+  			con.style.display=i==cursel?"block":"none";
+ 		}
+	}
+	function opennew2(){
+		window.showModalDialog("会见修改.html",window,"dialogWidth=950px;dialogHeight=350px");
+	}
+	function opennew1(){
+		window.showModalDialog("会见详细.html",window,"dialogWidth=950px;dialogHeight=350px");
+	}
+	function opennew(){
+		window.showModalDialog("newMeeting.html",window,"dialogWidth=950px;dialogHeight=350px");
+	}
+</script>
+</head>
+
+<body>
+	<div>
+		<table width="100%" class="t1">
+			<tr>
+				<td width="20%">会见人</td>
+				<td width="30%"><input type="text" /></td>
+				<td width="20%">来访人</td>
+				<td width="30%"><input type="text" /></td>
+			</tr>
+			<tr>
+				<td width="20%">邀请时间</td>
+				<td width="30%"><input type="text" onclick="WdatePicker()"/></td>
+				<td width="20%">会见地点</td>
+				<td width="30%"><input type="text" /></td>
+			</tr>
+			<tr>
+				<td align="center" colspan="4"><input type="button" value="筛选"/>&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="清空"/></td>
+			</tr>
+		</table>
+	</div>
+    <div id="Tab2">
+		<div class="Menubox">
+			<ul>
+   				<li id="two1" onclick="setTab('two',1,3)">待办会见</li>
+   				<li id="two2" onclick="setTab('two',2,3)">未会见</li>
+   				<li id="two3" onclick="setTab('two',3,3)">已会见</li>
+   			</ul>
+		</div>
+		<div class="Contentbox">
+		<!--待办会见信息-->
+			<div id="con_two_1">
+				<table width="100%" border="1" class="t1">
+					<tr class="a2">
+						<th width="7%">序号</th>
+						<th width="8%">会见人</th>
+						<th width="12%">来访人</th>
+						<th width="12%">会见时间</th>
+						<th width="15%">会见地点</th>
+						<th width="22%">操作</th>
+					</tr>
+					<tr align="center">
+						<td>1</td>
+						<td>李芳</td>
+						<td>张华</td>
+						<td>2012-05-25</td>
+						<td>天津市海泰信息广场</td>
+						<td><a href="javascript:void(0)" onclick="opennew1()">查看</a>&nbsp;&nbsp;<a href="javascript:void(0)">下载方案</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick="opennew2()">修改</a></td>
+					</tr>
+				</table>
+			</div>
+		<!--未会见信息-->
+			<div id="con_two_2" style="display:none">
+				<table width="100%" border="1" class="t1">
+					<tr class="a2">
+						<th width="7%">序号</th>
+						<th width="8%">会见人</th>
+						<th width="12%">来访人</th>
+						<th width="12%">会见时间</th>
+						<th width="15%">会见地点</th>
+						<th width="22%">操作</th>
+					</tr>
+					<tr align="center">
+						<td>1</td>
+						<td>李芳</td>
+						<td>张华</td>
+						<td>2012-05-25</td>
+						<td>天津市海泰信息广场</td>
+						<td><a href="javascript:void(0)" onclick="opennew1()">查看</a>
+							<a href="javascript:void(0)">下载方案</a>
+							<a href="javascript:void(0)" onclick="opennew2()">修改</a>
+							<a href="javascript:void(0)">提交</a>
+							<a href="javascript:void(0)">删除</a>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="con_two_3" style="display:none">
+			<!--已会见信息-->
+				<table width="100%" border="1" class="t1">
+					<tr class="a2">
+						<th width="7%">序号</th>
+						<th width="8%">会见人</th>
+						<th width="12%">来访人</th>
+						<th width="12%">会见时间</th>
+						<th width="15%">会见地点</th>
+						<th width="28%">操作</th>
+					</tr>
+					<tr align="center">
+						<td>1</td>
+						<td>李芳</td>
+						<td>张华</td>
+						<td>2012-05-25</td>
+						<td>天津市海泰信息广场</td>
+						<td><a href="javascript:void(0)" onclick="opennew1()">查看</a>
+							<a href="javascript:void(0)">下载方案</a>
+							<a href="javascript:void(0)">删除</a>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+body{background:#369; margin:0 auto; padding:0}
+#all{background:url(../image/bg.jpg); width:1000px; height:650px; margin:0 auto; padding:0}
+#head{height:220px; width:1000px}
+#center{margin:0 0 0 320px; background:url(../image/bg_login.jpg); width:366px; height:256px}
+#key{height:104px; width:366px}
+#input{height:71px; width:366px}
+.name{width:150px; background-image:url(../image/blank.jpg); background-repeat:repeat-x; margin:5px 0 0 142px; border:none; background-color:transparent}
+.pass{width:150px; background-image:url(../image/blank.jpg); background-repeat:repeat-x; margin:23px 0 0 142px; border:none; background-color:transparent}
+#botton{width:366px; height:81px}
+.bot{width:119px; height:27px; margin:15px 0 0 187px; background-image:url(../image/bot.jpg); cursor:hand; border:none}

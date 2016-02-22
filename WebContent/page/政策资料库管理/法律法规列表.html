@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>对外邀请列表</title>
+
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+
+	function opennew() {
+		window.showModalDialog("法律法规新建.html", window,"dialogWidth=950px;dialogHeight=350px");
+	}
+
+	function opensearchs() {
+		window.showModalDialog("政策查找.html", window,"dialogWidth=950px;dialogHeight=350px");
+	}
+</script>
+</head>
+
+<body>
+<div>
+<table width="100%" class="t1">
+	<tr>
+		<td width="20%">资料标题</td>
+		<td width="30%"><input type="text" /></td>
+		<td width="20%">发布人</td>
+		<td width="30%"><input type="text" /></td>
+	</tr>
+	<tr>
+		<td>发布时间</td>
+		<td colspan="3" align="left"><input	type="text" />至<input type="text" /></td>
+	</tr>
+	<tr>
+		<td align="center" colspan="4"><input type="button" value="筛选" />&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="button" value="清空" /></td>
+	</tr>
+</table>
+</div>
+<div style="padding-top: 10px;">
+	<input type="button" value="新增法律法规" onclick="opennew();" />
+</div>
+<div style="padding-top: 10px;">
+<table width="100%" class="t1">
+	<tr class="a1">
+		<td colspan="4"><img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />法律法规</td>
+	</tr>
+</table>
+<table width="100%" border="1" class="t1">
+	<tr class="a2">
+		<th width="8%">序号</th>
+		<th>资料名称</th>
+		<th width="8%">国家</th>
+		<th width="12%">发布时间</th>
+		<th width="10%">上传人</th>
+		<th>备注</th>
+		<th width="20%">操作</th>
+	</tr>
+	<tr align="center">
+		<td>1</td>
+		<td>因公出国（境）人员须知</td>
+		<td>荷兰</td>
+		<td>2011-05-20</td>
+		<td>李小璐</td>
+		<td>中国中煤能源股份有限公司，因公出国（境）人员须知</td>
+		<td><a href="http://localhost:8080/ForeignAffairs/weboffice/LawsOfficeOnline.jsp" target="_blank" >查看</a>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);">删除</a>&nbsp; <a href="javascript:void(0);">下载附件</a> </td>
+	</tr>
+</table>
+</div>
+</body>
+</html>

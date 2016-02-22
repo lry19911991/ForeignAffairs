@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>会议纪要新建</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div>
+		<table width="99%" border="1" class="t1">
+			<tr>
+				  <td width="11%"><font color="red">*</font>会议主题</td>
+				  <td width="23%"><input type="text" /> </td>
+				  <td width="14%"><font color="red">*</font>记录人</td>
+				  <td width="52%"><input type="text" /> </td>
+			</tr>
+			<tr>
+				  <td width="14%"><font color="red">*</font>主持人</td>
+				  <td colspan="3" width="52%"><input type="text" /> </td>
+			</tr>
+			<tr>
+				  <td width="11%"><font color="red">*</font>会议时间</td>
+				  <td width="23%"><input type=text onClick="WdatePicker()"> </td>
+				  <td width="14%"><font color="red">*</font>录入日期</td>
+				  <td width="52%"><input type="text" /> </td>
+			</tr>
+			<tr>
+				<td width="11%"><font color="red">*</font>会议地点</td>
+				  <td colspan="3" width="23%"><input type="text" style="width:80%;" /> </td>
+			</tr>
+			<tr>
+				  <td width="11%"><font color="red">*</font>与会人员</td>
+				<td colspan="3"><textarea name="textarea" cols="70" rows="4"></textarea><input type="button" value="点击选择人名" /></td>
+			</tr>
+			<tr>
+				  <td width="11%"><font color="red">*</font>会议内容</td>
+				<td colspan="3">
+				<textarea rows="4" cols="70"></textarea>	</td>
+			</tr>
+			
+			<tr>
+				  <td width="11%">备注</td>
+				  <td colspan="3"><textarea name="textarea" cols="70" rows="4"></textarea></td>
+			</tr>
+			<tr>
+				  <td width="11%">上传附件</td>
+				  <td colspan="3"><input type="file" style="width:50%;" /> <input type="button" value="多文件上传" /></td>
+			</tr>
+		
+			<tr>
+				  <td colspan="4">
+					 <input type="button" value="保存" />
+					 <input type="button" onclick="jump()" value="返回" />	  
+					</td>
+			  </tr>
+				
+			</table>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+function jump(){
+	window.open("../台湾事务管理/会议纪要列表.html","_self");
+}
+</script>

@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script language="javascript" type="text/javascript" src="../My97DatePicker/WdatePicker.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table width="99%" border="1" class="t1">
+<tr>
+      <td width="11%">会议主题</td>
+	  <td width="23%"><input type="text" value="关于某某的主题报告" /> </td>
+	  <td width="14%">记录人</td>
+	  <td width="52%"><input type="text"  value="孙红" /> </td>
+</tr>
+<tr>
+      <td width="11%">会议地点</td>
+	  <td width="23%"><input type="text" value="某大会堂"/> </td>
+	  <td width="14%">主持人</td>
+	  <td width="52%"><input type="text" value="李四" /> </td>
+</tr>
+<tr>
+      <td width="11%">会议时间</td>
+	  <td width="23%"><input type="text" value="2012-4-18" onclick="WdatePicker()" /> </td>
+	  <td width="14%">录入日期</td>
+	  <td width="52%"><input type="text" value="2012-2-5" disabled="disabled" /> </td>
+</tr>
+<tr>
+      <td width="11%">与会人员</td>
+    <td colspan="3"><textarea name="textarea" cols="70" rows="10">张三、李四、王五 等人参与会议。</textarea><input type="button" value="点击选择人名" /></td>
+</tr>
+<tr>
+      <td width="11%">会议内容</td>
+    <td colspan="3">
+	<textarea rows="10" cols="85">会议主要讲了关于弘扬爱国精神的范例。</textarea>	</td>
+</tr>
+<tr>
+      <td width="11%">查看附件</td>
+      <td colspan="3"><a href="javascript:void(0);">下载附件</a></td>
+</tr>
+<tr>
+      <td width="11%">重新上传附件</td>
+      <td colspan="3"><input type="file" /> <input type="button" value="多文件上传" /></td>
+</tr>
+<tr>
+      <td width="11%">备注</td>
+      <td colspan="3"><textarea name="textarea" cols="85" rows="2">无</textarea></td>
+</tr>
+<tr align="center">
+      <td colspan="4">
+	     <input type="button" value="保存" onclick="alert('保存成功');window.close();" />
+   		 <input type="button" value="取消" onclick="window.close();" />	  </td>
+  </tr>
+
+</table>
+
+</body>
+</html>

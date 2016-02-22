@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>费用填写</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+	function gb(){
+		window.close();
+	}
+</script>
+</head>
+
+<body>
+	<div>
+		<table width="99%" class="t1">
+			<tr>
+				<td width="30%">类型</td>
+				<td width="70%">
+					<select style="width:156px;">
+						<option>置装费</option>
+						<option>交通费</option>
+						<option>伙食费</option>
+						<option>住宿费</option>
+						<option>通信费</option>
+						<option>公杂费</option>
+						<option>礼品费</option>
+						<option>宴请费</option>
+						<option>其他费用</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					费用
+				</td>
+				<td>
+					<input type="text" />元
+				</td>
+			</tr>
+			<tr>
+				<td>时间</td>
+				<td><input type="text" /></td>
+			</tr>
+			<tr>
+				<td>用途</td>
+				<td><textarea cols="30" rows="2"></textarea></td>
+			</tr>
+			<tr align="center">
+				<td colspan="2"><input type="button" onclick="gb()" value="提交" />&nbsp;&nbsp;<input type="button" value="关闭" onclick="gb()" /></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

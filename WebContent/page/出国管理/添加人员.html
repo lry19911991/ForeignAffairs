@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>添加人员</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+	function renyuan(){
+		window.showModalDialog("../出国管理/人员树.html",window,"dialogWidth:300px;dialogHeight:620px:center:yes");
+		document.getElementById("xingming").value="腾飞";
+		document.getElementById("chushengdi").value="北京市";
+		document.getElementById("dianhua").value="13800001111";
+		document.getElementById("pid").value="120897198801011789";
+		document.getElementById("chushengriqi").value="1988-01-01";
+	}
+	function jump(){
+		window.close();
+	}
+function zd(id,tit){
+	if(document.getElementById(id).style.display=="none"){
+		document.getElementById(id).style.display="block";
+		document.getElementById(tit).src="../images/tit1.gif";
+	}else{
+		document.getElementById(id).style.display="none";
+		document.getElementById(tit).src="../images/tit.gif";
+	}
+}
+function openZhaoPian(){
+	var s = document.getElementById("file");
+	s.click();
+		
+}
+
+function showNew(){
+	window.showModalDialog("人员树.html",window,"dialogWidth=100px;dialogHeight=450px");
+}
+
+<!--function showNews(){-->
+<!--	window.showModalDialog("添加人员.html",window,"dialogWidth=950px;dialogHeight=450px");-->
+<!--}-->
+</script>
+</head>
+
+<body>
+	<div>
+		<table width="99%" border="1" class="t1">
+			<tr>
+  	<td colspan="4"><input type="button" value="按公司人员添加" onclick="showNew()" /></td>
+ 			 </tr>
+ 			 <tr>
+ 			 	<td colspan="4"><input type="button" value="填写以下信息   "/></td>
+ 			 </tr>
+        
+			<tr class="a1" onclick="zd('d1','tit1')">
+				<td colspan="4"><img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />基本信息</td>
+			</tr>
+			</table>
+			<div id="d1">
+			<table width="99%" class="t1">
+			<tr class="a2">
+				<td width="15%"><font color="red">*</font>姓名</td>
+				<td width="35%"><input id="xingming" type="text" style="width:70%;" /><input type="button" onclick="renyuan()" value="选择" /></td>
+				<td width="15%">拼音</td>
+				<td width="35%"><input type="text" style="width:70%;" /><input type="button" value="查询" /></td>
+			</tr>
+			<tr>
+				<td><font color="red">*</font>性别</td>
+				<td><select><option><----请选择----></option><option selected="selected">男</option><option>女</option></select></td>
+				<td><font color="red">*</font>电码</td>
+				<td><input id="dianhua" type="text" style="width:70%;" /></td>
+			</tr>
+			<tr class="a2">
+				<td><font color="red">*</font>出生地</td>
+				<td><input id="chushengdi" type="text" style="width:70%;" /></td>
+				<td><font color="red">*</font>民族</td>
+				<td><select><option><----请选择----></option><option selected="selected">汉</option><option>蒙</option><option>回</option></select></td>
+			</tr>
+			<tr>
+				<td>出生地（英文）</td>
+				<td colspan="3"><input type="text" style="width:88%;" /></td>
+			</tr>
+			<tr class="a2">
+				<td><font color="red">*</font>出生日期</td>
+				<td><input id="chushengriqi" type="text" style="width:70%;" /></td>
+				<td><font color="red">*</font>国籍</td>
+				<td><select><option><----请选择----></option><option>中国</option></select></td>
+			</tr>
+			<tr>
+				<td><font color="red">*</font>身份证号</td>
+				<td><input id="pid" type="text" style="width:70%;" /></td>
+				<td><font color="red">*</font>婚姻状况</td>
+				<td><select><option><----请选择----></option><option>已婚</option><option>未婚</option></select></td>
+			</tr>
+			<tr class="a2">
+				<td><font color="red">*</font>工作单位</td>
+				<td><select><option><----请选择----></option><option>单位一</option><option>单位二</option></select></td>
+				<td>军官证</td>
+				<td><input type="text" style="width:70%;" /></td>
+			</tr>
+			<tr>
+				<td><font color="red">*</font>工作部门</td>
+				<td><select><option><----请选择----></option><option>部门一</option><option>部门二</option></select></td>
+				<td><font color="red">*</font>上级单位</td>
+				<td><input type="text" style="width:70%;" /><input type="button" value="选择" /></td>
+			</tr>
+			<tr class="a2">
+				<td>工作单位英文名称</td>
+				<td colspan="3"><input type="text" style="width:88%;" /></td>
+			</tr>
+			<tr>
+				<td><font color="red">*</font>职务</td>
+				<td><select><option><----请选择----></option><option>工程师</option><option>技术总监</option></select></td>
+				<td><font color="red">*</font>级别</td>
+				<td><select><option><----请选择----></option><option>级别一</option><option>技术二</option></select></td>
+			</tr>
+			<tr class="a2">
+				<td>职务英文名称</td>
+				<td><input type="text" style="width:70%;" /></td>
+				<td>是否系统内人员</td>
+				<td><select><option><----请选择----></option><option>系统内</option><option>系统外</option></select></td>
+			</tr>
+			<tr>
+				<td><font color="red">*</font>护照号</td>
+				<td><input type="text" style="width:70%;" /><input type="button" value="选择" /></td>
+				<td><font color="red">*</font>护照类型</td>
+				<td><select><option><----请选择----></option><option>类型一</option></select></td>
+			</tr>
+			<tr class="a2">
+				<td><font color="red">*</font>通行证号</td>
+				<td><input type="text" style="width:70%;" /><input type="button" value="选择" /></td>
+				<td><font color="red">*</font>通行证类型</td>
+				<td><select><option><----请选择----></option><option>类型一</option></select></td>
+			</tr>
+			<tr>
+				<td>联系方式</td>
+				<td colspan="3"><input type="text" style="width:88%;" /></td>
+			</tr>
+			</table>
+			</div>
+			<table width="99%" class="t1">
+			<tr class="a1" onclick="zd('d2','tit2')">
+				<td colspan="4"><img id="tit2" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />个人信息</td>
+			</tr>
+			</table>
+			<div id="d2">
+			<table width="99%" class="t1">
+			<tr class="a2">
+				<td width="15%">本人手机号</td>
+				<td width="35%"><input type="text" style="width:70%;" /></td>
+				<td width="15%">身高</td>
+				<td width="35%"><input type="text" style="width:70%;" />（CM）</td>
+			</tr>
+			<tr>
+				<td>年龄</td>
+				<td><input type="text" style="width:70%;" /></td>
+				<td>毕业时间</td>
+				<td><input type="text" style="width:70%;" /></td>
+			</tr>
+			<tr class="a2">
+				<td>学历</td>
+				<td><input type="text" style="width:70%;" /></td>
+				<td>学位</td>
+				<td><input type="text" style="width:70%;" /></td>
+			</tr>
+			<tr>
+				<td>毕业学校</td>
+				<td colspan="3"><input type="text" style="width:88%;" /></td>
+			</tr>
+			</table>
+			</div>
+			<table width="99%" class="t1">
+			<tr class="a1" onclick="zd('d3','tit3')">
+				<td colspan="4"><img src="../images/tit1.gif" height="18px" width="18px" align="bottom" />工作单位信息</td>
+			</tr>
+			</table>
+			<div id="d3">
+			<table width="99%" class="t1">
+			<tr class="a2">
+				<td width="15%">单位地址</td>
+				<td colspan="3"><input type="text" style="width:88%;" /></td>
+			</tr>
+			<tr>
+				<td>单位地址（英）</td>
+				<td colspan="3"><input type="text" style="width:88%;" /></td>
+			</tr>
+			<tr class="a2">
+				<td>对外职务</td>
+				<td><input type="text" style="width:70%;" /></td>
+				<td>对外职务（英）</td>
+				<td><input type="text" style="width:70%;" /></td>
+			</tr>
+			<tr>
+				<td>对外身份</td>
+				<td><input type="text" style="width:70%;" /></td>
+				<td>对外身份（英）</td>
+				<td><input type="text" style="width:70%;" /></td>
+			</tr>
+			<tr class="a2">
+				<td>单位电话</td>
+				<td><input type="text" style="width:70%;" /></td>
+				<td>单位传真</td>
+				<td><input type="text" style="width:70%;" /></td>
+			</tr>
+			<tr>
+				<td>单位邮编</td>
+				<td colspan="3"><input type="text" style="width:88%;" /></td>
+			</tr>
+			</table>
+			</div>
+			<table width="99%" class="t1">
+			<tr class="a1" onclick="zd('d4','tit4')">
+				<td colspan="4"><img id="tit4" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />家庭信息</td>
+			</tr>
+			</table>
+			<div id="d4">
+			<table width="99%" class="t1">
+			<tr class="a2">
+				<td width="15%">父亲姓名</td>
+				<td width="35%"><input type="text" style="width:70%;" /></td>
+				<td width="15%">母亲姓名</td>
+				<td width="35%"><input type="text" style="width:70%;" /></td>
+			</tr>
+			<tr>
+				<td>家庭地址</td>
+				<td colspan="3"><input type="text" style="width:88%;" /></td>
+			</tr>
+			<tr class="a2">
+				<td>家庭地址（英）</td>
+				<td colspan="3"><input type="text" style="width:88%;" /></td>
+			</tr>
+			<tr>
+				<td>住宅电话</td>
+				<td><input type="text" style="width:70%;" /></td>
+				<td>邮编</td>
+				<td><input type="text" style="width:70%;" /></td>
+			</tr>
+			<tr class="a2">
+				<td>配偶姓名</td>
+				<td><input type="text" style="width:70%;" /></td>
+				<td>配偶出生日期</td>
+				<td><input type="text" style="width:70%;" /></td>
+			</tr>
+			<tr>
+				<td>配偶出生地</td>
+				<td colspan="3"><input type="text" style="width:88%;" /></td>
+			</tr>
+			<tr class="a2">
+				<td>子女情况</td>
+				<td colspan="3"><textarea cols="50" style="width:88%;" rows="5"></textarea></td>
+			</tr>
+			</table>
+			</div>
+<!--			<table width="99%" class="t1">-->
+<!--			<tr class="a1" onclick="zd('d5','tit5')">-->
+<!--				<td colspan="4"><img id="tit5" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />历史出访信息</td>-->
+<!--			</tr>-->
+<!--			</table>-->
+<!--			<div id="d5">-->
+<!--			<table width="99%" class="t1">-->
+<!--			<tr class="a2">-->
+<!--				<td width="15%">曾持有因公护照号码</td>-->
+<!--				<td width="35%"><input type="text" style="width:70%;" /></td>-->
+<!--				<td width="15%">曾持有因私护照号码</td>-->
+<!--				<td width="35%"><input type="text" style="width:70%;" /></td>-->
+<!--			</tr>-->
+<!--			<tr>-->
+<!--				<td>是否曾被拒签</td>-->
+<!--				<td><input type="radio" name="radio" />是<input type="radio" name="radio" />否</td>-->
+<!--				<td>护照办理类型</td>-->
+<!--				<td><input type="radio" name="radio1" />因公<input type="radio" name="radio1" />因私</td>-->
+<!--			</tr>-->
+<!--			<tr class="a2">-->
+<!--				<td>拒签原因</td>-->
+<!--				<td colspan="3"><textarea cols="50" style="width:88%;" rows="5"></textarea></td>-->
+<!--			</tr>-->
+<!--			<tr>-->
+<!--				<td>家庭成员是否有在您将要出访国家居住过</td>-->
+<!--				<td colspan="3"><input type="radio" name="radio2" />是<input type="radio" name="radio2" />否</td>-->
+<!--			</tr>-->
+<!--			<tr class="a2">-->
+<!--				<td>基本情况</td>-->
+<!--				<td colspan="3"><input type="text" style="width:88%;" /></td>-->
+<!--			</tr>-->
+<!--			<tr>-->
+<!--				<td>是否去过申报国</td>-->
+<!--				<td><input type="radio" name="radio3" />是<input type="radio" name="radio3" />否</td>-->
+<!--				<td>出访时间</td>-->
+<!--				<td><input type="text" style="width:70%;" /></td>-->
+<!--			</tr>-->
+<!--			<tr class="a2">-->
+<!--				<td><font color="red">*</font>出访国家</td>-->
+<!--				<td><input type="text" style="width:70%;" /><input type="button" value="选择" /></td>-->
+<!--				<td><font color="red">*</font>访问天数</td>-->
+<!--				<td><input type="text" style="width:70%;" /></td>-->
+<!--			</tr>-->
+<!--			<tr>-->
+<!--				<td>备注</td>-->
+<!--				<td colspan="3"><textarea cols="50" style="width:88%;" rows="5"></textarea></td>-->
+<!--			</tr>-->
+<!--			<tr class="a2">-->
+<!--				<td><font color="red">*</font>离境时间</td>-->
+<!--				<td><input type="text" style="width:70%;" /></td>-->
+<!--				<td><font color="red">*</font>任务类型</td>-->
+<!--				<td><input type="text" style="width:70%;" /></td>-->
+<!--			</tr>-->
+<!--			<tr>-->
+<!--				<td>收件时间</td>-->
+<!--				<td><input type="text" style="width:70%;" /></td>-->
+<!--				<td>任务时间</td>-->
+<!--				<td><input type="text" style="width:70%;" /></td>-->
+<!--			</tr>-->
+<!--			<tr class="a2">-->
+<!--				<td>任务名称</td>-->
+<!--				<td colspan="3"><input type="text" style="width:88%;" /></td>-->
+<!--			</tr>-->
+<!--			<tr>-->
+<!--				<td>任务号</td>-->
+<!--				<td><input type="text" style="width:70%;" /></td>-->
+<!--				<td>团组号</td>-->
+<!--				<td><input type="text" style="width:70%;" /></td>-->
+<!--			</tr>-->
+<!--			<tr class="a2">-->
+<!--				<td>任务批件号</td>-->
+<!--				<td colspan="3"><input type="text" style="width:88%;" /></td>-->
+<!--			</tr>-->
+<!--			</table>-->
+<!--			</div>-->
+<!--			<table width="99%" class="t1">-->
+<!--			<tr class="a1" onclick="zd('d6','tit6')">-->
+<!--				<td colspan="4"><img id="tit6" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />电子护照管理</td>-->
+<!--			</tr>-->
+<!--			</table>-->
+<!--			<div id="d6">-->
+<!--			<table width="99%" class="t1">-->
+<!--			<tr class="a2">-->
+<!--				<td width="20%">姓名</td>-->
+<!--				<td width="50%"><input type="text" /></td>-->
+<!--				<td align="center" colspan="2" rowspan="5">-->
+<!--                	<div style="width:90px; height:130px;">-->
+<!--                        <img style="width:90px; height:110px;background:#CCC" src="../images/yicun_m.jpg" />-->
+<!--                        <input type="button" value="上传照片" onclick="openZhaoPian();" />-->
+<!--                        <input type="file" id="file" style="display:none"/>-->
+<!--                    </div>-->
+<!--                </td>-->
+<!--			</tr>-->
+<!--			<tr>-->
+<!--				<td>身份证号</td>-->
+<!--				<td><input type="text" size="40" /></td>-->
+<!--			</tr>-->
+<!--			<tr class="a2">-->
+<!--				<td>政审批件号（备案号）</td>-->
+<!--				<td><input type="text" size="40" /></td>-->
+<!--			</tr>-->
+<!--			<tr>-->
+<!--				<td>身份加注</td>-->
+<!--				<td><textarea cols="45" rows="3"></textarea></td>-->
+<!--			</tr>-->
+<!--			<tr class="a2">-->
+<!--				<td>数字照片编号</td>-->
+<!--				<td><input type="text" size="40" /></td>-->
+<!--			</tr>-->
+<!--			</table>-->
+<!--			</div>-->
+<!--			<table width="99%" class="t1">-->
+<!--			<tr class="a1" onclick="zd('d7','tit7')">-->
+<!--				<td colspan="4"><img id="tit7" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />扫描件管理</td>-->
+<!--			</tr>-->
+<!--			</table>-->
+<!--			<div id="d7">-->
+<!--			<table width="99%" class="t1">-->
+<!--			<tr class="a2">-->
+<!--				<td width="20%">身份证扫描件</td>-->
+<!--				<td colspan="3"><input type="file" style="width:60%;" />&nbsp;&nbsp;<input type="button" value="上传" /></td>-->
+<!--			</tr>-->
+<!--			<tr>-->
+<!--				<td>户口本扫描件</td>-->
+<!--				<td colspan="3"><input type="file" style="width:60%;" />&nbsp;&nbsp;<input type="button" value="上传" /></td>-->
+<!--			</tr>-->
+<!--			<tr class="a2">-->
+<!--				<td>数字签名扫描件</td>-->
+<!--				<td colspan="3"><input type="file" style="width:60%;" />&nbsp;&nbsp;<input type="button" value="上传" /></td>-->
+<!--			</tr>-->
+<!--			</table>-->
+<!--			</div>-->
+         <div>
+			<table width="99%" class="t1">
+			<tr align="center">
+				<td colspan="4"><input type="button" value="保存" />&nbsp;&nbsp;<input type="button" onclick="jump()" value="返回" /></td>
+			</tr>
+		   </table>
+		</div>
+	</div>
+</body>
+</html>

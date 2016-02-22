@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>境外机构资质管理-->新建机构</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../My97DatePicker/WdatePicker.js" ></script>
+<script type="text/javascript">
+function jump(){
+	window.open("../境外机构证件资质管理/境外机构列表.html","_self");
+}
+
+function showJZ(){
+	window.showModalDialog("证件新建.html",window,"dialogWidth=850px;dialogHeight=450px");
+}
+
+function gb(){
+	window.close();
+}
+</script>
+</head>
+
+<body>
+	<table width="99%" border="1" class="t1">
+    	<tr class="a1">
+        	<td>
+            	<img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />机构信息
+            </td>
+        </tr>
+    </table>
+	<div>
+		<table width="99%" id="tztab"  border="1" class="t1">
+			<tr>
+				<td width="15%"><font color="red">*</font>机构名称(中文)</td>
+				<td width="35%"><input type="text" /></td>
+				<td width="15%">机构名称(英文)</td>
+				<td width="35%"><input type="text" /></td>
+			</tr>
+			<tr>
+				<td><font color="red">*</font>机构负责人</td>
+				<td><input type="text" /></td>
+                <td><font color="red">*</font>机构设立时间</td>
+				<td colspan="3"><input type="text" onclick="WdatePicker();" /></td>
+			</tr>
+			<tr>
+				<td><font color="red">*</font>机构设立地址</td>
+				<td colspan="3"><input type="text" style="width:80%;" /></td>
+			</tr>
+			<tr>
+				<td><font color="red">*</font>机构设立原因</td>
+				<td colspan="3"><textarea cols="70" rows="4"></textarea></td>
+			</tr>
+			<tr>
+				<td><font color="red">*</font>机构描述</td>
+				<td colspan="3"><textarea cols="70" rows="4"></textarea></td>
+			</tr>
+         </table>
+     </div>
+     <div>
+     	 <table width="99%" class="t1">
+         	<tr class="a1">
+				<td><img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />资质信息</td>
+			</tr>
+            <tr>
+            	<td><input type="button" value="添加资质" onclick="showJZ();" /></td>
+            </tr>
+         </table>
+         <table width="99%" class="t1">
+			<tr class="a2">
+            	<th width="8%">序号</th>
+                <th width="25%">证件名称</th>
+                <th width="17%">类型</th>
+                <th width="20%">注册号</th>
+                <th width="15%">法定代表人</th>
+                <th width="15%">操作</th>
+            </tr>
+		 </table>
+	</div>
+	<table width="99%" border="1" class="t1">
+    	<tr class="a1">
+        	<td>
+            	<img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />经办人信息
+            </td>
+        </tr>
+    </table>
+	<div>
+		<table width="99%" class="t1">
+			<tr>
+				<td width="18%">
+				<div align="right"><font color="red">*</font>申请人</div>
+				</td>
+				<td width="24%"><input type="text" style="width: 70%;" /></td>
+				<td width="13%">
+				<div align="right"><font color="red">*</font>电话</div>
+				</td>
+				<td width="45%"><input type="text" style="width: 70%;" /></td>
+			</tr>
+			<tr class="a2">
+				<td width="18%">
+				<div align="right">单位</div>
+				</td>
+				<td width="24%"><input type="text" style="width: 70%;" /></td>
+				<td width="13%">
+				<div align="right">部门</div>
+				</td>
+				<td width="45%"><input type="text" style="width: 70%;" /></td>
+			</tr>
+			<tr>
+				<td width="18%">
+				<div align="right">科室</div>
+				</td>
+				<td width="24%"><input type="text" style="width: 70%;" /></td>
+				<td width="13%">
+				<div align="right">填报时间</div>
+				</td>
+				<td width="45%"><input type="text" style="width: 70%;" onclick ="WdatePicker()"/></td>
+			</tr>
+			<tr align="center">
+		        <td colspan="6">
+		            <input type="button" onclick="" value="保存" />&nbsp;&nbsp;
+		            <input type="button" onclick="gb()" value="返回" />
+		        </td>
+		    </tr>
+		</table>
+	</div>
+	
+</body>
+</html>

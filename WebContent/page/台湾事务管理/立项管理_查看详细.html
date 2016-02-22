@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function wffzrnew(){
+	window.showModalDialog("立项管理_立项申请_我方负责人_新建.html",window,"dialogWidth:800px;dialogHeight:130px:center:yes");
+}
+function wffzrxiugai(){
+	window.showModalDialog("立项管理_立项申请_我方负责人_修改.html",window,"dialogWidth:800px;dialogHeight:130px:center:yes");
+}
+function hzdwnew(){
+	window.showModalDialog("立项管理_立项申请_合作单位_新建.html",window,"dialogWidth:800px;dialogHeight:130px:center:yes");
+}
+function hzdwxiugai(){
+	window.showModalDialog("立项管理_立项申请_合作单位_修改.html",window,"dialogWidth:800px;dialogHeight:130px:center:yes");
+}
+function hzffzrnew(){
+	window.showModalDialog("立项管理_立项申请_合作方负责人_新建.html",window,"dialogWidth:800px;dialogHeight:160px:center:yes");
+}
+function hzffzrxiugai(){
+	window.showModalDialog("立项管理_立项申请_合作方负责人_修改.html",window,"dialogWidth:800px;dialogHeight:160px:center:yes");
+}
+function showCountry(){
+window.showModalDialog("../对外合作项目管理/显示国家页.html",window,"dialogWidth:800px;dialogHeight:600px:center:yes");
+	
+}
+function zd(id,tit){
+		if(document.getElementById(id).style.display=="none"){
+			document.getElementById(id).style.display="block";
+			document.getElementById(tit).src="../images/tit1.gif";
+		}else{
+			document.getElementById(id).style.display="none";
+			document.getElementById(tit).src="../images/tit.gif";
+		}
+	}
+	function dw(){
+		window.showModalDialog("../出国管理/组织机构.html",window,"dialogWidth:300px;dialogHeight:700px:center:yes");
+	}
+function cl(){
+	window.close();
+}
+</script>
+</head>
+
+<body>
+<table width="99%" border="1" class="t1">
+ 	<tr class="a1" onclick="zd('d1','tit1')">
+		<td colspan="2" class="a1"><img id="tit1" src="../images/tit1.gif" height="18px" width="18px"  />项目基本信息</td>
+	</tr>
+</table>
+<div id="d1">
+	<table class="t1" width="99%">
+	<tr class="a2">
+		<td width="16%"><div align="right">项目编号</div></td>
+	  <td width="84%"><input type="text" style="width:70%;" value="XMBH20120505"  readonly="readonly"/></td>
+	</tr>
+	<tr>
+		<td width="16%"><div align="right">项目名称</div></td>
+		<td><input type="text" style="width:70%;" value="XX项目" readonly="readonly"/></td>
+	</tr>
+	<tr class="a2">
+		<td width="16%"><div align="right">我方单位</div></td>
+		<td><input type="text" style="width:70%;" value="四达矿业公司" readonly="readonly"/></td>
+	</tr>
+</table>
+</div>
+<table width="99%" border="1" class="t1">
+ 	<tr class="a1" onclick="zd('d2','tit2')">
+		<td class="a1"><img id="tit2" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />我方项目负责人信息 
+		</td>
+	</tr>
+	</table>
+	<div id="d2">
+	<table width="99%" class="t1">
+	<tr>
+		<td>
+			<input type="button" value="新建" onclick="javascript:wffzrnew();" />
+            &nbsp;
+            <input type="button" value="修改" onclick="javascript:wffzrxiugai();"/>
+            &nbsp;
+            <input type="button" value="删除" />
+			<table width="99%" border="1" class="t1">
+				<tr class="a2">
+				  <td width="12%"><div align="center">
+					<input type="checkbox"  />
+				  全选</td>
+				  <td width="7%"><div align="center">序号</div></td>
+				  <td width="10%"><div align="center">姓名</div></td>
+				  <td width="14%"><div align="center">电话</div></td>
+				  <td width="14%"><div align="center">单位</div></td>
+				  <td width="15%"><div align="center">部门</div></td>
+				  <td width="12%"><div align="center">科室</div></td>
+				  <td width="16%"><div align="center">填报时间</div></td>
+				</tr>
+				<tr>
+					<td><div align="center">
+					  <input type="checkbox"  />
+					  </div></td>
+					<td><div align="center">1</div></td>
+					<td><div align="center">张三</div></td>
+					<td><div align="center">1234567</div></td>
+					<td><div align="center">1234567</div></td>
+					<td><div align="center">技术部</div></td>
+					<td><div align="center">技术部</div></td>
+					<td><div align="center">2012-05-17</div></td>
+				</tr>
+				<tr class="a2">
+					<td><div align="center">
+					  <input type="checkbox"  />
+					  </div></td>
+					<td><div align="center">2</div></td>
+					<td><div align="center">李四</div></td>
+					<td><div align="center">7654321</div></td>
+					<td><div align="center">7654321</div></td>
+					<td><div align="center">技术部</div></td>
+					<td><div align="center">技术部</div></td>
+					<td><div align="center">2012-05-17</div></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</div>
+<table width="99%" class="t1">
+	<tr class="a1" onclick="zd('d3','tit3')">
+		<td><img id="tit3" src="../images/tit1.gif" height="18px" width="18px"  />合作地区</td>
+	</tr>
+</table>
+<div id="d3">
+<table width="99%" border="1" class="t1">
+	<tr>
+		<td width="15%">合作地区</td>
+		<td width="85%"><input type="text" style="width:70%;" value="台湾" readonly="readonly"/></td>
+	</tr>
+</table>
+</div>
+<table width="99%" border="1" class="t1">
+	<tr class="a1" onclick="zd('d4','tit4')">
+		<td>
+			<img id="tit4" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />合作单位
+		</td>
+	</tr>
+</table>
+	<div id="d4">
+	<table width="99%" class="t1">
+	<tr>
+		<td>
+			<input type="button" value="新建" onclick="javascript:hzdwnew();" />
+				&nbsp;
+				<input type="button" value="修改" onclick="javascript:hzdwxiugai();"/>
+				&nbsp;
+				<input type="button" value="删除" />
+			<table width="99%" border="1" class="t1">
+				<tr class="a2">
+					<td width="12%"><div align="center">
+					  <input type="checkbox" />
+				  全选</div></td>
+				  <td width="7%"><div align="center">序号</div></td>
+				  <td width="12%"><div align="center">所属地区</div></td>
+				  <td width="19%"><div align="center">单位名称</div></td>
+				  <td width="18%"><div align="center">该单位计划投资</div></td>
+				  <td width="15%"><div align="center">货币类型</div></td>
+				  <td width="17%"><div align="center">折合人民币</div></td>
+				<tr>
+					<td><div align="center">
+					  <input type="checkbox" />
+					  </div></td>
+					<td><div align="center">1</div></td>
+					<td><div align="center">台湾</div></td>
+					<td><div align="center">XX公司</div></td>
+					<td><div align="center">5000</div></td>
+					<td><div align="center">美元</div></td>
+					<td><div align="center">31466.331</div></td>
+				</tr>
+				<tr class="a2">
+					<td><div align="center">
+					  <input name="checkbox" type="checkbox" />
+					</div></td>
+					<td><div align="center">2</div></td>
+					<td><div align="center">台湾</div></td>
+					<td><div align="center">XX公司</div></td>
+					<td><div align="center">5000</div></td>
+					<td><div align="center">美元</div></td>
+					<td><div align="center">31466.331</div></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</div>
+
+<table width="99%" border="1" class="t1">
+ 	<tr class="a1" onclick="zd('d5','tit5')">
+		<td><img id="tit5" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />合作方项目负责人信息
+			</td>
+	</tr>
+	</table>
+	<div id="d5">
+	<table width="99%" class="t1">
+	<tr>
+		<td>
+			<input type="button" value="新建" onclick="javascript:hzffzrnew();" />
+            &nbsp;
+            <input type="button" value="修改" onclick="javascript:hzffzrxiugai();"/>
+            &nbsp;
+            <input type="button" value="删除" />
+			<table width="99%" border="1" class="t1">
+				<tr class="a2">
+					<td width="11%"><div align="center">
+					  <input type="checkbox"  />
+				  全选</div></td>
+				  <td width="8%"><div align="center">序号</div></td>
+					<td width="14%"><div align="center">所属公司</div></td>
+				  <td width="10%"><div align="center">姓名</div></td>
+				  <td width="11%"><div align="center">电话</div></td>
+				  <td width="11%"><div align="center">部门</div></td>
+				  <td width="11%"><div align="center">科室</div></td>
+				  <td width="13%"><div align="center">填报时间</div></td>
+				</tr>
+				<tr>
+					<td><div align="center">
+					  <input type="checkbox"  />
+					  </div></td>
+					<td><div align="center">1</div></td>
+					<td><div align="center">XX公司</div></td>
+					<td><div align="center">Tom</div></td>
+					<td><div align="center">1234567</div></td>
+					<td><div align="center">1234567</div></td>
+					<td><div align="center">技术部</div></td>
+					<td><div align="center">研发工程师</div></td>
+				</tr>
+				<tr class="a2">
+					<td><div align="center">
+					  <input type="checkbox"  />
+					  </div></td>
+					<td><div align="center">2</div></td>
+					<td><div align="center">XX公司</div></td>
+					<td><div align="center">Jake</div></td>
+					<td><div align="center">7654321</div></td>
+					<td><div align="center">7654321</div></td>
+					<td><div align="center">技术部</div></td>
+					<td><div align="center">测试工程师</div></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</div>
+
+<table width="99%" border="1" class="t1">
+<tr class="a1" onclick="zd('d6','tit6')">
+	<td colspan="4"><img id="tit6" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />其他详情</td>
+</tr>
+</table>
+<div id="d6">
+<table width="99%" border="1" class="t1">
+<tr>
+	<td width="18%"><div align="right">我方计划总投资</div></td>
+	<td width="34%"><input type="text" style="width:70%;" value="15000" readonly="readonly"/>
+	元</td>
+	<td width="15%"><div align="right">货币单位</div></td>
+	<td width="45%">
+		<select>
+		    <option>人民币</option>
+		    <option>美元</option>
+		    <option>英镑</option>
+		    <option>日元</option>
+		    <option>欧元</option>
+    </select></td>
+</tr>
+<tr class="a2">
+	<td><div align="right">合作方计划总投资</div></td>
+	<td><input type="text" style="width:70%;"  value="15000" readonly="readonly"/>
+	美元</td>
+	<td><div align="right">货币单位</div></td>
+	<td>
+		<select>
+		    <option>美元</option>
+		    <option>欧元</option>
+		    <option>英镑</option>
+		    <option>日元</option>
+		    <option>人民币</option>
+	    </select>	</td>
+</tr>
+<tr>
+	<td><div align="right">折合人民币</div></td>
+	<td><input type="text" style="width:70%;"  value="94161.9586" readonly="readonly"/>
+	元</td>
+	<td><div align="right">设定转换率</div></td>
+	<td><input type="text" style="width:70%;" value="1美元=6.2933人民币元"  readonly="readonly"/></td>
+</tr>
+<tr class="a2">
+	<td rowspan="2"><div align="right">项目合作时间</div></td>
+	<td colspan="3"> 从   
+	  <input type="text" style="width:25%;"  value="2012-05-01" readonly="readonly"/>到<input type="text" style="width:25%;" value="2012-05-30" readonly="readonly" /></td>
+  </tr>
+<tr>
+	<td colspan="3" align="left" valign="middle"><div align="left">描述
+        <input type="text" style="width:83%;" value="无"  readonly="readonly"/>
+	</div></td>
+  </tr>
+<tr class="a2">
+      <td width="18%"><div align="right">项目简介</div></td>
+    <td colspan="3"><br>
+      <textarea name="textarea" cols="60" style="width:88%;" rows="5" readonly="readonly">项目介绍填写处、项目介绍填写处、项目介绍填写处、项目介绍填写处</textarea>
+    </br></td>
+</tr>
+<tr>
+      <td width="18%"><div align="right">立项原因</div></td>
+	  <td colspan="3"><br><textarea rows="5" style="width:88%;" cols="60"  >理想原因填写处、理想原因填写处、理想原因填写处、理想原因填写处</textarea></br>	  </td>
+  </tr>
+<tr class="a2">
+      <td width="18%"><div align="right">附件查看</div></td>
+  <td colspan="3"><input name="button" type="button" value="点击查看" /></td>
+</tr>
+<tr class="a2">
+      <td width="18%"><div align="right">备注</div></td>
+    <td colspan="3"><textarea rows="1" style="width:88%;" cols="60"  readonly="readonly">无</textarea> </td>
+  </tr>
+  </table>
+</div>
+<table width="99%" class="t1">
+	<tr class="a1" onclick="zd('d9','tit9')">
+		<td colspan="4"><img id="tit9" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />申请人信息</td>
+	</tr>
+	</table>
+	<div id="d9">
+	<table class="t1" width="99%">
+	<tr class="a2">
+      <td width="18%"><div align="right">操作人</div></td>
+	  <td width="34%"><input type="text" style="width:70%;" value="王小虎"  readonly="readonly"/></td>
+	  <td width="15%"><div align="right">所属部门</div></td>
+      <td width="45%"><input type="text" style="width:70%;" value="研发部"  readonly="readonly" /> </td>
+	</tr>
+	<tr >
+      <td width="18%"><div align="right">电话</div></td>
+	  <td width="34%"><input type="text" style="width:70%;"  value="12345678"  readonly="readonly"/></td>
+	  <td width="15%"><div align="right">单位</div></td>
+      <td width="45%"><input type="text" style="width:70%;" value="大屯集团" /> </td>
+</tr>
+<tr class="a2">
+      <td width="18%"><div align="right">科室</div></td>
+	  <td width="34%"><input type="text" style="width:70%;"  value="12345678"  readonly="readonly"/></td>
+	  <td width="15%"><div align="right">邮箱</div></td>
+      <td width="45%"><input type="text" style="width:70%;" value="1234567@126.com"   readonly="readonly"/> </td>
+</tr>
+<tr >
+      <td width="18%"><div align="right">申请时间</div></td>
+    <td colspan="3"><input type=text onClick="WdatePicker()" value="2012-04-05"  readonly="readonly"></td>
+  </tr>
+  </table>
+  </div>
+  <table width="99%" class="t1">
+<tr align="center">
+      <td colspan="4">
+
+	       <input type="button" value="保存" />
+	       <input type="button" value="取消" onclick="cl();" />	  
+	</td>
+  </tr>
+</table>
+
+</body>
+</html>

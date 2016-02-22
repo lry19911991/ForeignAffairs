@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<script language="javascript">
+function menuload(){
+	var url=window.location.search;
+	var Request = new Object();
+	if(url.indexOf("?")!=-1)
+	{
+	　　var str = url.substr(1)　//去掉?号
+	　　strs = str.split("&");
+	　　for(var i=0;i<strs.length;i++)
+	　　{
+	　　 　 Request[strs[i].split("=")[0]]=unescape(strs[ i].split("=")[1]);
+	　　}
+	}
+	if((Request["id"])==1){
+		window.open("index_1.html","content_2");
+	}else if((Request["id"])==2){
+		window.open("index_2.html","content_2");
+	}else if((Request["id"])==3){
+		window.open("index_3.html","content_2");
+	}else if((Request["id"])==4){
+		window.open("index_4.html","content_2");
+	}else if((Request["id"])==5){
+		window.open("index_5.html","content_2");
+	}else if((Request["id"])==6){
+		window.open("index_6.html","content_2");
+	}else if((Request["id"])==7){
+		window.open("index_7.html","content_2");
+	}else if((Request["id"])==8){
+		window.open("index_8.html","content_2");
+	}else if((Request["id"])==9){
+		window.open("index_9.html","content_2");
+	}
+	
+}
+</script>
+
+</head>
+
+<body style="overflow-y:hidden" onload="MM_preloadImages('image/hov_2.png','image/hov_3.png','image/hov_4.png','image/hov_5.png','image/hov_6.png','image/hov_7.png','image/hov_8.png','image/hov_9.png','image/hov_1.png','image/hov_r2_c6_s1.png','image/hov_r2_c8_s1.png','image/hov_r2_c10_s1.png');menuload();">
+<div id="all">
+<div id="head">
+<div id="head_right">
+<div class="head_admin"><img src="image/bot_admin.png" /><span class="style1">当前登录用户：测试人员</span></div>
+<div class="head_bot"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image22','','image/hov_r2_c6_s1.png',1)"><img src="image/bot_home.png" name="Image22" width="38" height="40" border="0" id="Image22" /></a></div>
+<div class="head_bot"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image23','','image/hov_r2_c8_s1.png',1)"><img src="image/bot_search.png" name="Image23" width="38" height="40" border="0" id="Image23" /></a></div>
+<div class="head_bot"><a href="../登录/login.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image24','','image/hov_r2_c10_s1.png',1)"><img src="image/bot_quit.png" name="Image24" width="38" height="40" border="0" id="Image24" /></a></div>
+</div><!--head_right-->
+</div><!--head-->
+<div id="main">
+<div id="main_left">
+<div class="left_bot"><a href="index_1.html" target="content_2" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image20','','image/hov_1.png',1)"><img src="image/bot_1.png" name="Image20" width="100" height="60" border="0" id="Image20" /></a></div>
+<div class="left_bot"><a href="index_2.html" target="content_2" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image21','','image/hov_2.png',1)"><img src="image/bot_2.png" name="Image21" width="100" height="60" border="0" id="Image21" /></a></div>
+<div class="left_bot"><a href="index_3.html"  target="content_2" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image13','','image/hov_3.png',1)"><img src="image/bot_3.png" name="Image13"width="100" height="60" border="0" id="Image13" /></a></div>
+<div class="left_bot"><a href="index_4.html"  target="content_2" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image14','','image/hov_4.png',1)"><img src="image/bot_4.png" name="Image14" width="100" height="60" border="0" id="Image14" /></a></div>
+<div class="left_bot"><a href="index_5.html" target="content_2" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image15','','image/hov_5.png',1)"><img src="image/bot_5.png" name="Image15" width="100" height="60" border="0" id="Image15" /></a></div>
+<div class="left_bot"><a href="index_6.html" target="content_2" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image16','','image/hov_6.png',1)"><img src="image/bot_6.png" name="Image16" width="100" height="60" border="0" id="Image16" /></a></div>
+<div class="left_bot"><a href="index_7.html" target="content_2" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image17','','image/hov_7.png',1)"><img src="image/bot_7.png" name="Image17" width="100" height="60" border="0" id="Image17" /></a></div>
+<div class="left_bot"><a href="index_8.html" target="content_2" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image18','','image/hov_8.png',1)"><img src="image/bot_8.png" name="Image18" width="100" height="60" border="0" id="Image18" /></a></div>
+<div class="left_bot"><a href="index_9.html" target="content_2" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image19','','image/hov_9.png',1)"><img src="image/bot_9.png" name="Image19" width="100" height="60" border="0" id="Image19" /></a></div>
+</div><!--main_left-->
+<div id="main_content">
+<iframe width="890" height="699" frameborder=0 scrolling=no src="index_2.html" name="content_2"></iframe>
+
+</div><!--main_content-->
+</div>
+<!--all-->
+
+</body>
+</html>

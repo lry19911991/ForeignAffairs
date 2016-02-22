@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>团组列表信息</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+body,div,ul,li{
+ padding:0;
+ text-align:center;
+}
+body{
+ font:12px "宋体";
+ text-align:center;
+}
+a:link{
+ color:#00F;
+ text-decoration:none;
+}
+a:visited {
+ color: #00F;
+ text-decoration:none;
+}
+a:hover {
+ color: #c00;
+ text-decoration:underline;
+}
+ul{ list-style:none;}
+
+/*选项卡2*/
+#Tab2{
+width:100%;
+margin:0px;
+padding:0px;
+margin:0 auto;}
+/*菜单class*/
+.Menubox {
+width:100%;
+height:28px;
+line-height:28px;
+}
+.Menubox ul{
+margin:0px;
+padding:0px;
+}
+.Menubox li{
+ background:url(../images/botton0_a.gif);
+ float:left;
+ display:block;
+ cursor:pointer;
+ width:114px;
+ text-align:center;
+ color:#949694;
+ font-weight:bold;
+ border-left:0px solid #CAD9EA;
+ border-top:0px solid #CAD9EA;
+ border-right:0px solid #CAD9EA;
+ }
+.Menubox li.hover{
+ padding:0px;
+ /*background:#CAD9EA;*/
+ background:url(../images/botton0_hov.gif);
+ width:114px;
+ border-left:1px solid #CAD9EA;
+ border-top:1px solid #CAD9EA;
+ border-right:1px solid #CAD9EA;
+ color:#739242;
+ font-weight:bold;
+ height:27px;
+line-height:27px;
+ border-left:0px solid #CAD9EA;
+ border-top:0px solid #CAD9EA;
+ border-right:0px solid #CAD9EA;
+}
+.Contentbox{
+ clear:both;
+ margin-top:0px;
+ border:1px solid #CAD9EA;
+ height:400px;
+ text-align:center;
+ padding-top:8px;
+}
+
+-->
+</style>
+<script type="text/javascript">
+	function setTab(name,cursel,n){
+ for(i=1;i<=n;i++){
+  var menu=document.getElementById(name+i);
+  var con=document.getElementById("con_"+name+"_"+i);
+  menu.className=i==cursel?"hover":"";
+  con.style.display=i==cursel?"block":"none";
+ }
+}
+
+function showAudit(){
+	window.showModalDialog("audit.html",window,"dialogWidth=950px;dialogHeight=350px");
+}
+
+function show(){
+	window.showModalDialog("show.html",window,"dialogWidth=950px;dialogHeight=350px");
+}
+
+function showInfo(){
+	window.showModalDialog("团组详细.html",window,"dialogWidth=950px;dialogHeight=450px");
+}
+function showNew(){
+	window.showModalDialog("新建团组.html",window,"dialogWidth=950px;dialogHeight=450px");
+}
+function showinfo1(){
+	window.showModalDialog("团组详细.html",window,"dialogWidth=950px;dialogHeight=450px");
+}
+function opennew(){
+	window.showModalDialog("newGroup.html",window,"dialogWidth=950px;dialogHeight=350px");
+}
+</script>
+</head>
+
+<body>
+
+   <div >
+		<table width="99%" class="t1">
+			<tr class="a2">
+				<th width="8%">选择</th>
+				<th width="8%">序号</th>
+				<th >申请名称</th>
+				<th >计划名称</th>
+				<th>出访国家</th>
+				<th >出访时间</th>
+				<th >组团单位</th>
+				<th>团组长</th>
+				<th>是否有局级领导</th>
+			</tr>
+			<tr align="center">
+				<td><input type="checkbox"/></td>
+				<td>1</td>
+				<td>出国考察</td>
+				<td>出国计划</td>
+				<td>美国</td>
+				<td>2012-1-2</td>
+				<td>大屯公司</td>
+				<td>张三</td>
+				<td>无</td>
+			</tr>
+			<tr  class="a2" align="center">
+				<td><input type="checkbox"/></td>
+				<td>2</td>
+				<td>出国考察</td>
+				<td>出国计划</td>
+				<td>英国</td>
+				<td>2012-1-2</td>
+				<td>大屯公司</td>
+				<td>张三</td>
+				<td>无</td>
+				
+			</tr>
+		
+		</table>
+		
+		<table>
+			<tr>
+				<td>
+					<input type="button" value="确定" />
+				</td>
+			</tr>
+		</table>
+   </div>
+
+</body>
+</html>

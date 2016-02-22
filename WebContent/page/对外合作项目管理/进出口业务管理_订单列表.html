@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<link href="css/zTreeStyle/zTreeStyle.css" rel="stylesheet"  type="text/css"/>
+<script type="text/javascript">
+ function openXJDD(){
+	 window.showModalDialog("进出口业务管理_新建订单.html",window,"dialogWidth=900px;dialogHeight=350px");
+ }
+</script>
+
+
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.ztree.core-3.0.js"></script>
+<script type="text/javascript" src="js/jquery.ztree.excheck-3.0.js"></script>
+
+<script type="text/javascript">
+		var setting = {
+		check: {
+			enable: false
+		},
+		data: {
+			simpleData: {
+				enable: true
+			}
+		},
+		callback: {
+			onClick: onClick
+		}
+	};
+
+	
+	
+	var code;
+	
+	function setCheck() {
+		var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+		zTree.setting.check.chkboxType = type;
+		showCode("setting.check.chkboxType = { 'Y' : '" + type.Y + "', 'N' : '" + type.N + "' };");
+	}
+	function showCode(str) {
+		if (!code) code = $("#code");
+		code.empty();
+		code.append("<li>"+str+"</li>");
+	}
+	
+	var zNodes=[{id:1,name:'项目列表',pId:0,type:1,flag:0,open:true},{id:2,name:'巴西煤矿开发',pId:1},{id:3,name:'美国新能源开发',pId:1},{id:4,name:'巴西煤矿开采',pId:1}];
+	window.onload=function(){
+	
+			//alert(11);
+		$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+	
+		//setCheck();
+	}
+	
+	
+	function onClick(){
+		//alert(document.getElementById("con_two_1").style.display);
+		document.getElementById("con_two_1").style.display="none";
+		document.getElementById("con_two_2").style.display="block";
+	//	window.close();
+	}
+
+	function openInfo(){
+		window.showModalDialog("进出口业务管理_查看详情.html",window,"dialogWidth:950px;dialogHeight:350px:center:yes");
+	}
+	function openUpdate(){
+		window.showModalDialog("进出口业务管理_修改.html",window,"dialogWidth:950px;dialogHeight:350px:center:yes");
+	}
+</script>
+
+
+</head>
+
+<body>
+<table width="100%">
+    <tr>
+        <td width="20%" valign="top">
+        	<div>
+              <ul id="treeDemo" class="ztree"></ul>
+            </div>
+      </td>
+        <td width="80%">
+<div style="padding-top:10px;">
+	<table width="99%">
+		<tr>
+			<td><input type="button" value="新建订单" onclick="openXJDD();" /></td>
+		</tr>
+	</table>
+</div>
+
+    	<table width="99%" class="t1">
+			<tr class="a1">
+				<td>
+					<img id="tit1" src="../images/tit1.gif" height="18px" width="18px"  align="bottom" 
+
+/>进出口业务列表
+				</td>
+			</tr>
+		</table>
+
+<div id="con_two_1" >
+<table width="99%" id="mytab"  border="1" class="t1">
+  <tr class="a2">
+    <th width="8%"><div align="center">序号</div></th>
+    <th width="18%" ><div align="center">订单编号</div></th>
+    <th width="10%" ><div align="center">订单类型</div></th>
+    <th width="14%" ><div align="center">创建时间</div></th>
+	<th width="19%"><div align="center">项目名称</div></th>
+	<th width="10%"><div align="center">状态</div></th>
+    <th width="21%"><div align="center">操作</div></th>
+  </tr>
+    <tr>
+      <td><div align="center">1</div></td>
+    <td><div align="center">DDBH20120404</div></td>
+    <td><div align="center">出口</div></td>
+    <td><div align="center">2012-4-9</div></td>
+	<td><div align="center">
+	  <div align="center">巴西煤矿开发</div>
+	</div></td>
+	<td><div align="center">完成</div></td>
+     <td>
+       <div align="center"><a href="javascript:void(0)" onclick="openInfo();">查看详细</a>&nbsp;&nbsp;
+            <a href="javascript:void(0)" onclick="openUpdate();">修改</a>&nbsp;&nbsp;         </div></td>
+	</tr>
+    <tr class="a2">
+      <td><div align="center">2</div></td>
+      <td><div align="center">DDBH20120404</div></td>
+    <td><div align="center">出口</div></td>
+    <td><div align="center">2012-4-9</div></td>
+	<td><div align="center">
+	  <div align="center">巴西煤矿开发</div>
+	</div></td>
+	<td><div align="center">未完成</div></td>
+     <td>
+       <div align="center"><a href="javascript:void(0)" onclick="openInfo();">查看详细</a>&nbsp;&nbsp;
+            <a href="javascript:void(0)" onclick="openUpdate();">修改</a>&nbsp;&nbsp;         </div></td>
+	</tr>
+    <tr>
+      <td><div align="center">3</div></td>
+      <td><div align="center">DDBH20120404</div></td>
+    <td><div align="center">出口</div></td>
+    <td><div align="center">2012-4-9</div></td>
+	<td><div align="center">
+	  <div align="center">巴西煤矿开发</div>
+	</div></td>
+	<td><div align="center">完成</div></td>
+     <td>
+       <div align="center"><a href="javascript:void(0)" onclick="openInfo();">查看详细</a>&nbsp;&nbsp;
+            <a href="javascript:void(0)" onclick="openUpdate();">修改</a>&nbsp;&nbsp;         </div></td>
+	</tr>
+    <tr class="a2">
+      <td><div align="center">4</div></td>
+      <td><div align="center">DDBH20120404</div></td>
+    <td><div align="center">出口</div></td>
+    <td><div align="center">2012-4-9</div></td>
+	<td><div align="center">
+	  <div align="center">美国新能源开发</div>
+	</div></td>
+	<td><div align="center">未完成</div></td>
+     <td>
+       <div align="center"><a href="javascript:void(0)" onclick="openInfo();">查看详细</a>&nbsp;&nbsp;
+            <a href="javascript:void(0)" onclick="openUpdate();">修改</a>&nbsp;&nbsp;         </div></td>
+	</tr>
+    <tr>
+      <td><div align="center">5</div></td>
+      <td><div align="center">DDBH20120404</div></td>
+    <td><div align="center">出口</div></td>
+    <td><div align="center">2012-4-9</div></td>
+	<td><div align="center">美国新能源开发</div></td>
+	<td><div align="center">完成</div></td>
+     <td>
+       <div align="center"><a href="javascript:void(0)" onclick="openInfo();">查看详细</a>&nbsp;&nbsp;
+            <a href="javascript:void(0)" onclick="openUpdate();">修改</a>&nbsp;&nbsp;         </div></td>
+	</tr>
+</table>
+</div>
+<div id="con_two_2"  style="display:none" >
+<table width="99%" id="mytab"  border="1" class="t1">
+  <tr class="a2">
+    <th width="8%"><div align="center">序号</div></th>
+    <th width="18%" ><div align="center">订单编号</div></th>
+    <th width="10%" ><div align="center">订单类型</div></th>
+    <th width="14%" ><div align="center">创建时间</div></th>
+	<th width="19%"><div align="center">项目名称</div></th>
+	<th width="10%"><div align="center">状态</div></th>
+    <th width="21%"><div align="center">操作</div></th>
+  </tr>
+    <tr>
+      <td><div align="center">1</div></td>
+    <td><div align="center">DDBH20120404</div></td>
+    <td><div align="center">出口</div></td>
+    <td><div align="center">2012-4-9</div></td>
+	<td><div align="center">
+	  <div align="center">巴西煤矿开发</div>
+	</div></td>
+	<td><div align="center">完成</div></td>
+     <td>
+       <div align="center"><a href="javascript:void(0)" onclick="openInfo();">查看详细</a>&nbsp;&nbsp;
+            <a href="javascript:void(0)" onclick="openUpdate();">修改</a>&nbsp;&nbsp;         </div></td>
+	</tr>
+    <tr class="a2">
+      <td><div align="center">2</div></td>
+      <td><div align="center">DDBH20120404</div></td>
+    <td><div align="center">出口</div></td>
+    <td><div align="center">2012-4-9</div></td>
+	<td><div align="center">
+	  <div align="center">巴西煤矿开发</div>
+	</div></td>
+	<td><div align="center">未完成</div></td>
+     <td>
+       <div align="center"><a href="javascript:void(0)" onclick="openInfo();">查看详细</a>&nbsp;&nbsp;
+            <a href="javascript:void(0)" onclick="openUpdate();">修改</a>&nbsp;&nbsp;         </div></td>
+	</tr>
+    <tr>
+      <td><div align="center">3</div></td>
+      <td><div align="center">DDBH20120404</div></td>
+    <td><div align="center">出口</div></td>
+    <td><div align="center">2012-4-9</div></td>
+	<td><div align="center">
+	  <div align="center">巴西煤矿开发</div>
+	</div></td>
+	<td><div align="center">完成</div></td>
+     <td>
+       <div align="center"><a href="javascript:void(0)" onclick="openInfo();">查看详细</a>&nbsp;&nbsp;
+            <a href="javascript:void(0)" onclick="openUpdate();">修改</a>&nbsp;&nbsp;         </div></td>
+	</tr>
+</table>
+</div>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

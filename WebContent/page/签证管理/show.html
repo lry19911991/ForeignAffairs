@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>出国管理-->签证护照管理-->证件办理</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function zd(id,tit){
+	if(document.getElementById(id).style.display=="none"){
+		document.getElementById(id).style.display="block";
+		document.getElementById(tit).src="../images/tit1.gif";
+	}else{
+		document.getElementById(id).style.display="none";
+		document.getElementById(tit).src="../images/tit.gif";
+	}
+}
+function gb(){
+	window.close();
+}
+
+function openJQSFZ(){
+	window.open("http://localhost:8080/ForeignAffairs/FlexAndS2SH-debug/CutPicByMouse.html","_blank");
+}
+
+function openJQHK(){
+	window.open("http://localhost:8080/ForeignAffairs/FlexAndS2SH-debug/CutHuKouByMouse.html","_blank");
+}
+
+function openWord(){
+	window.open("http://localhost:8080/ForeignAffairs/weboffice/OfficeOnline.jsp","_blank");
+}
+
+function openZhaoPian(){
+	var s = document.getElementById("file");
+	s.click();
+		
+}
+
+</script>
+</head>
+
+<body>
+<table width="99%" class="t1">
+	<tr class="a1" onclick="zd('d3','tit3')">
+		<td colspan="4"><img id="tit3" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />人员信息</td>
+	</tr>
+</table>
+<div id="d3">
+<table width="99%" border="1" class="t1">
+	<tr>
+		<td width="20%">姓名：</td>
+		<td width="50%">李军军</td>
+       	<td align="center" width="30%" colspan="2" rowspan="5">
+        	<div style="width:90px; height:130px;">
+            	<img style="width:90px; height:110px;background:#CCC" src="images/yicun.jpg" />
+           		<input type="button" value="上传照片" onclick="openZhaoPian();" />
+           		<input type="file" id="file" style="display:none"/>
+            </div>
+        </td>
+	</tr>
+     <tr>
+    	<td>身份证号码：</td>
+		<td>
+			120798198802031678
+		</td>
+    </tr>
+    <tr>
+    	<td>政审批件号(备案号)</td>
+		<td>
+			<input type="text" style="width:70%;" value=""/>
+		</td>
+    </tr>
+    <tr>
+    	<td>身份加注</td>
+		<td>
+			<textarea style="width:70%" rows="3"></textarea>
+		</td>
+    </tr>
+    <tr>
+    	<td>数字照片编号</td>
+		<td >
+			<input type="text" style="width:70%;" value=""/>
+		</td>
+    </tr>
+</table>
+</div>
+<table width="99%" class="t1">
+	<tr class="a1" onclick="zd('d1','tit1')">
+		<td colspan="4"><img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />证件扫描件</td>
+	</tr>
+</table>
+<div id="d1">
+<table width="99%" border="1" class="t1">
+	<tr>
+    	<td width="20%">身份证扫描件</td>
+    	<td width="80%">
+        	<input type="file" style="width:70%" /> &nbsp;
+            <input type="button" value="上传"/>
+            <input type="button" value="截取" onclick="openJQSFZ();"/>
+        </td>
+    </tr>
+    <tr>
+    	<td width="20%">户口本扫描件</td>
+    	<td width="80%">
+        	<input type="file" style="width:70%" /> &nbsp;
+            <input type="button" value="上传"/>
+            <input type="button" value="截取" onclick="openJQHK();"/>
+        </td>
+    </tr>
+    <tr>
+    	<td width="20%">数字签名扫描件</td>
+    	<td width="80%">
+        	<input type="file" style="width:70%" /> &nbsp;
+            <input type="button" value="上传"/>
+            <input type="button" value="截取"/>
+        </td>
+    </tr>
+</table>
+</div>
+<table class="t1" width="99%">
+	<tr class="a1" onclick="zd('d2','tit2')">
+		<td colspan="4"><img id="tit2" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />联系人信息</td>
+	</tr>
+</table>
+<div id="d2">
+<table class="t1" width="99%">
+	<tr class="a2">
+		<td width="15%">联系人</td>
+		<td width="30%"><input type="text" style="width:70%;" value="林石"/></td>
+		<td width="15%">电话</td>
+		<td width="30%"><input type="text" style="width:70%;" value="13099998888"/></td>
+	</tr>
+	<tr>
+		<td>传真</td>
+		<td><input type="text" style="width:70%;" value="010-82256791" /></td>
+		<td>邮箱</td>
+		<td><input type="text" style="width:70%;" value="bj_ljj@chinacoal.com" /></td>
+	</tr>
+</table>
+</div>
+<table class="t1" width="99%">
+    <tr align="center">
+    	<td colspan="4">
+        	<input type="button" value="生成申请" onclick="openWord();"/>
+             &nbsp;
+            <input type="button" onclick="gb()" value="取消"/>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

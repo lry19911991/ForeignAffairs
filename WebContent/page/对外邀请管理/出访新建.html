@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>出访新建</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function jump(){
+	window.close();;
+}
+function showCountry(){
+	window.open("../对外邀请管理/显示国家页.html","_blank");
+}
+</script>
+</head>
+
+<body>
+	<div>
+		<table width="99%" id="tztab"  border="1" class="t1">
+			<tr>
+				<td>出访人</td>
+				<td><input type="text"/></td>
+				<td>出访时间</td>
+				<td><input type="text" /></td>
+			</tr>
+			<tr>
+				<td>出访国家</td>
+				<td><input type="text" /> <input type="button" onclick="showCountry()" value="选择国家" /></td>
+				<td>出访原因</td>
+				<td><input type="text" /></td>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<input type="button" value="提交" />
+					<input type="button" onclick="jump()" value="返回" />
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

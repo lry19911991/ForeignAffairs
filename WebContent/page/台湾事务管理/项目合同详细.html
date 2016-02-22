@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script language="javascript" type="text/javascript" src="../My97DatePicker/WdatePicker.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>项目合同详细</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.STYLE1 {font-weight: bold}
+-->
+</style>
+<script type="text/javascript">
+	function jump(){
+		window.open("../台湾事务管理/项目合同列表.html","_self");
+	}
+</script>
+</head>
+
+<body>
+<table width="99%" border="1" class="t1">
+<tr>
+    <td width="18%">提交身份</td>
+    <td colspan="3">
+	<select disabled="disabled">
+	<option>身份一</option>
+	<option>身份二</option>
+	</select> </td>
+  </tr>
+<tr>
+    <td width="18%">项目编号</td>
+    <td width="35%"><input type="text" value="XMBH20110301" disabled="disabled"/></td>
+    <td width="18%">项目名称</td>
+    <td width="29%"><input type="text" value="XX项目"disabled="disabled"/> </td>
+  </tr>
+<tr>
+    <td width="18%">资金来源</td>
+    <td width="27%"><input type="text" value="工程款"  disabled="disabled"/> </td>
+    <td width="23%">合同类型</td>
+    <td width="32%">
+	<input type="radio" name="合同类型"value="0" checked="checked"/>国际
+	<input type="radio" name="合同类型"value="1" />国内	</td>
+  </tr>
+<tr>
+    <td width="18%" height="71">合同当事人</td>
+    <td colspan="3">
+		<table width="100%">
+			<tr align="left">
+				<td colspan="9" nowrap="nowrap"><strong>【选择当事人】  【删除】 </strong>【<strong>明细</strong>】</td>
+			  <td colspan="2" nowrap="nowrap">金额单位：万元</td>
+			</tr>
+			<tr >
+				<td><strong>序号</strong></td>
+			  <td>			    <input type="checkbox" class="STYLE1" />		      </td>
+				<td width="9%"><strong>当事人类别</strong></td>
+				<td width="9%"><strong>当事人名称</strong></td>
+				<td width="9%"><strong>国名简称</strong></td>
+				<td width="9%"><strong>区号</strong></td>
+				<td width="18%"><strong>银行名称</strong></td>
+				<td width="18%"><strong>银行账号</strong></td>
+				<td width="9%"><strong>开户行</strong></td>
+				<td width="9%"><strong>注册资金</strong></td>
+				<td width="9%"><strong>货币类型</strong></td>
+			</tr>
+			<tr >
+				<td><strong>1</strong></td>
+			  <td>			    <input type="checkbox" class="STYLE1" />		      </td>
+				<td width="9%"> </td>
+				<td width="9%">李四 </td>
+				<td width="9%">中国 </td>
+				<td width="9%">086 </td>
+				<td width="18%">XX银行</td>
+				<td width="18%">1234567890 </td>
+				<td width="9%">天津市XX银行 </td>
+				<td width="9%">10000 </td>
+				<td width="9%">人民币</td>
+			</tr>
+	  </table>	</td>
+  </tr>
+<tr>
+    <td width="18%">合同标的</td>
+    <td colspan="3"><textarea rows="3" cols="80" disabled="disabled">合同标的填写位置。</textarea></td>
+  </tr>
+<tr>
+    <td width="18%">合同说明及摘要</td>
+    <td colspan="3"><textarea rows="8" cols="80" disabled="disabled">合同说明及摘要填写位置、合同说明及摘要填写位置、合同说明及摘要填写位置</textarea></td>
+  </tr>
+<tr>
+    <td width="18%" rowspan="2">合同依据</td>
+	<td colspan="3"><textarea rows="8" cols="80" disabled="disabled">合同依据填写位置。</textarea></td>
+</tr>
+<tr>
+    <td colspan="3"><input type="button" value="点击查看已上传附件列表" /></td>
+  </tr>
+<tr>
+    <td width="18%">金额类型</td>
+    <td width="27%">
+	<select disabled="disabled">
+		<option>实际金额</option>
+		<option>金额类型1</option>
+		<option>金额类型2</option>
+	</select>	</td>
+    <td width="23%">款项方向</td>
+    <td width="32%">
+	<select disabled="disabled">
+		
+		<option>款项方向一</option>
+		<option>款项方向二</option>
+	</select>	</td>
+  </tr>
+<tr>
+    <td width="18%">货币类型</td>
+    <td width="27%">
+	<select disabled="disabled">
+		<option>人民币</option>
+		<option>美元</option>
+		<option>欧元</option>
+		<option>英镑</option>
+		<option>日元</option>
+	</select>	</td>
+    <td width="23%">金额数值</td>
+    <td width="32%"><input type="text" value="200" disabled="disabled" />
+      万元 </td>
+  </tr>
+<tr>
+    <td width="18%">订金（预付款）或定金</td>
+    <td colspan="3">
+		<input type="radio" name="定金、定金"value="0" checked="checked"/>订金（预付款）
+		<input type="radio" name="定金、定金"value="0" />定金
+		<input type="radio" name="定金、定金"value="0" />无	</td>
+  </tr>
+<tr>
+    <td width="18%">违约金</td>
+    <td colspan="3"><input type="text" value="30000" disabled="disabled"/>
+    元 </td>
+  </tr>
+<tr>
+    <td width="18%">质保金</td>
+    <td width="27%"><input type="text"  value="4000" disabled="disabled"/>
+      万元 </td>
+    <td width="23%">质保金比例</td>
+    <td width="32%"><input type="text" value="20" disabled="disabled"/>
+      % </td>
+  </tr>
+<tr>
+    <td width="18%">合同大类别</td>
+    <td width="27%">
+	<select disabled="disabled">
+		
+		<option>合同大类别一</option>
+		<option>合同大类别二</option>
+	</select>	</td>
+    <td width="23%">合同小类别</td>
+    <td width="32%">
+		<select disabled="disabled">
+		
+		<option>合同小类别一</option>
+		<option>合同小类别二</option>
+		</select>	</td>
+  </tr>
+<tr>
+    <td width="18%">是否关联交易</td>
+    <td colspan="3">
+		<input type="radio" name="关联交易"value="0" />
+		是
+		<input type="radio" name="关联交易"value="1"  checked="checked"/>
+		否	</td>
+  </tr>
+<tr>
+    <td width="18%">是否招投标</td>
+    <td colspan="3">
+		<input type="radio" name="招投标"value="0" />
+		是
+		<input type="radio" name="招投标"value="1" checked="checked" />
+		否	</td>
+  </tr>
+<tr>
+    <td width="18%">是否担保</td>
+    <td colspan="3">
+		<input type="radio" name="担保"value="0" />
+		是
+		<input type="radio" name="担保"value="1" checked="checked" />
+		否	</td>
+  </tr>
+<tr>
+    <td width="18%" rowspan="2">履行期限</td>
+    <td colspan="3">从<input type="text" value="2012-3-3"onclick="WdatePicker()"  disabled="disabled"/>
+      至
+        <input type="text" value="2012-8-9" onclick="WdatePicker()" disabled="disabled" /></td>
+  </tr>
+<tr>
+    <td colspan="3">描述<input type="text" width="600" value="描述填写内容" disabled="disabled" /></td>
+  </tr>
+<tr>
+    <td width="18%" rowspan="2">款项进度描述</td>
+    <td colspan="3">
+		<input type="radio" name="款项进度"value="0"  checked="checked"/>一次性
+		<input type="radio" name="款项进度"value="1" />分期	</td>
+  </tr>
+<tr>
+    <td colspan="3"><textarea rows="8" cols="80" disabled="disabled">付款进度描述</textarea></td>
+  </tr>
+<tr>
+      <td width="18%">保密级别</td>
+    <td colspan="3">
+		<input type="radio" name="保密"value="0" checked="checked" />普通商密
+		<input type="radio" name="保密"value="1" />核心商密	</td>
+  </tr>
+<tr>
+      <td width="18%" rowspan="2"  >合同文本</td>
+<tr>
+    <td colspan="3"><input type="button" value="点击查看合同" /></td>
+  </tr>
+<tr>
+      <td width="18%">合同附件</td>
+    <td colspan="3"><input type="button" value="点击查看附件列表" /></td>
+  </tr>
+<tr>
+      <td width="18%">重要日期</td>
+    <td colspan="3">
+	
+		<table width="100%" border="1">
+			<tr>
+				<td colspan="5">【新增】 【删除】</td>
+			</tr>
+		  <tr>
+			<td width="7%"nowrap="nowrap"><strong>序号</strong></td>
+			<td width="7%" nowrap="nowrap"><input type="checkbox" /></td>
+			<td  width="25%"nowrap="nowrap"><strong>开始时间</strong></td>
+			<td width="25%"nowrap="nowrap"><strong>结束时间</strong></td>
+			<td width="40%"nowrap="nowrap"><strong>内容</strong></td>
+		  </tr>
+	  </table>
+	</td>
+  </tr>
+<tr>
+      <td width="18%" rowspan="2">合同用印</td>
+    <td colspan="3">【新增】 【删除】</td>
+  </tr>
+<tr>
+    <td colspan="3"><table width="100%" border="1">
+      <tr>
+        <td width="7%" nowrap="nowrap"><strong>序号</strong></td>
+        <td width="7%"nowrap="nowrap"><input type="checkbox" /></td>
+        <td width="20%" nowrap="nowrap"><strong>印章种类</strong></td>
+        <td  width="20%"nowrap="nowrap"><strong>用印数量（含骑缝章）</strong></td>
+      </tr>
+    </table></td>
+  </tr>
+<tr>
+  <td>关联合同编号</td>
+  <td><input type="text" value="HT20120303" disabled="disabled"/></td>
+  <td>关联合同</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>经办人</td>
+  <td><input type="text"  value="张三" disabled="disabled"/></td>
+  <td>经办人电话</td>
+  <td><input name="text" type="text"  value="12345678" disabled="disabled"/></td>
+</tr>
+<tr>
+  <td>经办处室</td>
+  <td><input type="text"  value="经办管理处" disabled="disabled"/></td>
+  <td>经办部门</td>
+  <td><input name="text" type="text" value="法律事务部" disabled="disabled" /></td>
+</tr>
+<tr>
+  <td>经办单位</td>
+  <td><input type="text" disabled="disabled" value="中国中煤能源集团有限公司" /></td>
+  <td>经办时间</td>
+  <td><input name="text" type="text" value="2012-3-2" disabled="disabled" /></td>
+</tr>
+<tr>
+    <td colspan="4">
+	     <input type="button" onclick="jump()" value="返回" /></td>
+  </tr>
+</table>
+</body>
+</html>

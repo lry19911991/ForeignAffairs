@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>申请列表</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+
+<script language="javascript">
+
+function showAudit(){
+	window.showModalDialog("audit.html",window,"dialogWidth=950px;dialogHeight=550px");
+}
+
+function show(){
+	window.showModalDialog("show.html",window,"dialogWidth=950px;dialogHeight=350px");
+}
+
+function showInfo(){
+	window.showModalDialog("showinfo.html",window,"dialogWidth=950px;dialogHeight=350px");
+}
+
+function showMsg(){
+	alert("上报成功！");
+}
+
+function opennew(){
+	window.open("new.html","content");
+}
+
+function openfile(){
+	window.open("../newplan.xls","_blank");
+}
+</script>
+</head>
+<body>
+<div style="height:25px; text-align:left">
+	<input type="button" value="新建出国请示" onclick="opennew();" />&nbsp;&nbsp;
+	<input type="button" value="导出选中项" onclick="openfile();" />
+</div>
+<div>
+<table width="100%" border="1" class="t1">
+	<tr class="a1">
+		<td>
+			<img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />待审申请
+		</td>
+	</tr>
+</table>
+</div>
+  <div id="d1" >
+       <table width="100%" border="1" class="t1">
+           <tr class="a2">
+           	   <th width="10%"><input type="checkbox"/>全选</th>
+               <th width="8%">序号</th>
+               <th width="15%">申请编号</th>
+               <th width="20%">申请名称</th>
+               <th width="17%">计划名称</th>
+               <th width="15%">单位名称</th>
+               <th width="15%">当前状态</th>
+           </tr>
+           <tr align="center">
+           	   <td><input type="checkbox"/></td>
+               <td>1</td>
+               <td>
+               	<a href="javascript:void(0);" onclick="showAudit();">DT2012-SQ-0120</a>
+               </td>
+               <td>
+                   <a href="javascript:void(0);" onclick="showAudit();">大屯能源出国培训申请</a>
+               </td>
+               <td>大屯公司2012年出国计划</td>
+               <td>大屯能源股份有限公司</td>
+               <td>
+                   	待审核
+               </td>
+           </tr>
+           
+       </table>
+  </div>
+  
+</body>
+</html>

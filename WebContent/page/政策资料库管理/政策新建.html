@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新建政策信息</title>
+
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script language="javascript">
+	function zd(id,tit){
+		if(document.getElementById(id).style.display=="none"){
+		document.getElementById(id).style.display="block";
+		document.getElementById(tit).src="../images/tit1.gif";
+		}else{
+		document.getElementById(id).style.display="none";
+		document.getElementById(tit).src="../images/tit.gif";
+		}
+	}
+	function country(){
+	window.showModalDialog("../对外邀请管理/显示国家页.html",window,"dialogWidth:800px;dialogHeight:600px:center:yes");
+	}
+</script>
+</head>
+
+<body>
+	<table width="99%" class="t1">
+		<tr class="a1" onclick="zd('d1','tit1')">
+			<td colspan="4"><img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />政策信息</td>
+		</tr>
+	</table>
+	<div id="d1">
+	<table width="99%"  border="1" class="t1">
+		<tr class="a2">
+			<td width="15%">编号</td>
+			<td width="35%"><input type="text" /></td>
+			<td width="15%">标题</td>
+			<td width="35%"><input type="text" /></td>
+		</tr>
+		<tr class="a2">
+			<td width="15%">附件</td>
+		  	<td colspan="1"><input type="file" value="选择附件..."/></td>
+			<td width="15%">类别</td>
+			<td width="35%"><select name="category">
+								<option>公司政策</option>
+								<option>法律政策</option>
+								<option>行业政策</option>
+								<option>其它政策</option>
+							</select>
+			</td>
+		</tr>
+		<tr class="a2">
+			<td>政策内容</td>
+			<td colspan="3"><textarea rows="3" cols="70"></textarea></td>
+		</tr>
+	</table>
+	</div>
+	<table width="99%" class="t1">
+		<tr class="a1" onclick="zd('d2','tit2')">
+			<td colspan="4"><img id="tit2" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />发布信息</td>
+		</tr>
+	</table>
+	<div id="d2">
+	<table width="99%" border="1" class="t1">
+		<tr class="a2">
+			<td width="15%">发布人</td>
+			<td width="35%"><input type="text" value="林石" disabled="disabled" /></td>
+			<td width="15%">发布时间</td>
+			<td width="35%"><input type="text" value="2012-6-16"  disabled="disabled"/></td>
+		</tr>
+	</table>
+	</div>
+	<div>
+	<table width="99%" border="1" class="t1">
+		<tr align="center">
+			<td colspan="4">
+				<input type="button" value="提交" />&nbsp;&nbsp;
+				<input type="button" value="保存" />&nbsp;&nbsp;
+				<input type="button" value="清空" />
+			</td>
+		</tr>
+	</table>
+	</div>
+</body>
+	
+</html>

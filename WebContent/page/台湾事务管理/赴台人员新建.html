@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>赴台人员新建</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div>
+		<table width="99%" id="tztab"  border="1" class="t1">
+			<tr>
+				<td colspan="4">人员信息</td>
+			</tr>
+			<tr>
+				<td><font color="red">*</font>姓名</td>
+				<td colspan="3"><input type="text" />&nbsp;&nbsp;<input type="button" value="选择人员" /></td>
+				
+			</tr>
+			<tr>
+				<td><font color="red">*</font>职务</td>
+				<td colspan="3">
+					<select>
+						<option>职务</option>
+						<option>技术工程师</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><font color="red">*</font>性别</td>
+				<td><input type="radio" name="sex" checked="checked" />男<input type="radio" name="sex" />女</td>
+				<td><font color="red">*</font>出生日期</td>
+				<td><input type="text" /></td>
+			</tr>
+			<tr>
+				<td><font color="red">*</font>身份证号</td>
+				<td><input type="text" /></td>
+				<td><font color="red">*</font>联系方式</td>
+				<td><input type="text" /></td>
+			</tr>
+			<tr>
+				<td><font color="red">*</font>住址</td>
+				<td colspan="3"><textarea cols="109" rows="5"></textarea></td>
+			</tr>
+			<tr>
+				<td colspan="4"><font color="red">*</font>证件信息</td>
+			</tr>
+			<tr>
+				<td><font color="red">*</font>证件类型</td>
+				<td colspan="3">
+					<select>
+						<option>证件类型</option>
+						<option>身份证</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>证件描述</td>
+				<td colspan="3"><textarea cols="109" rows="5"></textarea></td>
+			</tr>
+			<tr>
+				<td><font color="red">*</font>证件附件</td>
+				<td colspan="3"><input type="file" style="width:60%;" /></td>
+			</tr>
+			<tr>
+				<td><font color="red">*</font>所在机构或部门</td>
+				<td>
+					<select>
+						<option>机构或部门</option>
+						<option>工程部</option>
+					</select>
+				</td>
+				<td>参加工作时间</td>
+				<td><input type="text" /></td>
+			</tr>
+			<tr>
+				<td>开始审查时间</td>
+				<td colspan="3"><input type="text" /></td>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<input type="button" value="提交" /><input type="button" onclick="jump()" value="返回" />
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+function jump(){
+	window.open("../台湾事务管理/赴台人员列表.html","_self");
+}
+</script>

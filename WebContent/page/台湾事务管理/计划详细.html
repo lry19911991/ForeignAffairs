@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<title>计划详细</title> 
+
+<style type="text/css"> 
+	body{ font-size:12px;} 
+	.sec,.sec1{ cursor:pointer;} 
+	.sec{ color:#FFFFFF; font-weight:bold; text-align:center; background-color:#9DB3C5;}
+	.sec1{ color:#9DB3C5; text-align:center; background-color:#FFFFFF;} 
+	div{ line-height:22px;} 
+</style> 
+
+<script language="javascript"> 
+function $(id){ 
+return document.getElementById(id); 
+} 
+function xxk(num,id,ii,iii) 
+{ 
+//alert(ii); 
+var dq; 
+for(var i=1;i<=num;i++) 
+{ 
+   if(i==id){ 
+	  dq=$(ii+i).className='sec'; //当前选项 
+	  $(iii+i).style.display="block"; 
+   } 
+   else 
+   { 
+	  dq=$(ii+i).className='sec1'; 
+	  $(iii+i).style.display="none"; 
+   } 
+} 
+} 
+</script> 
+
+</head> 
+
+<body> 
+    <table width="100%" border="0" cellpadding="4" cellspacing="1" bordercolor="#FFFFFF" bgcolor="#9DB3C5">
+       <tr> 
+         <td class="sec" id="ts1" onclick="xxk(4,1,'ts','tts')">新建计划</td> 
+         <td bgcolor="#FFFFFF" id="ts2" class="sec1" onclick="xxk(4,2,'ts','tts')">项目管理</td>
+         <td bgcolor="#FFFFFF" id="ts3" class="sec1" ></td>
+         <td bgcolor="#FFFFFF" id="ts4" class="sec1" ></td>
+       </tr> 
+     <tr> 
+    <td colspan="4" bgcolor="#FFFFFF"> 
+        <div id="tts1">
+        	<table width="99%" border="1" class="t1">
+				<tr>
+					<td colspan="4">新建计划</td>
+				</tr>
+				<tr>
+					<td>计划编号</td>
+					<td colspan="3">123456</td>
+				</tr>
+				<tr>
+					<td>出访地区</td>
+					<td colspan="3">
+					台湾
+				</td>
+				</tr>
+				<tr>
+					<td>出访时间</td>
+					<td>2012-1-1</td>
+					<td>回国时间</td>
+					<td>2012-1-13</td>
+				</tr>
+				<tr>
+					<td>出访原因或任务</td>
+					<td colspan="3">出访原因</td>
+				</tr>
+				<tr>
+					<td>计划年度</td>
+					<td>
+						2012
+					</td>
+					<td>上报文号</td>
+					<td>123456</td>
+				</tr>
+				<tr>
+					<td colspan="4">申请人信息</td>
+				</tr>
+				<tr>
+					<td>申请人</td>
+					<td>张三</td>
+					<td>电话</td>
+					<td>123456</td>
+				</tr>
+				<tr>
+					<td>单位</td>
+					<td>大屯能源股份有限公司</td>
+					<td>部门</td>
+					<td>行政部</td>
+					<td>科室</td>
+					<td>行政科</td>
+					<td>填报时间</td>
+					<td>2012-05-17</td>
+				</tr>
+				<tr>
+					<td colspan="2"> 
+						<input type="button" value="返回" onclick="jump()" /> 
+					</td>
+				</tr>
+				
+			</table>
+				</div> 
+				<div id="tts2" style="display:none;">
+					<div>
+						<table width="99%" border="1" class="t1">
+							<tr>
+								<td>项目编号</td>
+								<td>123456789</td>
+								<td>项目名称</td>
+								<td>123456789</td>
+							</tr>
+							<tr>
+								<td>项目类型</td>
+								<td >
+									类型一
+								</td>
+								<td>赴台人数</td>
+								<td>4</td>
+							</tr>
+							<tr>
+								<td>计划费用</td>
+								<td colspan="3">20000</td>
+							</tr>
+							<tr>
+								<td>地区</td>
+								<td colspan="3">台湾</td>
+							</tr>
+							<tr>
+								<td>备注</td>
+								<td colspan="3">备注备注。。。。。。</td>
+							</tr>
+							<tr>
+								<td colspan="4">
+									<input type="button" value="返回" onclick="jump()" />
+								</td>
+							</tr>
+						</table>
+					</div>
+
+				</div> 
+				<div id="tts3" style="display:none;">
+					<div>
+						<table width="99%" border="1" class="t1">
+						  <tr>
+							<td width="30%;">团组编号</td>
+							<td>123456789</td>
+						  </tr>
+						  <tr>
+							<td>计划人数</td>
+							<td>3</td>
+						  </tr>
+						  <tr>
+							<td>人员信息</td>
+							<td>
+								<table border="1">
+									<tr>
+										<td>序号</td>
+										<td>姓名</td>
+										<td>工作单位</td>
+										<td>职务</td>
+										<td>操作</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>张三</td>
+										<td>工作单位一</td>
+										<td>工程师</td>
+										<td>
+											<a href="../台湾事务管理/人员详细.html">查看</a>
+										</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>李四</td>
+										<td>工作单位二</td>
+										<td>技术顾问</td>
+										<td>
+											<a href="../台湾事务管理/人员详细.html">查看</a>
+										</td>
+									</tr>
+								</table>
+							</td>
+						  </tr>
+						  <tr>
+							<td>是否有副司局级人员</td>
+							<td>否</td>
+						  </tr>
+						  <tr>
+							<td>副司局级以上人员名单</td>
+							<td>
+								
+							</td>
+						  </tr>
+						  <tr>
+							<td>备注</td>
+							<td>备注备注。。。。。。</td>
+						  </tr>
+						  <tr>
+							<td colspan="2">
+								<input type="button" value="取消" />
+							</td>
+						  </tr>
+						</table>
+					</div>
+					
+				</div> 
+				<div id="tts4" style="display:none;">
+					<div>
+						<table width="99%" border="1" class="t1">
+							<tr>
+								<td>项目编号</td>
+								<td>123456789</td>
+								<td>团组编号</td>
+								<td>123456789</td>
+							</tr>
+							<tr>
+								<td>费用金额</td>
+								<td>10万元</td>
+								<td>费用来源</td>
+								<td>
+									合同支付
+								</td>
+							</tr>	
+							<tr>
+								<td>备注</td>
+								<td colspan="3">备注备注。。。。。。</td>
+							</tr>
+							<tr>
+								<td colspan="4"><input type="button" value="取消" /></td>
+							</tr>
+						</table>
+					</div>
+				</div> 
+			</td> 
+		  </tr> 
+    </table> 
+</body> 
+</html> 
+<script type="text/javascript">
+function jump(){
+	window.open("../台湾事务管理/赴台计划列表.html","_self");
+}
+function showCountry(){
+	window.open("../对外邀请管理/显示国家页.html","_blank");
+}
+</script>

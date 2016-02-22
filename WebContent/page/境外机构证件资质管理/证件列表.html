@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>证书列表</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+
+function showinfo(){
+	window.showModalDialog("证件详细.html",window,"dialogWidth=950px;dialogHeight=450px");
+}
+
+function showcheck(){
+	window.showModalDialog("证件年检.html",window,"dialogWidth=750px;dialogHeight=250px");
+}
+
+function showchange(){
+	window.showModalDialog("证件变更.html",window,"dialogWidth=750px;dialogHeight=350px");
+}
+
+</script>
+
+</head>
+
+<body>
+	<div style="padding-top:10px;">
+		<table width="99%" class="t1">
+			<tr>
+				<td width="15%">证件名称</td>
+				<td width="35%"><input type="text" /></td>
+				<td width="15%">证件类型</td>
+				<td width="35%">
+                	<select>
+                    	<option>--请选择--</option>
+                        <option>有限责任公司</option>
+                        <option>股份制企业</option>
+                        <option>其他</option>
+                    </select>
+                </td>
+			</tr>
+             <tr>
+            	<td>注册号</td>
+                <td><input type="text"/></td>
+                <td>法定代表人</td>
+                <td><input type="text" /></td>
+            </tr>
+			<tr>
+				<tr>
+					<td>关联单位</td>
+					<td colspan="3">
+                        <input type="text" />
+                        &nbsp;&nbsp;&nbsp;
+                        <input type="button" value="筛选" />
+                    </td>
+				</tr>
+			</tr>
+		</table>
+	</div>
+	
+	<div style="padding-top:10px;">
+    	<table width="99%" class="t1">
+			<tr class="a1">
+				<td>
+                	<img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />证件列表
+                </td>
+			</tr>
+		</table>
+		<table width="99%" id="tztab"  border="1" class="t1">
+			<tr class="a2">
+					<th width="8%">序号</th>
+					<th width="17%">证件名称</th>
+                    <th width="10%">类型</th>
+                    <th width="15%">注册号码</th>
+                    <th width="13%">法定代表人</th>
+                    <th width="15%">关联单位</th>
+					<th width="22%">操作</th>
+			</tr>
+			<tr align="center">
+				<td>1</td>
+				<td>平朔公司营业执照</td>
+				<td>营业执照</td>
+				<td>90871234560</td>
+                <td>将军</td>
+                <td>平朔股份公司</td>
+				<td>
+					<a href="javascript:void(0);" onclick="showinfo();">查看</a>&nbsp;
+                    <a href="javascript:void(0);" onclick="showcheck();">年检</a>&nbsp;
+                    <a href="javascript:void(0);" onclick="showchange();">变更</a>&nbsp;
+					<a href="javascript:void(0);">注销</a>
+				</td>
+			</tr>
+			<tr align="center">
+				<td>2</td>
+				<td>大屯公司营业执照</td>
+				<td>营业执照</td>
+				<td>90874321560</td>
+                <td>李勇</td>
+                <td>大屯股份公司</td>
+				<td>
+					<a href="javascript:void(0);" onclick="showinfo();">查看</a>&nbsp;
+                    <a href="javascript:void(0);" onclick="showcheck();">年检</a>&nbsp;
+                    <a href="javascript:void(0);" onclick="showchange();">变更</a>&nbsp;
+					<a href="javascript:void(0);">注销</a>
+				</td>
+			</tr>
+			
+		</table>
+	</div>
+</body>
+</html>

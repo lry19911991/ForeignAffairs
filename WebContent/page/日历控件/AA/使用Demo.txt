@@ -1,0 +1,10 @@
+<asp:TextBox ID="txtStartDate" runat="server" Width="180px"
+ onclick="return SelectDate(this,'yyyy-MM-dd');">
+</asp:TextBox>
+
+<input type=text onclick="SelectDate(this,'yyyy-MM-dd');">
+
+.net <script language="javascript" src=WebCalendar2.js type="text/javascript" charset="gb2312"></script> 
+// gb2312可解决乱码
+
+支持中/英文，可扩展，详见JS文件

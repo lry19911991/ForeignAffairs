@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>资料库修改</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div>
+		<table width="90%" id="tztab"  border="1" class="t1">
+			<tr>
+				<td>资料名称</td>
+				<td><input type="text" value="资料名称一" /></td>
+				<td>资料分类</td>
+				<td>
+					<select>
+						<option>资料分类</option>
+						<option selected="selected">分类一</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>资料描述</td>
+				<td colspan="3"><textarea rows="5" cols="70">资料描述。。。。。。</textarea></td>
+			</tr>
+			<tr>
+				<td>相关附件</td>
+				<td colspan="3"><input type="file" style="width:60%;" /></td>
+			</tr>
+			<tr>
+				<td>发布人</td>
+				<td><input type="text" value="张三" /></td>
+				<td>创建时间</td>
+				<td><input type="text" value="2012-4-4" /></td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" value="提交" /><input type="button" onclick="jump()" value="返回" />
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+function jump(){
+	window.open("../政策资料库管理/资料库列表.html","_self");
+}
+</script>

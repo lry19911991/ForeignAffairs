@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE>项目树结构</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ztree.core-3.0.js"></script>
+	<script type="text/javascript" src="js/jquery.ztree.excheck-3.0.js"></script>
+	<!--
+	<script type="text/javascript" src="js/jquery.ztree.exedit-3.0.js"></script>
+	-->
+	<SCRIPT type="text/javascript">
+		var setting = {
+		check: {
+			enable: false
+		},
+		data: {
+			simpleData: {
+				enable: true
+			}
+		},
+		callback: {
+			onClick: onClick
+		}
+	};
+
+	
+	
+	var code;
+	
+	function setCheck() {
+		var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+		zTree.setting.check.chkboxType = type;
+		showCode("setting.check.chkboxType = { 'Y' : '" + type.Y + "', 'N' : '" + type.N + "' };");
+	}
+	function showCode(str) {
+		if (!code) code = $("#code");
+		code.empty();
+		code.append("<li>"+str+"</li>");
+	}
+	
+	var zNodes=[{id:1,name:'项目列表',pId:0,type:1,flag:0,open:true},{id:2,name:'巴西煤矿开发',pId:1},{id:3,name:'美国新能源开发',pId:1},{id:4,name:'巴西煤矿开采',pId:1}];
+	window.onload=function(){
+	
+			//alert(11);
+		$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+	
+		//setCheck();
+	}
+	
+	
+	function onClick(){
+		alert(11);
+	//	window.close();
+	}
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+<table width="100%">
+    <tr>
+        <td width="40%">
+        	<div>
+                <ul id="treeDemo" class="ztree"></ul>
+            </div>
+        </td>
+        <td width="60%">
+liuxiaodong
+        </td>
+    </tr>
+</table>
+	
+	
+</BODY>
+</HTML>

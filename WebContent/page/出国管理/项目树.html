@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>人员树</title>
+<link rel="stylesheet" href="../JQuery zTree/css/zTreeStyle/zTreeStyle.css" type="text/css">
+<script type="text/javascript" src="../JQuery zTree/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="../JQuery zTree/js/jquery.ztree.core-3.0.js"></script>
+<script type="text/javascript" src="../JQuery zTree/js/jquery.ztree.excheck-3.0.js"></script>
+
+	<script type="text/javascript">
+		var setting = {
+		check: {
+			enable: false
+		},
+		data: {
+			simpleData: {
+				enable: true
+			}
+		},
+		callback: {
+			onClick: onClick
+		}
+	};
+
+	
+	
+	var code;
+	
+	function setCheck() {
+		var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+		zTree.setting.check.chkboxType = type;
+		showCode("setting.check.chkboxType = { 'Y' : '" + type.Y + "', 'N' : '" + type.N + "' };");
+	}
+	function showCode(str) {
+		if (!code) code = $("#code");
+		code.empty();
+		code.append("<li>"+str+"</li>");
+	}
+	//产生树的数据
+	var zNodes=[{id:1,name:'项目列表',pId:0,type:1,flag:0,open:true},{id:2,name:'巴西煤矿开发',pId:1},{id:3,name:'美国新能源开发',pId:1},{id:4,name:'巴西煤矿开采',pId:1}];
+	window.onload=function(){
+	
+		$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+
+	}
+	
+	
+	function onClick(){
+		window.close();
+	}
+</script>
+</head>
+<body>
+	<div >
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+</body>
+</html>

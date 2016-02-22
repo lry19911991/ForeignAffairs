@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<!--指定上传组件  默认 jakarta   即 apache common upload-->
+	<constant name="struts.multipart.parser" value="jakarta"></constant>
+	
+	<!--制定上传文件临时存放路径	-->
+	<constant name="struts.multipart.saveDir" value="/file"></constant>
+
+	<!--指定上传文件的最大字节数  -->
+	<constant name="struts.multipart.maxSize" value="200000000"></constant>
+	
+	<!--国际化文件  便于上传验证-->
+	<constant name="struts.custom.i18n.resources" value="messageResource"></constant>
+	
+	<package name="defaultPackage" extends="struts-default">
+		<!--通过interceptors 标签声明拦截器和拦截器栈-->
+		<interceptors>
+			<interceptor-stack name="baseInterceptor">
+			<!--拦截器fileUpload  负责拦截enctype="multipart/form-data"的表单-->
+				<interceptor-ref name="fileUpload">
+					<!--设置允许上传的文件类型,此处为覆盖struts-default的fileUpload拦截器配置 -->
+					<param name="allowedTypes">image/bmp,image/png,image/gif,image/jpeg,image/jpg,image/x-png,image/pjpeg,application/vnd.ms-excel,application/x-xls</param>
+				</interceptor-ref>
+				
+				<!--性能监控拦截器-->
+				<interceptor-ref name="timer" />
+				
+				<!-- 默认拦截器栈 必须加入 -->
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		
+		<!--设置baseInterceptor拦截器是当前package 的默认拦截器	-->
+		<default-interceptor-ref name="baseInterceptor"></default-interceptor-ref>
+		</package>
+</struts>    

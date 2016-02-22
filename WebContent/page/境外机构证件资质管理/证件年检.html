@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>境外机构资质管理-->证件资质管理-->年检信息</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../My97DatePicker/WdatePicker.js" ></script>
+</head>
+
+<body>
+<div>
+<table width="100%" class="t1">
+	<tr class="a1">
+    	<td>
+        	<img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />年检信息
+        </td>
+    </tr>
+</table>
+</div>
+<table width="100%" class="t1">
+	<tr>
+    	<td width="15%">证件类型</td>
+        <td width="35%">
+        	<select disabled="disabled">
+            	<option>--请选择--</option>
+                <option selected="selected">营业执照</option>
+                <option>开采许可证</option>
+            </select>
+        </td>
+        <td width="15%">证件名称</td>
+        <td width="35%">
+        	<input type="text" disabled="disabled" value="平朔公司营业执照" />
+        </td>
+    </tr>
+    <tr>
+    	<td>经办部门</td>
+        <td><input type="text" disabled="disabled" value="企业管理部" /></td>
+        <td>经办人</td>
+        <td><input type="text" disabled="disabled" value="林石" /></td>
+    </tr>
+    <tr>
+    	<td>年检年份</td>
+        <td>
+        	<select>
+            	<option>--请选择--</option>
+                <option selected="selected">2012</option>
+                <option>2013</option>
+                <option>2014</option>
+                <option>2015</option>
+                <option>2016</option>
+                <option>2017</option>
+            </select>&nbsp;年
+        </td>
+        <td>年检日期</td>
+        <td>
+        	<input type="text" value="2012-5-2"  onclick="WdatePicker();"/>
+        </td>
+    </tr>
+    <tr>
+    	<td>年检结果</td>
+        <td colspan="3">
+        	<textarea rows="4" cols="60"></textarea>
+        </td>
+    </tr>
+    <tr>
+    	<td>附件</td>
+    	<td colspan="3">
+        	<input type="file" />
+        </td>
+    </tr>
+    <tr align="center">
+    	<td colspan="4">
+        	<input type="button" value="确定" /> &nbsp;&nbsp;
+            <input type="button" value="取消" />
+        </td>
+    </tr>
+</table>
+</body>
+</html>

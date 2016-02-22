@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>国际会议修改</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function jump(){
+	window.close();;
+}
+</script>
+</head>
+
+<body>
+	<div>
+		<table width="99%" id="tztab"  border="1" class="t1">
+			<tr>
+				<td>会议主题</td>
+				<td><input type="text" value="交流经验" /></td>
+				<td>会议时间</td>
+				<td><input type="text" value="2012-4-20" /></td>
+			</tr>
+			<tr>
+				<td>会议所在国家</td>
+				<td colspan="3"><input type="text" value="中国" /><input type="button" onclick="showCountry()" value="选择国家" /></td>
+			</tr>
+			<tr>
+				<td>具体地点</td>
+				<td colspan="3">
+					<textarea cols="90" rows="5"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>人员</td>
+				<td colspan="3">
+					<input type="button" onclick="showEmployee()" value="选择人员" />
+					<table>
+						<tr>
+							<td>姓名</td>
+							<td><input type="text" value="张三" /></td>
+							<td>职务</td>
+							<td><input type="text" value="工程师" /></td>
+						</tr>
+						<tr>
+							<td>姓名</td>
+							<td><input type="text" value="王华" /></td>
+							<td>职务</td>
+							<td><input type="text" value="技术总监" /></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<input type="button" value="提交" /><input type="button" onclick="jump()" value="返回" />
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

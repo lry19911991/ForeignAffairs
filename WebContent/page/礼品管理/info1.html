@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>礼品管理--&gt;采购申请</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript">
+function openDw(){
+	window.showModalDialog("../出国管理/组织机构.html",window,"dialogWidth:300px;dialogHeight:620px:center:yes");
+	document.getElementById("bumen").value="办公厅";
+}
+function showAdd(){
+	window.showModalDialog("addcontent.html",window,"dialogWidth=950px;dialogHeight=350px");
+
+}
+function backTab(){
+	window.close();
+}
+function zd(id,tit){
+	if(document.getElementById(id).style.display=="none"){
+		document.getElementById(id).style.display="";
+		document.getElementById(tit).src="../images/tit1.gif";
+	}else{
+		document.getElementById(id).style.display="none";
+		document.getElementById(tit).src="../images/tit.gif";
+	}
+}
+function shengchengBH(){
+		document.getElementById("bh").value="ZM-C-2012-001-01";
+}
+function showPeple(){
+	window.showModalDialog("../出国管理/人员树.html",window,"dialogWidth:300px;dialogHeight:620px:center:yes");
+}
+</script>
+</head>
+
+<body>
+<table width="99%" class="t1">
+    <tr class="a1" onclick="zd('d2','tit2')">
+     <td colspan="4"><img id="tit2" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />申请人信息</td>
+    </tr>
+</table>
+<div id="d2">
+	<table class="t1" width="99%">
+	<tr class="a2">
+		<td width="15%"><font color="#FF0000">*</font>申请人</td>
+		<td width="35%"><input type="text" disabled="disabled" value="林石"/></td>
+		<td width="15%"><font color="#FF0000">*</font>电话</td>
+		<td width="35%"><input type="text" disabled="disabled" value="13099998888"/></td>
+	</tr>
+	<tr>
+		<td>单位</td>
+		<td><input type="text" disabled="disabled" value="中煤能源集团总部" /></td>
+		<td>部门</td>
+		<td><input type="text" disabled="disabled" value="办公厅" /></td>
+	</tr>
+    <tr class="a2">
+		<td>科室</td>
+		<td><input type="text" disabled="disabled" /></td>
+		<td>申请时间</td>
+		<td><input name="text" disabled="disabled" type="text" value="2012-5-17" onclick = "WdatePicker();" /></td>
+	</tr>
+	</table>
+</div>
+<table class="t1" width="99%">
+	<tr class="a1" onclick="zd('d3','tit3')">
+		<td colspan="4"><img id="tit3" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />领用信息</td>
+	</tr>
+</table>
+<div id="d3">
+<table width="99%" class="t1">
+    <tr class="a2">
+       <td width="15%"><font color="#FF0000">*</font>物品名称</td>
+       <td width="35%">
+            <input type="text" disabled="disabled" style="width:70%" value="生日蛋糕" />
+       </td>
+       <td width="15%"><font color="#FF0000">*</font>物品等级</td>
+       <td width="35%">
+       	   <select disabled="disabled">
+       	   		<option>--请选择--</option>
+       	   		<option>高档礼品</option>
+       	   		<option>中高档礼品</option>
+       	   		<option>中档礼品</option>
+       	   		<option>中低档礼品</option>
+       	   		<option selected="selected">低档礼品</option>
+       	   </select>
+       </td>
+    </tr>
+     <tr>
+      
+       <td><font color="#FF0000">*</font>数量</td>
+       <td>
+            <input type="text" disabled="disabled" style="width:60%" value="2"/>
+       </td>
+       <td><font color="#FF0000">*</font>估计费用</td>
+       <td>
+       		<input type="text" disabled="disabled" style="width:60%" value="500"/>&nbsp;&nbsp;元
+       </td>
+    </tr>
+    <tr class="a2">
+    	<td><font color="#FF0000">*</font>用途</td>
+    	<td>
+    		<textarea disabled="disabled" rows="3" cols="80" title="礼品用途">员工生日福利</textarea>
+    	</td>
+    </tr>
+</table>
+</div>
+   <table width="99%" class="t1">
+<tr class="a1" onclick="zd('d7','tit7')">
+	<td colspan="4"><img id="tit7" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />联系人信息</td>
+</tr>
+</table>
+<div id="d7">
+<table width="99%" class="t1">
+<tr class="a2">
+	<td width="15%">联系人</td>
+	<td width="35%"><input type="text" style="width:70%;"  disabled="disabled" value="林石"/></td>
+	<td width="15%">电话</td>
+	<td width="35%"><input type="text" style="width:70%;"  disabled="disabled" value="13099998888"/></td>
+</tr>
+<tr>
+	<td>传真</td>
+	<td><input type="text" style="width:70%;" disabled="disabled" value="010-82256791" /></td>
+	<td>邮箱</td>
+	<td><input type="text" style="width:70%;" disabled="disabled" value="bj_ls@chinacoal.com" /></td>
+</tr>
+</table>
+</div>
+   
+<table width="99%" class="t1">
+   <tr align="center">
+   	<td colspan="4">
+        <input type="button" value="关闭" onclick="backTab();"/>
+    </td>
+</tr>
+</table>
+</body>
+</html>

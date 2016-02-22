@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>出国管理-->出国计划-->待审核计划</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+
+function colsed(){
+	window.close();
+}
+function zd(id,tit){
+	if(document.getElementById(id).style.display=="none"){
+		document.getElementById(id).style.display="block";
+		document.getElementById(tit).src="../images/tit1.gif";
+	}else{
+		document.getElementById(id).style.display="none";
+		document.getElementById(tit).src="../images/tit.gif";
+	}
+}
+</script>
+</head>
+
+<body>
+<table class="t1" width="99%">
+	<tr class="a1" onclick="zd('d1','tit1')">
+		<td colspan="4"><img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />计划信息</td>
+	</tr>
+</table>
+<div id="d1">
+<table width="99%" border="1" class="t1">
+ 	
+	<tr class="a2">
+    	<td width="15%">计划年度</td>
+		<td width="35%">
+			<select style="width:70%;">
+            	<option>--请选择--</option>
+				<option selected="selected">2012</option>
+				<option>2013</option>
+                <option>2014</option>
+                <option>2015</option>
+                <option>2016</option>
+                <option>2017</option>
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+                <option>2021</option>
+			</select> &nbsp;年
+		</td>
+		<td width="15%">计划编号</td>
+		<td width="35%"><input type="text" style="width:70%;" value="DT2012-0120S"/></td>
+	</tr>
+    <tr>
+    	<td>计划名称</td>
+        <td colspan="3"><input type="text" style="width:88%;" value="大屯公司2012年赴台计划" /></td>
+    </tr>
+	</table>
+	</div>
+	
+	<table width="99%" class="t1">
+	<tr class="a1" onclick="zd('d2','tit2')">
+		<td colspan="4"><img id="tit2" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />申请人信息</td>
+	</tr>
+	</table>
+	<div id="d2">
+	<table width="99%" class="t1">
+	<tr class="a2">
+		<td width="15%">申请人</td>
+		<td width="35%"><input type="text" style="width:70%;"  value="林石"/></td>
+		<td width="15%">电话</td>
+		<td width="35%"><input type="text" style="width:70%;" value="13099998888"/></td>
+	</tr>
+	<tr>
+		<td>单位</td>
+		<td><input type="text" style="width:70%;" value="大屯能源股份有限公司" /></td>
+		<td>部门</td>
+		<td><input type="text" style="width:70%;" value="行政部" /></td>
+	</tr>
+	<tr>
+		<td>科室</td>
+		<td><input type="text" style="width:70%;" value="行政科" /></td>
+		<td>填报时间</td>
+		<td><input type="text" style="width:70%;" value="2012-05-17" /></td>
+	</tr>
+	</table>
+	</div>
+	
+	<table width="99%" class="t1">
+    <tr class="a1" onclick="zd('d3','tit3')">
+		<td colspan="4"><img id="tit3" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />计划内容列表</td>
+	</tr>
+	</table>
+	<div id="d3">
+	<table width="99%" class="t1">
+    <tr >
+    	<td colspan="4">
+        	<div id="proList" style="display:block">
+               <table width="100%">
+                    <tr class="a2">
+                        <th width="8%">序号</th>
+                        <th width="13%">内容编号</th>
+                        <th width="12%">内容名称</th>
+                        <th width="10%">内容类别</th>
+                        <th width="16%">计划单位</th>
+                        <th width="12%">是否有局副领导</th>
+                        <th width="8%">人数</th>
+                        <th width="10%">出访地区</th>
+                        <th width="8%">操作</th>
+                    </tr>
+                    <tr align="center">
+                        <td>1</td>
+                        <td><a href="javascript:void(0)">DTJX2012-0120</a></td>
+                        <td>技术交流</td>
+                        <td>考察交流</td>
+                        <td>大屯能源江西分公司</td>
+                        <td>否</td>
+                        <td>2</td>
+                        <td>台湾</td>
+                        <td><a href="javascript:void(0)">删除</a></td>
+                    </tr>
+                     <tr class="a2" align="center">
+                        <td>2</td>
+                        <td><a href="javascript:void(0)">DTXZ2012-0120</a></td>
+                        <td>技术交流</td>
+                        <td>考察交流</td>
+                        <td>大屯能源徐州分公司</td>
+                        <td>否</td>
+                        <td>2</td>
+                        <td>台湾</td>
+                        <td><a href="javascript:void(0)">删除</a></td>
+                    </tr>
+                </table>
+             </div>
+        </td>
+    </tr>
+	</table>
+	</div>
+	<table width="99%" class="t1">
+    <tr align="center">
+    	<td colspan="4">
+        	<input type="button" onclick="colsed();" value="审核"/>
+             &nbsp;
+            <input type="button" onclick="colsed();" value="取消"/>
+        </td>
+    </tr>
+  
+</table>
+</body>
+</html>

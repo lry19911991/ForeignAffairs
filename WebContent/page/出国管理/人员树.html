@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>人员树</title>
+<link rel="stylesheet" href="../JQuery zTree/css/zTreeStyle/zTreeStyle.css" type="text/css">
+<script type="text/javascript" src="../JQuery zTree/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="../JQuery zTree/js/jquery.ztree.core-3.0.js"></script>
+<script type="text/javascript" src="../JQuery zTree/js/jquery.ztree.excheck-3.0.js"></script>
+<script type="text/javascript">
+		var setting = {
+		check: {
+			enable: false
+		},
+		data: {
+			simpleData: {
+				enable: true
+			}
+		},
+		callback: {
+			onClick: onClick
+		}
+	};
+
+	
+	
+	var code;
+	
+	function setCheck() {
+		var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+		zTree.setting.check.chkboxType = type;
+		showCode("setting.check.chkboxType = { 'Y' : '" + type.Y + "', 'N' : '" + type.N + "' };");
+	}
+	function showCode(str) {
+		if (!code) code = $("#code");
+		code.empty();
+		code.append("<li>"+str+"</li>");
+	}
+	
+	var zNodes=[{id:1,name:'大屯公司',pId:0,type:1,flag:0,open:true},{id:2,name:'办公室',pId:1,type:1,flag:0,open:true},{id:3,name:'党委工作部',pId:1,type:1,flag:0,open:true},{id:4,name:'企业发展部',pId:1,type:1,flag:0,open:true},{id:5,name:'人力资源部',pId:1,type:1,flag:0,open:true},{id:6,name:'财务部',pId:1,type:1,flag:0,open:true},{id:7,name:'经营管理部',pId:1,type:1,flag:0,open:true},{id:8,name:'生产管理部',pId:1,type:1,flag:0,open:true},{id:9,name:'通风管理部',pId:1,type:1,flag:0,open:true},{id:10,name:'机电管理部',pId:1,type:1,flag:0,open:true},{id:11,name:'安全监察部',pId:1,type:1,flag:0,open:true},{id:12,name:'建设管理部',pId:1,type:1,flag:0,open:true},{id:13,name:'法律事务部',pId:1,type:1,flag:0,open:true},{id:14,name:'纪委、监察审计部',pId:1,type:1,flag:0,open:true},{id:15,name:'工会',pId:1,type:1,flag:0,open:true},{id:16,name:'团委',pId:1,type:1,flag:0,open:true},{id:17,name:'企业文化部',pId:1,type:1,flag:0,open:true},{id:18,name:'武装部',pId:1,type:1,flag:0,open:true},{id:19,name:'教卫办',pId:1,type:1,flag:0,open:true},{id:20,name:'地区处',pId:1,type:1,flag:0,open:true},{id:21,name:'离退休管理中心',pId:1,type:1,flag:0,open:true},{id:22,name:'技术中心',pId:1,type:1,flag:0,open:true},{id:201,name:'张凌琳',pId:2,type:1,flag:0,open:true},{id:202,name:'李宏博',pId:2,type:1,flag:0,open:true},{id:301,name:'林石',pId:3,type:1,flag:0,open:true},{id:302,name:'王好',pId:3,type:1,flag:0,open:true},{id:401,name:'单田芳',pId:4,type:1,flag:0,open:true},{id:402,name:'李连杰',pId:4,type:1,flag:0,open:true},{id:501,name:'马莉莉',pId:5,type:1,flag:0,open:true},{id:502,name:'高圆圆',pId:5,type:1,flag:0,open:true},{id:601,name:'张章章',pId:6,type:1,flag:0,open:true},{id:602,name:'李丽丽',pId:6,type:1,flag:0,open:true},{id:701,name:'黎明',pId:7,type:1,flag:0,open:true},{id:801,name:'王红',pId:8,type:1,flag:0,open:true},{id:901,name:'王吉',pId:9,type:1,flag:0,open:true},{id:1001,name:'侃侃',pId:10,type:10,flag:0,open:true},{id:1101,name:'安飞',pId:11,type:1,flag:0,open:true},{id:1201,name:'腾飞',pId:12,type:1,flag:0,open:true},{id:1301,name:'李晴晴',pId:13,type:1,flag:0,open:true},{id:1401,name:'微微',pId:14,type:1,flag:0,open:true},{id:1501,name:'李部长',pId:15,type:1,flag:0,open:true},{id:1601,name:'团委书记',pId:16,type:1,flag:0,open:true},{id:1701,name:'文化部长',pId:17,type:1,flag:0,open:true},{id:1801,name:'武装部长',pId:18,type:1,flag:0,open:true},{id:1901,name:'教卫办主任',pId:19,type:1,flag:0,open:true},{id:2001,name:'何其正',pId:20,type:1,flag:0,open:true},{id:2101,name:'张勇',pId:21,type:1,flag:0,open:true},{id:2201,name:'李波',pId:22,type:1,flag:0,open:true}];
+	window.onload=function(){
+
+		$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+	
+	}
+	
+	
+	function onClick(){
+		window.close();
+	}
+</script>
+</head>
+<body>
+	<div >
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+</body>
+</html>

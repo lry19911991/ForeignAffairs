@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>出国管理-->团组管理-->添加团组</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+	function tjry(){
+		window.showModalDialog("添加人员.html",window,"dialogWidth=800px;dialogHeight=600px");
+	}
+	function jump(){
+		window.close();
+	}
+	function zd(id,tit){
+		if(document.getElementById(id).style.display=="none"){
+			document.getElementById(id).style.display="block";
+			document.getElementById(tit).src="../images/tit1.gif";
+		}else{
+			document.getElementById(id).style.display="none";
+			document.getElementById(tit).src="../images/tit.gif";
+		}
+	}
+	function openDW(){
+	window.showModalDialog("../出国管理/组织机构.html",window,"dialogWidth:300px;dialogHeight:620px:center:yes");
+	document.getElementById("dw").value="中煤建设集团有限公司";
+}
+</script>
+</head>
+
+<body>
+  <table width="99%" class="t1">
+  <tr class="a1" onclick="zd('d3','tit3')">
+  	<td colspan="4"><img src="../images/tit1.gif" height="18px" width="18px" align="bottom" id="tit3"  />团组信息</td>
+  </tr>
+  </table>
+  <div id="d3" style="display:block;">
+  <table width="99%" class="t1">
+  <tr>
+  	<td width="15%"><font color="red">*</font>团组名称</td>
+	<td width="35%"><input type="text" style="width:70%;" value="大屯公司" /></td>
+	<td width="15%"><font color="red">*</font>团组长</td>
+	<td width="35%"><input type="text" style="width:70%;" value="张三" /></td>
+  </tr>
+  <tr class="a2">
+  	<td><font color="red">*</font>组团单位</td>
+	<td colspan="3"><input type="text" style="width:50%" id="dw"/>&nbsp;&nbsp;<input type="button" value="选择单位" onclick="openDW()" />
+  </tr>
+  
+  <tr>
+  	<td colspan="4"><input type="button" value="添加人员" onclick="tjry()" /></td>
+  </tr>
+  <tr>
+    <td colspan="4">
+		<table width="100%" class="t1">
+			<tr class="a2">
+				<th width="8%">序号</th>
+				<th width="15%">姓名</th>
+				<th width="20%">工作单位</th>
+				<th width="17%">部门</th>
+				<th width="15%">职务</th>
+				<th width="25%">操作</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>王鹏</td>
+				<td>大屯公司</td>
+				<td>技术部</td>
+				<td>工程师</td>
+				<td>
+					<a href="../出国管理/添加人员.html">查看</a>&nbsp;&nbsp;
+					<a href="../出国管理/添加人员.html">修改</a>&nbsp;&nbsp;
+					<a href="javascript:void(0)">删除</a>
+				</td>
+			</tr>
+			<tr  class="a2">
+				<td>2</td>
+				<td>张明</td>
+				<td>大屯集团</td>
+				<td>技术部</td>
+				<td>工程师</td>
+				<td>
+					<a href="../出国管理/添加人员.html">查看</a>&nbsp;&nbsp;
+					<a href="../出国管理/添加人员.html">修改</a>&nbsp;&nbsp;
+					<a href="javascript:void(0)">删除</a>
+				</td>
+			</tr>
+		</table>
+			
+    </td>
+  </tr>
+  </table>
+  </div>
+  <table width="99%" class="t1">
+  	<tr class="a1" onclick="zd('d1','tit1')">
+  		<td>
+  			<img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />填报人信息
+  		</td>
+  	</tr>
+  </table>
+  <div id="d1">
+	  <table width="99%" class="t1">
+	  	<tr>
+		<td width="15%">填写人</td>
+		<td width="35%"><input type="text" style="width:70%;" disabled="disabled" value="林石"/></td>
+		<td width="15%">电话</td>
+		<td width="35%"><input type="text" style="width:70%;" disabled="disabled" value="13099998888"/></td>
+	  </tr>
+	  <tr class="a2">
+		<td>传真</td>
+		<td><input type="text" style="width:70%;" disabled="disabled" value="010-82256791" /></td>
+		<td>邮箱</td>
+		<td><input type="text" style="width:70%;" disabled="disabled" value="xsgsxx@chinacoal.com" /></td>
+	  </tr>
+	
+	</table>
+</div>
+
+<table width="99%" class="t1">
+ 	  <tr>
+	    <td colspan="4" align="center">
+	    <input type="button" value="提交" />&nbsp;&nbsp;
+	    <input type="button" onclick="jump()" value="返回" />
+	    </td>
+	  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script language="javascript" type="text/javascript" src="../My97DatePicker/WdatePicker.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>对外项目管理-->会议纪要管理-->新建会议纪要</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript">
+	function jump(){
+		window.open("../对外合作项目管理/立项管理_立项申请列表.html","_self");
+	}
+	function zd(id,tit){
+		if(document.getElementById(id).style.display=="none"){
+			document.getElementById(id).style.display="block";
+			document.getElementById(tit).src="../images/tit1.gif";
+		}else{
+			document.getElementById(id).style.display="none";
+			document.getElementById(tit).src="../images/tit.gif";
+		}
+	}
+	function openDd(){
+		window.showModalDialog("人员树.html",window,"dialogWidth:300px;dialogHeight:620px:center:yes");
+	}
+</script>
+</head>
+
+<body>
+<table width="99%" class="t1">
+	<tr class="a1" onclick="zd('d1','tit1')">
+		<td colspan="4"><img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />申请信息</td>
+	</tr>
+</table>
+<div id="d1">
+<table width="99%" border="1" class="t1">
+
+<tr>
+      <td width="15%"><font color="red">*</font>会议主题</td>
+	  <td width="35%"><input type="text" /> </td>
+	  <td width="15%"><font color="red">*</font>记录人</td>
+	  <td width="35%"><input type="text" /> </td>
+</tr>
+<tr>
+      <td width="15%"><font color="red">*</font>所属项目</td>
+    <td colspan="3"><input type="text" style="width: 78%;" value="巴西项目开发"/></td>
+  </tr>
+<tr>
+      <td width="11%"><font color="red">*</font>会议地点</td>
+	  <td width="23%"><input type="text" /> </td>
+	  <td width="14%"><font color="red">*</font>主持人</td>
+	  <td width="52%"><input type="text" /> </td>
+</tr>
+<tr>
+      <td width="11%"><font color="red">*</font>会议时间</td>
+	  <td width="23%"><input type=text onclick="WdatePicker()"/> </td>
+	  <td width="14%"><font color="red">*</font>录入日期</td>
+	  <td width="52%"><input type="text" onclick="WdatePicker()" value="2012-4-18"/> </td>
+</tr>
+<tr>
+      <td width="11%"><font color="red">*</font>与会人员</td>
+    <td colspan="3"><textarea name="textarea" cols="70" rows="4"></textarea><input type="button" value="点击选择人名" onclick="openDd()"/></td>
+</tr>
+<tr>
+      <td width="11%"><font color="red">*</font>会议内容</td>
+    <td colspan="3">
+	<textarea rows="4" cols="70"></textarea>	</td>
+</tr>
+
+<tr>
+      <td width="11%">备注</td>
+      <td colspan="3"><textarea name="textarea" cols="70" rows="4"></textarea></td>
+</tr>
+<tr>
+      <td width="11%">上传附件</td>
+      <td colspan="3"><input type="file" style="width:50%;" /> <input type="button" value="多文件上传" /></td>
+</tr>
+
+</table>
+</div>
+
+<table class="t1" width="99%">
+<tr align="center">
+      <td colspan="4">
+	     <input type="button" value="保存" onclick="alert('保存成功');window.close();" />
+   		 <input type="button" onclick="window.close();" value="取消" />	  </td>
+  </tr>
+</table>
+</body>
+</html>

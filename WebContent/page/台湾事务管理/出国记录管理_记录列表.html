@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ztree.core-3.0.js"></script>
+	<script type="text/javascript" src="js/jquery.ztree.excheck-3.0.js"></script>
+	<!--
+	<script type="text/javascript" src="js/jquery.ztree.exedit-3.0.js"></script>
+	-->
+	<SCRIPT type="text/javascript">
+		var setting = {
+		check: {
+			enable: false
+		},
+		data: {
+			simpleData: {
+				enable: true
+			}
+		},
+		callback: {
+			onClick: onClick
+		}
+	};
+
+	
+	
+	var code;
+	
+	function setCheck() {
+		var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+		zTree.setting.check.chkboxType = type;
+		showCode("setting.check.chkboxType = { 'Y' : '" + type.Y + "', 'N' : '" + type.N + "' };");
+	}
+	function showCode(str) {
+		if (!code) code = $("#code");
+		code.empty();
+		code.append("<li>"+str+"</li>");
+	}
+	
+	var zNodes=[{id:1,name:'项目列表',pId:0,type:1,flag:0,open:true},{id:2,name:'巴西煤矿开发',pId:1},{id:3,name:'美国新能源开发',pId:1},{id:4,name:'巴西煤矿开采',pId:1}];
+	window.onload=function(){
+	
+			//alert(11);
+		$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+	
+		//setCheck();
+	}
+	
+	
+	function onClick(){
+		alert(11);
+	//	window.close();
+	}
+	</SCRIPT>
+
+
+</head>
+
+<body>
+<table width="100%">
+    <tr>
+        <td width="20%" valign="top">
+       	  <div>
+            <ul id="treeDemo" class="ztree"></ul>
+            </div>
+      </td>
+        <td width="80%">
+<table width="99%" id="mytab"  border="1" class="t1">
+  <tr>
+    <th width="5%"><span class="a1">序号</span></th>
+    <th width="11%">项目名称</th>
+    <th width="12%"><span class="a1">团组编号</span></th>
+    <th width="14%">团组长</th>
+    <th width="12%">出访国家</th>
+    <th width="8%">人数</th>
+    <th width="13%"><span class="a1">出国时间</span></th>
+    <th width="10%"><span class="a1">回国时间</span></th>
+    <th width="15%"><span class="a1">操作</span></th>
+  </tr>
+  <tr>
+      <td>1</div></td>
+    <td>NO.1项目</td>
+    <td>张三</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>2012-4-6</td>
+    <td>2012-4-9</td>
+     <td>
+       <a href="../对外合作项目管理/出国记录管理_查看详细.html">查看详细</a>&nbsp;&nbsp;
+      </div></td>
+   </tr>
+  <tr>
+      <td>2</td>
+      <td>NO.1项目</td>
+    <td>张三</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>2012-4-6</td>
+    <td>2012-4-9</td>
+     <td>
+       <a href="../对外合作项目管理/出国记录管理_查看详细.html">查看详细</a>&nbsp;&nbsp;
+      </div></td>
+   </tr>
+  <tr>
+      <td>3</td>
+      <td>NO.1项目</td>
+    <td>张三</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>2012-4-6</td>
+    <td>2012-4-9</td>
+     <td>
+       <a href="../对外合作项目管理/出国记录管理_查看详细.html">查看详细</a>&nbsp;&nbsp;
+      </div></td>
+   </tr>
+  <tr>
+      <td>4</td>
+      <td>NO.1项目</td>
+    <td>张三</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>2012-4-6</td>
+    <td>2012-4-9</td>
+     <td>
+       <a href="../对外合作项目管理/出国记录管理_查看详细.html">查看详细</a>&nbsp;&nbsp;
+      </div></td>
+   </tr>
+  <tr>
+      <td>5</td>
+      <td>NO.1项目</td>
+    <td>张三</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>2012-4-6</td>
+    <td>2012-4-9</td>
+     <td>
+       <a href="../对外合作项目管理/出国记录管理_查看详细.html">查看详细</a>&nbsp;&nbsp;
+      </div></td>
+   </tr>
+  <tr>
+      <td>6</td>
+      <td>NO.1项目</td>
+    <td>张三</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>2012-4-6</td>
+    <td>2012-4-9</td>
+     <td>
+       <a href="../对外合作项目管理/出国记录管理_查看详细.html">查看详细</a>&nbsp;&nbsp;
+      </div></td>
+   </tr>
+  <tr>
+      <td>7</td>
+      <td>NO.1项目</td>
+    <td>张三</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>2012-4-6</td>
+    <td>2012-4-9</td>
+     <td>
+       <a href="../对外合作项目管理/出国记录管理_查看详细.html">查看详细</a>&nbsp;&nbsp;
+      </div></td>
+   </tr>
+  <tr>
+      <td>8</td>
+      <td>NO.1项目</td>
+    <td>张三</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>2012-4-6</td>
+    <td>2012-4-9</td>
+     <td>
+       <a href="../对外合作项目管理/出国记录管理_查看详细.html">查看详细</a>&nbsp;&nbsp;
+      </div></td>
+   </tr>
+  <tr>
+      <td>9</td>
+      <td>NO.1项目</td>
+    <td>张三</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>2012-4-6</td>
+    <td>2012-4-9</td>
+     <td>
+       <a href="../对外合作项目管理/出国记录管理_查看详细.html">查看详细</a>&nbsp;&nbsp;
+      </div></td>
+   </tr>
+  <tr>
+      <td>1</div>0</td>
+      <td>NO.1项目</td>
+    <td>张三</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>2012-4-6</td>
+    <td>2012-4-9</td>
+     <td>
+       <a href="../对外合作项目管理/出国记录管理_查看详细.html">查看详细</a>&nbsp;&nbsp;
+      </div></td>
+   </tr>
+</table>
+
+
+      </td>
+    </tr>
+</table>
+
+
+</body>
+</html>

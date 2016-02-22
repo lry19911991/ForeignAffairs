@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>工作总结管理</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function opennew(){
+	window.showModalDialog("已完成回国任务.html",window,"dialogWidth=950px;dialogHeight=350px");
+}
+function zd(id,tit){
+		if(document.getElementById(id).style.display=="none"){
+			document.getElementById(id).style.display="block";
+			document.getElementById(tit).src="../images/tit1.gif";
+		}else{
+			document.getElementById(id).style.display="none";
+			document.getElementById(tit).src="../images/tit.gif";
+		}
+	}
+
+function tishi(){
+	alert("执行完的出国任务列表");
+}
+</script>
+</head>
+
+<body>
+	<div>
+		<table width="99%" border="1" class="t1">
+			<tr class="a2">
+				<td width="15%">出国任务编号</td>
+				<td width="35%"><input type="text" style="width:70%;" /><input type="button" value="选择" onclick="opennew();" /></td>
+				<td width="15%">提交人</td>
+				<td width="35%"><input type="text" style="width:70%;"  value="张三"/></td>
+			</tr>
+			<tr>
+				<td>创建时间</td>
+				<td colspan="3"><input type="text" /></td>
+			</tr>
+			<tr class="a2">
+				<td>工作内容简要</td>
+				<td colspan="3"><textarea cols="80" style="width:88%;" rows="4"></textarea></td>
+			</tr>
+			<tr>
+				<td>相关附件</td>
+				<td colspan="3"><input type="file" style="width:80%;" /></td>
+			</tr>
+			<tr class="a2" align="center">
+				<td colspan="4"><input type="button" value="保存" /><input type="button" value="取消" /></td>
+			</tr>
+		</table>
+	</div>
+	<div style="padding-top:10px;">
+		<table width="99%" border="1" class="t1">
+			<tr class="a1" onclick="zd('d1','tit1')">
+				<td colspan="5"><img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom"/>已提交总结</td>
+			</tr>
+			</table>
+			<div id="d1">
+			<table width="99%" class="t1">
+			<tr class="a2">
+				<th width="8%">序号</th>
+				<th width="17%">计划名称</th>
+				<th width="10%">申请编号</th>
+				<th width="15%">申请名称</th>
+                <th width="10%">提交人</th>
+                <th width="15%">提交时间</th>
+                <th width="10%">状态</th>
+				<th width="15%">操作</th>
+			</tr>
+			<tr align="center">
+				<td>1</td>
+				<td>大屯公司2012年度计划</td>
+				<td>DT2012-1200S</td>
+				<td>大屯公司出国培训申请</td>
+                <td>林石</td>
+                <td>2012-4-4</td>
+                <td>已提交</td>
+				<td>
+					<a href="javascript:void(0);">查看</a>&nbsp;
+					<a href="javascript:void(0);">下载附件</a>
+				</td>
+			</tr>
+			
+		</table>
+		</div>
+	</div>
+</body>
+</html>

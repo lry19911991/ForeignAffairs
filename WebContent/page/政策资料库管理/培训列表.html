@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>培训列表</title>
+
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+
+	function opennew() {
+		window.showModalDialog("培训新建.html", window,"dialogWidth=950px;dialogHeight=550px");
+	}
+	function opensearchs() {
+		window.showModalDialog("政策查找.html", window,"dialogWidth=950px;dialogHeight=350px");
+	}
+</script>
+</head>
+
+<body>
+<div>
+<table width="100%" class="t1">
+	<tr>
+		<td width="20%">资料标题</td>
+		<td width="30%"><input type="text" /></td>
+		<td width="20%">发布人</td>
+		<td width="30%"><input type="text" /></td>
+	</tr>
+	<tr>
+		<td>发布时间</td>
+		<td colspan="3" align="left">
+			<input type="text" />至<input type="text" />
+		</td>
+	</tr>
+	<tr>
+		<td align="center" colspan="4">
+			<input type="button" value="筛选" />
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="清空" />
+		</td>
+	</tr>
+</table>
+</div>
+
+<div style="padding-top: 10px;">
+	<input type="button" value="新建培训" onclick="opennew();" />
+</div>
+
+<div style="padding-top: 10px;">
+<table width="100%" class="t1">
+	<tr class="a1">
+		<td colspan="4"><img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />培训班信息</td>
+	</tr>
+</table>
+<table width="100%" border="1" class="t1">
+	<tr class="a2">
+		<th width="8%">序号</th>
+		<th>培训班名称</th>
+		<th>培训地点</th>
+		<th>开始时间</th>
+		<th>结束时间</th>
+		<th width="20%">操作</th>
+	</tr>
+	<tr align="center">
+		<td>1</td>
+		<td>出国知识培训班17期</td>
+		<td>中央党校</td>
+		<td>2012-5-16</td>
+		<td>2011-05-20</td>
+		<td>
+			<a href="培训详细.html">查看</a>&nbsp; 
+			<a href="javascript:void(0);">修改</a>&nbsp; 
+		</td>
+	</tr>
+</table>
+</div>
+
+</body>
+</html>

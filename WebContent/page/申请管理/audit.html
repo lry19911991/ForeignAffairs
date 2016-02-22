@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>出国管理-->出国申请-->待审核申请</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="WebCalendar.js"></script>
+<script type="text/javascript">
+
+function colsed(){
+	window.close();
+}
+function zd(id,tit){
+	if(document.getElementById(id).style.display=="none"){
+		document.getElementById(id).style.display="block";
+		document.getElementById(tit).src="../images/tit1.gif";
+	}else{
+		document.getElementById(id).style.display="none";
+		document.getElementById(tit).src="../images/tit.gif";
+	}
+}
+function country(){
+	window.showModalDialog("../出国管理/显示国家页.html",window,"dialogWidth:800px;dialogHeight:600px:center:yes");
+}
+function dw(){
+	window.showModalDialog("../出国管理/组织机构.html",window,"dialogWidth:300px;dialogHeight:620px:center:yes");
+}
+function header(flag){
+	if(flag==1){
+		document.getElementById("leader").style.display="block";
+	}else if(flag==2){
+		document.getElementById("leader").style.display="none";
+	}
+}
+</script>
+</head>
+
+<body>
+<table width="99%" class="t1">
+	<tr class="a1" onclick="zd('d1','tit1')">
+		<td colspan="4"><img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />申请信息</td>
+	</tr>
+</table>
+<div id="d1">
+<table width="99%" border="1" class="t1">
+	<tr>
+		<td width="15%"><font color="#FF0000">*</font>申请编号</td>
+		<td width="35%"><input type="text" style="width:70%;" value="DT2012-0120S"/></td>
+        <td width="15%"><font color="#FF0000">*</font>申请时间</td>
+		<td width="35%">
+			<input type="text" style="width:70%;" value="2012-4-25"/>
+		</td>
+	</tr>
+    <tr class="a2">
+    	<td><font color="#FF0000">*</font>申请名称</td>
+        <td colspan="3"><input type="text" style="width:88%;" value="大屯能源出国培训申请" /></td>
+    </tr>
+	</table>
+	</div>
+	<table width="99%" class="t1">
+        <tr class="a1" onclick="zd('d6','tit6')">
+            <td colspan="4"><img id="tit6" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />申请人信息</td>
+        </tr>
+        </table>
+        <div id="d5">
+        <table width="99%" class="t1">
+        <tr class="a2">
+            <td width="15%"><font color="#FF0000">*</font>申请人</td>
+            <td width="35%"><input type="text" value="林石"/></td>
+            <td width="15%"><font color="#FF0000">*</font>电话</td>
+            <td width="35%"><input type="text" value="13800001111"/></td>
+        </tr>
+        <tr>
+            <td>单位</td>
+            <td><input type="text" value="大屯股份公司" /></td>
+            <td>部门</td>
+            <td><input type="text" value="外事处" /></td>
+        </tr>
+        <tr class="a2">
+            <td>科室</td>
+            <td><input type="text" value="" /></td>
+            <td>填报时间</td>
+            <td><input name="text" type="text" value="2012-9-1" onclick = "return SelectDate(this,'yyyy-MM-dd')" /></td>
+        </tr>
+        </table>
+        </div>
+	<table width="99%" class="t1">
+    <tr class="a1" onclick="zd('d3','tit3')">
+		<td colspan="4"><img id="tit3" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />出访信息</td>
+	</tr>
+	</table>
+	<div id="d3">
+    <table width="99%" class="t1">
+        <tr>
+           <td width="15%"><font color="#FF0000">*</font>出访国家</td>
+           <td  width="35%">
+                <input type="text" style="width:70%" value="日本,美国" /><input type="button" onclick="country()" value="请选择"/>
+           </td>
+           <td width="15%">邀请人</td>
+           <td width="35%"><input type="text" style="width:70%"/></td>
+        </tr>
+         <tr class="a2">
+           <td><font color="#FF0000">*</font>预计出访时间</td>
+           <td>
+               <input type="text" style="width:70%" value="2012-10-5" onclick = "return SelectDate(this,'yyyy-MM-dd')"/>
+           </td>
+           <td><font color="#FF0000">*</font>预计回国时间</td>
+           <td>
+                <input type="text" style="width:70%" value="2012-10-9" onclick = "return SelectDate(this,'yyyy-MM-dd')"/>
+           </td>
+        </tr>
+       
+        <tr class="a2">
+            <td><font color="#FF0000">*</font>行程路线</td>
+            <td colspan="4"><input type="text"  style="width:88%" value="北京,日本,美国"/></td>
+        </tr>
+        <tr>
+            <td><font color="#FF0000">*</font>估计费用</td>
+            <td><input type="text"  style="width:70%;text-align: right;" value="70"/>&nbsp;&nbsp;元</td>
+            <td><font color="#FF0000">*</font>经费来源</td>
+            <td>
+                <select>
+                    <option value="-1">--请选择--</option>
+                    <option value="1">合同支付</option>
+                    <option value="1" selected="selected">公司提供</option>
+                    <option value="1">对方支付</option>
+                    <option value="1">其他</option>
+                </select>
+            </td>
+        </tr>
+        <tr class="a2">
+            <td>出访原因</td>
+            <td colspan="3">
+                <textarea  style="width:88%" rows="3">交流学习</textarea>
+            </td>
+        </tr>
+        </table>
+        </div>
+        <table width="99%" class="t1">
+        <tr class="a1" onclick="zd('d4','tit4')">
+            <td colspan="4"><img id="tit4" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />团组信息</td>
+        </tr>
+        </table>
+        <div id="d4">
+        <table width="99%" class="t1">
+        <tr class="a2">
+            <td width="15%"><font color="#FF0000">*</font>组团单位</td>
+            <td width="35%"><input type="text" value="大屯股份公司"  style="width:65%"/><input type="button" onclick="dw()" value="请选择" /></td>
+            <td width="15%">
+              <font color="#FF0000">*</font> 团组人数
+            </td>
+            <td width="35%">
+                <input type="text"  style="width:70%" value="3"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+               <font color="#FF0000">*</font> 是否有局副级领导
+            </td>
+            <td colspan="3">
+                <input name="header" type="radio" onclick="header(1)"/>是
+                <input name="header" type="radio" onclick="header(2)" checked="checked" />否
+            </td>
+           
+        </tr>
+        <tr id="leader" style="display:none" class="a2">
+            <td><font color="#FF0000">*</font>局副级领导名单</td>
+            <td colspan="3">
+                 <textarea  style="width:88%;"rows="4"></textarea>
+                 <input type="button" value="请选择" />
+            </td>
+        </tr>
+     
+        <tr>
+            <td>备注</td>
+            <td colspan="3">
+                <textarea  style="width:88%" rows="3"></textarea>
+            </td>
+        </tr>
+        </table>
+        </div>
+        <table width="99%" class="t1">
+        <tr class="a1" onclick="zd('d5','tit5')">
+            <td colspan="4"><img id="tit5" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />附件信息</td>
+        </tr>
+        </table>
+        <div id="d5">
+        <table width="99%" class="t1">
+        <tr class="a2">
+            <td width="15%">上传附件</td>
+            <td><input type="file" size="45" value="上传附件" /></td>
+        </tr>
+        </table>
+        </div>
+        
+	<table class="t1" width="99%">
+		<tr class="a1" onclick="zd('d4','tit4')">
+			<td colspan="4"><img id="tit4" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />审批信息</td>
+		</tr>
+	</table>
+	<div id="d4">
+		<table width="99%" class="t1">
+			<tr>
+				<td width="15%"><font color="#FF0000">*</font>是否同意</td>
+				<td><input name="leader" type="radio" checked="checked" />同意
+								&nbsp;&nbsp;&nbsp;
+								<input name="leader" type="radio" />不同意</td>
+			</tr>
+			<tr class="a2">
+			<td width="15%">审批意见</td>
+			<td colspan="3"><textarea rows="3" cols="70"></textarea></td>
+			</tr>
+		</table>
+	</div>
+	<table width="99%" class="t1">
+    <tr align="center">
+    	<td colspan="4">
+        	<input type="button" onclick="colsed();" value="审核"/>
+             &nbsp;
+            <input type="button" onclick="colsed();" value="取消"/>
+        </td>
+    </tr>
+  
+</table>
+</body>
+</html>

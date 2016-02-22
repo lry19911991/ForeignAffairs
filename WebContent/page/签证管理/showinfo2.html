@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+	function zd(id,tit){
+		if(document.getElementById(id).style.display=="none"){
+			document.getElementById(id).style.display="block";
+			document.getElementById(tit).src="../images/tit1.gif";
+		}else{
+			document.getElementById(id).style.display="none";
+			document.getElementById(tit).src="../images/tit.gif";
+		}
+	}
+	function gb(){
+		window.close();
+	}
+</script>
+</head>
+
+<body>
+	<table width="99%" class="t1">
+		<tr class="a1" onclick="zd('d1','tit1')">
+			<td><img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom"/>证件信息</td>
+		</tr>
+	</table>
+	<div id="d1">
+	<table width="99%" class="t1">
+		<tr class="a2">
+			<td width="15%">证件编号</td>
+			<td width="35%"><input type="text" disabled="disabled" value="20110506" style="width:70%" /></td>
+			<td width="15%">证件类型</td>
+			<td width="35%"><input type="text" disabled="disabled" value="护照" style="width:70%" /></td>
+		</tr>
+		<tr>
+			<td>出访国家</td>
+			<td><input type="text" disabled="disabled" value="美国" style="width:70%" /></td>
+			<td>发证机构</td>
+			<td><input type="text" disabled="disabled" value="美国驻中国大使馆" style="width:70%" /></td>
+		</tr>
+		<tr class="a2">
+			<td>发证时间</td>
+			<td><input type="text" disabled="disabled" value="2011-6-6" style="width:70%" /></td>
+			<td>到期时间</td>
+			<td><input type="text" disabled="disabled" value="2012-1-6" style="width:70%" /></td>
+		</tr>
+	</table>
+	</div>
+	<table width="99%" class="t1">
+		<tr class="a1" onclick="zd('d2','tit2')">
+			<td><img id="tit2" src="../images/tit1.gif" height="18px" width="18px" align="bottom"/>扫描件信息</td>
+		</tr>
+	</table>
+	<div id="d2">
+		<table width="99%" class="t1">
+			<tr align="center">
+				<td><img style="width: 450px;width: 350px;" src="../images/qianzheng.jpg"/></td>
+			</tr>
+		</table>
+	</div>
+	<table width="99%" class="t1">
+		<tr align="center">
+			<td><input type="button" onclick="gb()" value="返回" /></td>
+		</tr>
+	</table>
+</body>
+</html>

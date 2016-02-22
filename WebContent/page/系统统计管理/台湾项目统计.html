@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>台湾项目统计</title>
+<link rel="stylesheet" href="css/Style.css" type="text/css" />
+<script language="JavaScript" src="js/FusionCharts.js"></script>
+</head>
+
+<body>
+<table width="98%" border="0" cellspacing="0" cellpadding="3" align="center">
+  <tr> 
+    <td valign="top" class="text" align="center"> 
+    <div id="chartdiv" align="center">FusionCharts. </div>
+      <script type="text/javascript">
+		   var chart = new FusionCharts("swf/FCF_Gantt.swf", "ChartId", "750", "450");
+		   chart.setDataURL("Data/Gantt.xml");		   
+		   chart.render("chartdiv");
+		</script> 
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" class="text" align="center">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

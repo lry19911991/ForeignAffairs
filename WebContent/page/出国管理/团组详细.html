@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>出国管理-->团组管理-->查看团组</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+	function tjry(){
+		window.showModalDialog("添加人员.html",window,"dialogWidth=800px;dialogHeight=600px");
+	}
+	function jump(){
+		window.close();
+	}
+	function zd(id,tit){
+		if(document.getElementById(id).style.display=="none"){
+			document.getElementById(id).style.display="block";
+			document.getElementById(tit).src="../images/tit1.gif";
+		}else{
+			document.getElementById(id).style.display="none";
+			document.getElementById(tit).src="../images/tit.gif";
+		}
+	}
+</script>
+</head>
+
+<body>
+<table width="99%" border="1" class="t1">
+	<tr class="a1"  onclick="zd('d1','tit1')">
+		<td colspan="4">
+			<img id="tit1" src="../images/tit.gif" height="18px" width="18px" align="bottom"/>
+			计划信息
+		</td>
+	</tr>
+</table>
+<div id="d1" style="display:none">
+<table width="99%" class="t1">
+	<tr>
+  	<td width="15%">计划编号</td>
+	<td  width="35%"><input type="text" disabled="disabled" style="width:70%;"  value="123456" /></td>
+	<td width="15%">计划名称</td>
+	<td class="" width="35%"><input type="text" disabled="disabled" style="width:70%;"  value="出国考察计划" /></td>
+  </tr>
+  <tr class="a2">
+  	<td>计划类别</td>
+	<td><input type="text" style="width:70%;" disabled="disabled"  value="考察交流" /></td>
+	<td>出国人数</td>
+	<td><input type="text" style="width:70%;" disabled="disabled"  value="5" />人</td>
+  </tr>
+  <tr>
+  	<td>出访国家</td>
+	<td><input type="text" style="width:70%;" disabled="disabled" value="美国" /></td>
+	<td>预计费用</td>
+	<td><input type="text" style="width:70%;" disabled="disabled" value="20" />万元</td>
+  </tr>
+  <tr  class="a2">
+  	<td>预计出访时间</td>
+	<td><input type="text" style="width:70%;" disabled="disabled" value="2013-2-3" /></td>
+	<td>出访天数</td>
+	<td><input type="text" style="width:70%;" disabled="disabled" value="5" />天</td>
+  </tr>
+  <tr>
+  	<td>组团单位</td>
+	<td colspan="3"><input type="text" disabled="disabled"  style="width:88%;" value="大屯公司" /></td>
+	
+  </tr>
+  <tr  class="a2">
+  	<td>出访原因</td>
+	<td colspan="3"><input type="text" disabled="disabled" value="出国考察交流"  style="width:88%;" /></td>
+  </tr>
+  <tr>
+  	<td>局副领导</td>
+	<td colspan="3"><input style="width:88%;" type="text" disabled="disabled"  value="" /></td>
+  </tr>
+  <tr  class="a2">
+  	<td>经费来源</td>
+	<td><input type="text" style="width:70%;" disabled="disabled" value="合同支付"  /></td>
+	<td>邀请人</td>
+	<td><input type="text" style="width:70%;" disabled="disabled" value="" /></td>
+  </tr>
+  <tr>
+  	<td>上报公司</td>
+	<td colspan=""><input type="text" style="width:70%;" disabled="disabled" size="83%" value="大屯公司" /></td>
+  </tr>
+  <tr class="a2">
+  	<td>备注</td>
+	<td colspan="3"><textarea cols="73" style="width:88%;" rows="3" disabled="disabled"></textarea></td>
+  </tr>
+  <tr>
+	<td>联系人</td>
+	<td><input type="text" style="width:70%;" disabled="disabled" value="林石"/></td>
+	<td>电话</td>
+	<td><input type="text" style="width:70%;" disabled="disabled" value="13099998888"/></td>
+  </tr>
+  <tr class="a2">
+	<td>传真</td>
+	<td><input type="text" style="width:70%;" disabled="disabled" value="010-82256791" /></td>
+	<td>邮箱</td>
+	<td><input type="text" style="width:70%;" disabled="disabled" value="xsgsxx@chinacoal.com" /></td>
+  </tr>
+  </table>
+  </div>
+  <table width="99%" class="t1">
+  <tr class="a1"  onclick="zd('d2','tit2')">
+  	<td colspan="4">
+		<img id="tit2" src="../images/tit.gif" height="18px" width="18px" align="bottom" />
+		申请信息
+	</td>
+  </tr>
+  </table>
+  <div id="d2" style="display:none;">
+  <table width="99%" class="t1">
+  <tr>
+    <td width="15%">申请编号：</td>
+    <td width="35%"><input type="text" style="width:70%;" disabled="disabled" value="20120102" /></td>
+	<td width="15%">申请名称</td>
+	<td width="35%"><input type="text" style="width:70%;" disabled="disabled" value="出国考察" /></td>
+  </tr>
+  <tr class="a2">
+  	<td>申请类型</td>
+	<td colspan="3"><input type="text" disabled="disabled" value="计划外" /></td>
+  </tr>
+  <tr>
+  	<td>申请单位</td>
+	<td><input type="text" style="width:70%;" disabled="disabled" value="大屯公司" /></td>
+	<td>申请人数</td>
+	<td><input type="text" style="width:70%;" value="5" disabled="disabled" />人</td>
+
+  </tr>
+  
+  <tr class="a2">
+  	<td>出访国家</td>
+	<td><input type="text" style="width:70%;" disabled="disabled" value="美国" /></td>
+	<td>预计费用</td>
+	<td><input type="text" style="width:70%;" disabled="disabled" value="20" />万元</td>
+  </tr>
+  <tr>
+  	<td>预计出国时间</td>
+	<td><input type="text" style="width:70%;" disabled="disabled" value="2013-3-4" /></td>
+	<td>出国天数</td>
+	<td><input type="text" style="width:70%;" disabled="disabled" value="5" />天</td>
+  </tr>
+  <tr class="a2">
+  	<td>经费来源</td>
+	<td><input type="text" style="width:70%;" disabled="disabled" value="合同支付" /></td>
+	<td>邀请人</td>
+	<td><input type="text"  style="width:70%;" disabled="disabled" value="" /></td>
+  </tr>
+  <tr>
+  	<td>是否途经台湾</td>
+	<td><input type="text" style="width:70%;" disabled="disabled" value="否" /></td>
+	<td>是否途经港澳</td>
+	<td><input type="text"  style="width:70%;" disabled="disabled" value="否" /></td>
+  </tr>
+  <tr class="a2">
+  	<td>途经国家</td>
+	<td colspan="3"><input type="text" disabled="disabled" value="" style="width:88%;" /></td>
+  </tr>
+  <tr>
+  	<td>组团单位</td>
+	<td colspan="3"><input type="text" style="width:88%;" disabled="disabled" value="大屯公司" /></td>
+  </tr>
+  <tr class="a2">
+  	<td>局副领导</td>
+	<td colspan="3"><input type="text" style="width:88%;" style="width:88%;" disabled="disabled" value="大屯公司" /></td>
+  </tr>
+  <tr>
+  	<td>申请原因</td>
+	<td colspan="3"><textarea rows="3" cols="73" style="width:88%;" disabled="disabled">到美国考察交流</textarea></td>
+  </tr>
+  <tr class="a2">
+  	<td>备注</td>
+	<td colspan="3"><textarea rows="3" cols="73" style="width:88%;" disabled="disabled"></textarea></td>
+  </tr>
+  </table>
+  </div>
+  <table width="99%" class="t1">
+  <tr class="a1" onclick="zd('d3','tit3')">
+  	<td colspan="4"><img src="../images/tit1.gif" height="18px" width="18px" align="bottom" id="tit3"  />团组信息</td>
+  </tr>
+  </table>
+  <div id="d3" style="display:block;">
+  <table width="99%" class="t1">
+  <tr>
+  	<td width="15%">组团单位</td>
+	<td width="35%"><input type="text" style="width:70%;" readonly="readonly" value="大屯公司" /></td>
+	<td width="15%">团组长</td>
+	<td width="35%"><input type="text" style="width:70%;" readonly="readonly" value="张三" /></td>
+  </tr>
+  <tr class="a2">
+  	<td>团组名称</td>
+	<td colspan="3"><input type="text"style="width:88%;" readonly="readonly" value="大屯公司项目出国培训团组" size="84%" /></td>
+  </tr>
+  <tr>
+    <td colspan="4">
+		<table width="100%" class="t1">
+			<tr class="a2">
+				<th width="8%">序号</th>
+				<th width="15%">姓名</th>
+				<th width="20%">工作单位</th>
+				<th width="17%">部门</th>
+				<th width="15%">职务</th>
+				<th width="25%">操作</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>王鹏</td>
+				<td>大屯公司</td>
+				<td>技术部</td>
+				<td>工程师</td>
+				<td>
+					<a href="../出国管理/添加人员.html">查看</a>&nbsp;&nbsp;
+					<a href="../出国管理/添加人员.html">修改</a>&nbsp;&nbsp;
+					<a href="javascript:void(0)">删除</a>
+				</td>
+			</tr>
+			<tr  class="a2">
+				<td>2</td>
+				<td>张明</td>
+				<td>大屯集团</td>
+				<td>技术部</td>
+				<td>工程师</td>
+				<td>
+					<a href="../出国管理/添加人员.html">查看</a>&nbsp;&nbsp;
+					<a href="../出国管理/添加人员.html">修改</a>&nbsp;&nbsp;
+					<a href="javascript:void(0)">删除</a>
+				</td>
+			</tr>
+		</table>
+			
+    </td>
+  </tr>
+  </table>
+  </div>
+  <table width="99%" class="t1">
+  	<tr class="a1" onclick="zd('d5','tit5')">
+  		<td>
+  			<img id="tit5" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />填报人信息
+  		</td>
+  	</tr>
+  </table>
+  <div id="d5">
+	  <table width="99%" class="t1">
+	  	<tr>
+		<td width="15%">填写人</td>
+		<td width="35%"><input type="text" style="width:70%;" disabled="disabled" value="林石"/></td>
+		<td width="15%">电话</td>
+		<td width="35%"><input type="text" style="width:70%;" disabled="disabled" value="13099998888"/></td>
+	  </tr>
+	  <tr class="a2">
+		<td>传真</td>
+		<td><input type="text" style="width:70%;" disabled="disabled" value="010-82256791" /></td>
+		<td>邮箱</td>
+		<td><input type="text" style="width:70%;" disabled="disabled" value="xsgsxx@chinacoal.com" /></td>
+	  </tr>
+	
+	</table>
+</div>
+   <table width="99%" class="t1">
+	  <tr>
+	    <td colspan="4" align="center">
+	    <input type="button" onclick="jump()" value="返回" />
+	    </td>
+	  </tr>
+	
+	</table>
+
+</body>
+</html>

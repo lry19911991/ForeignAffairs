@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>境外机构资质管理-->新建机构-->新建证件</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../My97DatePicker/WdatePicker.js" ></script>
+<script type="text/javascript">
+function gb(){
+	window.close();
+}
+</script>
+</head>
+
+<body>
+	<table width="99%" border="1" class="t1">
+    	<tr class="a1">
+        	<td>
+            	<img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />证件信息
+            </td>
+        </tr>
+    </table>
+	<div>
+		<table width="99%" id="tztab"  border="1" class="t1">
+			<tr>
+            	<td width="15%"><font color="red">*</font>证件类型</td>
+				<td width="35%">
+					<select>
+						<option>--请选择--</option>
+						<option>营业执照</option>
+                        <option>开采许可证</option>
+					</select>
+				</td>
+				<td width="15%"><font color="red">*</font>证件名称</td>
+				<td width="35%"><input type="text" /></td>
+				
+			</tr>
+            <tr>
+            	<td><font color="red">*</font>注册号</td>
+                <td><input type="text" /></td>
+                <td><font color="red">*</font>法定代表人</td>
+                <td><input type="text" />&nbsp;<input type="button" value="请选择" /></td>
+            </tr>
+            <tr>
+            	<td><font color="red">*</font>公司类型</td>
+                <td>
+                	<select>
+                    	<option>--请选择--</option>
+                        <option>有限公司</option>
+                        <option>股份制企业</option>
+                    </select>
+                </td>
+                <td><font color="red">*</font>登记机关</td>
+                <td><input type="text" /></td>
+            </tr>
+            <tr>
+            	<td><font color="red">*</font>公司住所</td>
+                <td colspan="3"><input type="text" style="width:85%" /></td>
+            </tr>
+			<tr>
+				<td><font color="red">*</font>注册资本</td>
+				<td>
+					<input type="text" />
+				</td>
+				<td><font color="red">*</font>货币类型</td>
+				<td>
+                	<select>
+                    	<option>--请选择--</option>
+                        <option>人民币</option>
+                        <option>美元</option>
+                        <option>日元</option>
+                    </select>
+                </td>
+			</tr>
+			<tr>
+				<td><font color="red">*</font>成立时间</td>
+				<td><input type="text" onclick="WdatePicker();" /></td>
+				<td><font color="red">*</font>副本数量</td>
+				<td><input type="text" /></td>
+			</tr>
+            <tr>
+            	<td><font color="red">*</font>营业期限</td>
+                <td colspan="3">
+                	<input type="text" onclick="WdatePicker();"/>&nbsp;到&nbsp;<input type="text" onclick="WdatePicker();" />
+                </td>
+            </tr>
+           	<tr>
+            	<td><font color="red">*</font>经营范围</td>
+                <td colspan="3">
+                	<textarea cols="70" rows="4"></textarea>
+                </td>
+            </tr>
+			<tr>
+				<td><font color="red">*</font>证件附件上传</td>
+				<td colspan="3"><input type="file" /></td>
+			</tr>
+			<tr>
+				<td><font color="red">*</font>关联机构</td>
+				<td colspan="3"><input type="text" value="大屯能源驻新加坡办事处" />&nbsp;&nbsp;&nbsp;</td>
+			</tr>
+            <tr>
+            	<td><font color="red">*</font>保管部门</td>
+				<td colspan="3"><input type="text" />&nbsp;&nbsp;&nbsp;<input type="button" value="选择部门" /></td>
+            </tr>
+			<tr align="center">
+				<td colspan="4">
+					<input type="button" value="提交" />&nbsp;&nbsp;<input type="button" onclick="gb()" value="返回" />
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,593 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>  
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>出访国家统计</title>  
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/Style.css" type="text/css" />
+<style type="text/css">
+<!--
+body,div,ul,li{
+ padding:0;
+ text-align:center;
+}
+body{
+ font:12px "宋体";
+ text-align:center;
+}
+a:link{
+ color:#00F;
+ text-decoration:none;
+}
+a:visited {
+ color: #00F;
+ text-decoration:none;
+}
+a:hover {
+ color: #c00;
+ text-decoration:underline;
+}
+ul{ list-style:none;}
+
+/*选项卡2*/
+#Tab2{
+width:100%;
+margin:0px;
+padding:0px;
+margin:0 auto;}
+/*菜单class*/
+.Menubox {
+width:100%;
+height:28px;
+line-height:28px;
+}
+.Menubox ul{
+margin:0px;
+padding:0px;
+}
+.Menubox li{
+ background:url(../images/botton0_a.gif);
+ float:left;
+ display:block;
+ cursor:pointer;
+ width:114px;
+ text-align:center;
+ color:#949694;
+ font-weight:bold;
+ border-left:0px solid #CAD9EA;
+ border-top:0px solid #CAD9EA;
+ border-right:0px solid #CAD9EA;
+ padding-right:3px;
+ }
+.Menubox li.hover{
+ padding:0px;
+ /*background:#CAD9EA;*/
+ background:url(../images/botton0_hov.gif);
+ width:114px;
+ color:#739242;
+ font-weight:bold;
+ height:27px;
+ line-height:27px;
+ border-left:0px solid #CAD9EA;
+ border-top:0px solid #CAD9EA;
+ border-right:0px solid #CAD9EA;
+ padding-right:3px;
+}
+.Contentbox{
+ clear:both;
+ margin-top:0px;
+ border:1px solid #CAD9EA;
+ height:400px;
+ text-align:center;
+ padding-top:8px;
+}
+
+-->
+</style>
+<script language="JavaScript" src="js/FusionCharts.js">
+</script>  
+<script type="text/javascript">
+window.onload=function(){ 
+	var chart = new FusionCharts("swf/FCF_StackedColumn3D.swf","ChartId","750","500");
+	var xmldata="<graph xAxisName='出访国家' yAxisName='出访人次' caption='出访时间统计' subCaption='10个国家（地区）' numDivLines='3' showValues='0' formatNumberScale='0' baseFontSize='12' decimalPrecision='0'>" +
+				"<categories>" +
+				"<category name='美国'/>" +
+				"<category name='英国'/>" +
+				"<category name='法国'/>" +
+				"<category name='日本'/>" +
+				"<category name='俄罗斯'/>" +
+				"<category name='澳大利亚'/>" +
+				"<category name='韩国'/>" +
+				"<category name='加拿大'/>" +
+				"<category name='德国'/>" +
+				"<category name='西班牙'/>" +
+				"</categories>" +
+				"<dataset seriesName='一季度' color='AFD8F8' showValues='0'>" +
+				"<set value='120'/>" +
+				"<set value='50'/>" +
+				"<set value='70'/>" +
+				"<set value='60'/>" +
+				"<set value='20'/>" +
+				"<set value='20'/>" +
+				"<set value='35'/>" +
+				"<set value='23'/>" +
+				"<set value='41'/>" +
+				"<set value='37'/>" +
+				"</dataset>" +
+				"<dataset seriesName='二季度' color='F6BD0F' showValues='0'>" +
+				"<set value='100'/>" +
+				"<set value='71'/>" +
+				"<set value='43'/>" +
+				"<set value='68'/>" +
+				"<set value='12'/>" +
+				"<set value='35'/>" +
+				"<set value='20'/>" +
+				"<set value='20'/>" +
+				"<set value='37'/>" +
+				"<set value='13'/>" +
+				"</dataset>" +
+				"<dataset seriesName='三季度' color='8BBA00' showValues='0'>" +
+				"<set value='90'/>" +
+				"<set value='30'/>" +
+				"<set value='10'/>" +
+				"<set value='40'/>" +
+				"<set value='25'/>" +
+				"<set value='13'/>" +
+				"<set value='10'/>" +
+				"<set value='23'/>" +
+				"<set value='30'/>" +
+				"<set value='10'/>" +
+				"</dataset>" +
+				"<dataset seriesName='四季度' color='E23737' showValues='0'>" +
+				"<set value='100'/>" +
+				"<set value='30'/>" +
+				"<set value='30'/>" +
+				"<set value='65'/>" +
+				"<set value='0'/>" +
+				"<set value='40'/>" +
+				"<set value='20'/>" +
+				"<set value='15'/>" +
+				"<set value='27'/>" +
+				"<set value='31'/>" +
+				"</dataset>" +
+				"</graph>";
+			chart.setDataXML(xmldata);
+		chart.render("stackedColumnChart3DDiv");
+		piechart();
+		piechartVisitedCompany();
+		columnchartVisitedCompany();
+}
+	function piechart(){
+		var chart = new FusionCharts("swf/FCF_Pie3D.swf", "ChartId", "375", "250");
+	
+		var xmldata=
+			"<graph decimalPrecision='0' showNames='1' caption='本部门出访国家统计' enableRotation='0'>" +
+			"<set value='4' name='美国'/>" +
+			"<set value='2' name='英国'/>" +
+			"<set value='1' name='法国'/>" +
+			"<set value='4' name='日本'/>" +
+			"<set value='1' name='俄罗斯'/>" +
+			"<set value='2' name='澳大利亚'/>" +
+			"<set value='2' name='韩国'/>" +
+			"<set value='1' name='加拿大'/>" +
+			"<set value='3' name='德国'/>" +
+			"<set value='2' name='西班牙'/>" +
+			"</graph>";
+	
+	chart.setDataXML(xmldata);
+	    
+	chart.render("piechartdiv");
+	}
+	function piechartVisitedCompany(){
+		var chart = new FusionCharts("swf/FCF_Pie3D.swf", "ChartId", "375", "250");
+		var xmldata = "<graph decimalPrecision='0' showNames='1' caption='本单位出访统计' enableRotation='0'>" +
+					  "<set value='8' name='已出访团组'/>" +
+					  "<set value='3' name='未出访团组'/>" +
+					  "</graph>";
+		chart.setDataXML(xmldata);
+		chart.render("piechartVisitedCompany");
+	}
+	function columnchartVisitedCompany(){
+		var chart = new FusionCharts("swf/FCF_StackedColumn3D.swf","ChartId","750","500");
+		var xmldata = "<graph xAxisName='团组名称' yAxisName='出访次数' caption='本单位团组出访统计' numDivLines='2' showValues='0' formatNumberScale='0' baseFontSize='12' decimalPrecision='0'>" +
+					  "<categories>" +
+					  "<category name='团组一'/>" +
+					  "<category name='团组二'/>" +
+					  "<category name='团组三'/>" +
+					  "</categories>" +
+					  "<dataset seriesName='出访次数' color='AFD8F8' showValues='0'>" +
+					  "<set value='5'/>" +
+					  "<set value='8'/>" +
+					  "<set value='12'/>" +
+					  "</dataset>" +
+					  "</graph>";
+		chart.setDataXML(xmldata);
+		chart.render("columnchartVisitedCompany");
+	}
+	function setTab(name,cursel,n){
+ 		for(i=1;i<=n;i++){
+  			var menu=document.getElementById(name+i);
+  			var con=document.getElementById("con_"+name+"_"+i);
+  			menu.className=i==cursel?"hover":"";
+  			con.style.display=i==cursel?"block":"none";
+ 		}
+	}
+</script>
+</head>  
+<body>
+	<div id="Tab2">
+		<div class="Menubox">
+			<ul>
+   				<li id="two1" onclick="setTab('two',1,3)">出访时间统计</li>
+   				<li id="two2" onclick="setTab('two',2,3)">出访部门统计</li>
+   				<li id="two3" onclick="setTab('two',3,3)">出访单位统计</li>    
+			</ul>
+			<input type="button" value="导出为Excel" />
+		</div>
+		<div id="con_two_1">
+		<!--出访时间统计-->
+			<div>
+				<table width="100%" class="t1">
+					<tr>
+						<td width="20%">选择年份</td>
+						<td width="30%" bordercolor="#55A0FF"><select name="visitDate">
+											<option selected="selected" >2011年</option>
+											<option>2010年</option>
+											<option>2009年</option>
+										</select>
+					  </td>
+						<td width="20%">出访状态</td>
+						<td width="30%"><select name="visitInfo">
+											<option selected="selected">选择状态......</option>
+											<option>已出访</option>
+											<option>未出访</option>
+										</select>
+						</td>
+					</tr>
+					<tr align="center">
+						<td colspan="4"><input type="button" value="筛选" />&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="清空" /></td>
+					</tr>
+				</table>
+				<table width="100%" border="1" class="t1">
+					<tr class="a2" align="center">
+						<th width="10%">序号</th>
+						<th width="10%">出访国家</th>
+						<th width="15%">一季度</th>
+						<th width="15%">二季度</th>
+						<th width="15%">三季度</th>
+						<th width="15%">四季度</th>
+						<th width="20%">合计</th>
+					</tr>
+					<tr align="center">
+						<td>1</td>
+						<td>美国</td>
+						<td>120</td>
+						<td>100</td>
+						<td>90</td>
+						<td>100</td>
+						<td>320</td>
+					</tr>
+					<tr align="center">
+						<td>2</td>
+						<td>英国</td>
+						<td>50</td>
+						<td>71</td>
+						<td>30</td>
+						<td>30</td>
+						<td>181</td>
+					</tr>
+					<tr align="center">
+						<td>3</td>
+						<td>法国</td>
+						<td>70</td>
+						<td>43</td>
+						<td>10</td>
+						<td>30</td>
+						<td>153</td>
+					</tr>
+					<tr align="center">
+						<td>4</td>
+						<td>日本</td>
+						<td>60</td>
+						<td>68</td>
+						<td>40</td>
+						<td>65</td>
+						<td>233</td>
+					</tr>
+					<tr align="center">
+						<td>5</td>
+						<td>俄罗斯</td>
+						<td>20</td>
+						<td>12</td>
+						<td>25</td>
+						<td>0</td>
+						<td>57</td>
+					</tr>
+					<tr align="center">
+						<td>6</td>
+						<td>澳大利亚</td>
+						<td>20</td>
+						<td>35</td>
+						<td>13</td>
+						<td>40</td>
+						<td>108</td>
+					</tr>
+					<tr align="center">
+						<td>7</td>
+						<td>韩国</td>
+						<td>35</td>
+						<td>20</td>
+						<td>10</td>
+						<td>20</td>
+						<td>85</td>
+					</tr>
+					<tr align="center">
+						<td>8</td>
+						<td>加拿大</td>
+						<td>23</td>
+						<td>20</td>
+						<td>23</td>
+						<td>15</td>
+						<td>81</td>
+					</tr>
+					<tr align="center">
+						<td>9</td>
+						<td>德国</td>
+						<td>41</td>
+						<td>37</td>
+						<td>30</td>
+						<td>27</td>
+						<td>135</td>
+					</tr>
+					<tr align="center">
+						<td>10</td>
+						<td>西班牙</td>
+						<td>37</td>
+						<td>13</td>
+						<td>10</td>
+						<td>31</td>
+						<td>91</td>
+					</tr>
+				</table>
+			</div>
+			<div>
+				<table width="100%" border="1" class="t1">
+					<tr>
+  						<td align="center" width="100%"><div id="stackedColumnChart3DDiv">统计数据为空 </div></td>
+  					</tr>
+				</table>
+			</div>
+		</div>
+		<div id="con_two_2" style="display:none">
+		<!--出访部门统计-->
+				<table width="100%" class="t1">
+					<tr>
+						<td width="20%">选择年份</td>
+						<td width="30%"><select id="visitDate">
+											<option selected="selected" >2011年</option>
+											<option>2010年</option>
+											<option>2009年</option>
+										</select>
+						</td>
+						<td width="20%">出访状态</td>
+						<td width="30%"><select name="visitInfo">
+											<option selected="selected">选择状态......</option>
+											<option>已出访</option>
+											<option>未出访</option>
+										</select>
+						</td>
+					</tr>
+					<tr>
+						<td width="20%">选择单位</td>
+						<td width="30%"><select name="company">
+											<option selected="selected">选择单位......</option>
+											<option>平朔工业公司</option>
+											<option>大屯公司</option>
+											<option>太原煤气化公司</option>
+											<option>进出口公司</option>
+											<option>中煤龙化公司</option>
+											<option>中煤建设集团有限公司</option>
+											<option>综合利用公司</option>
+											<option>北京中煤机械装备有限公司</option>
+											<option>上海大厦公司</option>
+											<option>运销公司</option>
+											<option>南方公司</option>
+											<option>实业公司</option>
+											<option>煤气层公司</option>
+											<option>地煤公司</option>
+											<option>中煤香港公司</option>
+											<option>中煤日本代表处</option>
+											<option>中日石炭公司</option>
+											<option>韩国代表处</option>
+											<option>中煤金海洋公司</option>
+											<option>中煤能源股份有限公司</option>
+										</select>
+						</td>
+						<td width="20%">选择部门</td>
+						<td width="30%"><select name="depart">
+											<option selected="selected">选择部门...</option>
+											<option>办公厅</option>
+											<option>董事会办公室</option>
+											<option>党群工作部</option>
+											<option>企业发展部</option>
+											<option>人力资源管理部</option>
+											<option>企业管理部</option>
+											<option>财务管理部</option>
+											<option>基本建设管理部</option>
+											<option>生产技术管理部</option>
+											<option>科技发展部</option>
+											<option>信息管理部</option>
+											<option>安全监察局</option>
+											<option>总调度室</option>
+											<option>法律事务部</option>
+											<option>监察审计部</option>
+											<option>企业文化部</option>
+											<option>离退休人员管理中心</option>
+											<option>服务中心</option>
+											<option>采购中心</option>
+										</select>
+						</td>
+					</tr>
+					<tr align="center">
+						<td colspan="4"><input type="button" value="筛选" />&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="清空" /></td>
+					</tr>
+				</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3" align="center">
+				<tr align="center">
+					<td align="center"><div id="piechartdiv">统计数据为空 </div></td>
+					<td>
+					<div id="taablediv">
+						<table width="100%" border="1" class="t1">
+							<tr class="a2" align="center">
+								<th width="10%">序号</th>
+								<th width="15%">员工姓名</th>
+								<th width="10%">性别</th>
+								<th width="15%">职务</th>
+								<th width="15%">出国次数</th>
+								<th width="10%">访问国家</th>
+							</tr>
+							<tr align="center">
+								<td>1</td>
+								<td>刘勇</td>
+								<td>男</td>
+								<td>项目经理</td>
+								<td>2</td>
+								<td><a onmousemove="alert('2012年3月出访韩国\n2011年9月出访日本')">详细</a></td>
+							</tr>
+							<tr align="center">
+								<td>2</td>
+								<td>陈毅</td>
+								<td>男</td>
+								<td>行政主管</td>
+								<td>1</td>
+								<td><a onmousemove="alert('2011年12月出访日本')">详细</a></td>
+							</tr>
+							<tr align="center">
+								<td>3</td>
+								<td>王吉</td>
+								<td>男</td>
+								<td>项目开发</td>
+								<td>1</td>
+								<td><a href="">详细</a></td>
+							</tr>
+							<tr align="center">
+								<td>4</td>
+								<td>何其正</td>
+								<td>男</td>
+								<td>项目组长</td>
+								<td>1</td>
+								<td><a href="">详细</a></td>
+							</tr>
+							<tr align="center">
+								<td>5</td>
+								<td>郭富城</td>
+								<td>男</td>
+								<td>项目经理</td>
+								<td>2</td>
+								<td><a href="">详细</a></td>
+							</tr>
+							<tr align="center">
+								<td>6</td>
+								<td>徐丹丹</td>
+								<td>女</td>
+								<td>部门副总</td>
+								<td>3</td>
+								<td><a onmousemove="alert('2012年4月出访美国\n2011年10月出访日本\n2011年3月出访英国')">详细</a></td>
+							</tr>
+						</table>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td align="center" colspan="2"><div id="stackedColumnChart3DDiv">统计数据为空</div></td>
+				</tr>
+			</table>
+		</div>
+		<div id="con_two_3" style="display:none">
+		<!--出访单位统计-->
+			<table width="100%" class="t1">
+				<tr>
+					<td width="20%">选择单位</td>
+					<td width="30%"><select name="company">
+										<option selected="selected">选择单位......</option>
+										<option>平朔工业公司</option>
+										<option>大屯公司</option>
+										<option>太原煤气化公司</option>
+										<option>进出口公司</option>
+											<option>中煤龙化公司</option>
+											<option>中煤建设集团有限公司</option>
+											<option>综合利用公司</option>
+											<option>北京中煤机械装备有限公司</option>
+											<option>上海大厦公司</option>
+											<option>运销公司</option>
+											<option>南方公司</option>
+											<option>实业公司</option>
+											<option>煤气层公司</option>
+											<option>地煤公司</option>
+											<option>中煤香港公司</option>
+											<option>中煤日本代表处</option>
+											<option>中日石炭公司</option>
+											<option>韩国代表处</option>
+											<option>中煤金海洋公司</option>
+											<option>中煤能源股份有限公司</option>
+										</select>
+					</td>
+					<td width="20%">出访状态</td>
+					<td width="30%"><select name="visitInfo">
+										<option selected="selected">选择状态......</option>
+										<option>已出访</option>
+										<option>未出访</option>
+									</select>
+					</td>
+				</tr>
+					<tr align="center">
+						<td colspan="4"><input type="button" value="筛选" />&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="清空" /></td>
+					</tr>
+				</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3" align="center">
+				<tr align="center">
+					<td align="center"><div id="piechartVisitedCompany">统计数据为空 </div></td>
+					<td>
+					<div id="taablediv">
+						<table width="100%" border="1" class="t1">
+							<tr class="a2" align="center">
+								<th width="10%">序号</th>
+								<th width="20%">团组名称</th>
+								<th width="10%">人数</th>
+								<th width="15%">领队</th>
+								<th width="15%">人员明细</th>
+							</tr>
+							<tr align="center">
+								<td>1</td>
+								<td>团组一</td>
+								<td>4</td>
+								<td>刘勇</td>
+								<td><a href="">明细</a></td>
+							</tr>
+							<tr align="center">
+								<td>2</td>
+								<td>团组二</td>
+								<td>10</td>
+								<td>何其正</td>
+								<td><a href="">明细</a></td>
+							</tr>
+							<tr align="center">
+								<td>3</td>
+								<td>团组三</td>
+								<td>5</td>
+								<td>郭富城</td>
+								<td><a href="">明细</a></td>
+							</tr>
+						</table>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td align="center" colspan="2"><div id="columnchartVisitedCompany">统计数据为空</div></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html> 
+

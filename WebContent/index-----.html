@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+  <head><meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!--Ext and ux styles -->
+    <link href="http://bryntum.com/examples/extjs-6.0.0/build/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" type="text/css"/>
+
+    <!--Scheduler styles-->
+    <link href="weboffice/sch-gantt-all.css?ver=" rel="stylesheet" type="text/css" />
+
+    <!--Implementation specific styles-->
+    <link href="gantt-export.css" rel="stylesheet" type="text/css" />
+    <link href="weboffice/examples.css" rel="stylesheet" type="text/css" />
+
+    <!--Ext lib and UX components-->
+    <script src="http://bryntum.com/examples/extjs-6.0.0/build/ext-all.js" type="text/javascript"></script>
+    <script src="http://bryntum.com/examples/extjs-6.0.0/build/classic/theme-classic/theme-classic.js" type="text/javascript"></script>
+
+    <!--Gantt files-->
+    <script src="weboffice/gnt-all-debug.js?ver=" type="text/javascript"></script>
+
+    <!--Application files-->
+    <script src="weboffice/examples-shared.js" type="text/javascript"></script>
+    <script src="gantt-export.js" type="text/javascript"></script>
+
+    <title>Ext Gantt PDF Export Demo</title>
+</head>
+  <body>
+    <div id="example-description">
+      <p>
+          NOTE: For this example to work you have to run it in a web server context. This example enables you to generate a PDF file out of a Gantt panel. It requires having <a href="http://phantomjs.org">PhantomJS 1.6</a> and <a href="http://imagemagick.org">ImageMagick</a> on your server as well as permissions to run them both and create/remove files.
+      </p>
+      <p>
+        The complete instruction of setting up this example is available in the <a href="README.txt">README.txt</a> file. Please note that the buffered option of the view (and data store) is not compatible with the export plugin.
+      </p>
+      <p>
+        Note that the js for the example code is not minified so it is readable. See <a href="gantt-export.js">export.js</a>. You can also take a look into PhantomJs renderer code <a href="render.js">render.js</a>.
+      </p>
+    </div>
+    <div id="example-container">
+    </div>
+  </body>
+</html>

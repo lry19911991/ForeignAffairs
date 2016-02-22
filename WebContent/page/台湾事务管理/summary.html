@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>计划汇总</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+function showinfo(){
+	window.showModalDialog("info.html",window,"dialogWidth=950px;dialogHeight=350px");
+}
+
+function showinfo1(){
+	window.showModalDialog("info1.html",window,"dialogWidth=950px;dialogHeight=350px");
+}
+function zd(id,tit){
+	if(document.getElementById(id).style.display=="none"){
+		document.getElementById(id).style.display="block";
+		document.getElementById(tit).src="../images/tit1.gif";
+	}else{
+		document.getElementById(id).style.display="none";
+		document.getElementById(tit).src="../images/tit.gif";
+	}
+}
+function fh(){
+	window.open("../计划管理/tab.html","_self");
+}
+</script>
+</head>
+
+<body>
+	<div>
+    	<table width="99%" class="t1">
+        	<tr class="a1" onclick="zd('d1','tit1')">
+				<td><img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />待汇总计划</td>
+			</tr>
+		</table>
+	</div>
+	<div id="d1">
+		<table width="99%" class="t1">
+            <tr>
+				<td>
+                	<input type="button" value="批量汇总" />
+                </td>
+			</tr>
+            <tr>
+            	<td>
+                	<table width="100%" border="1" class="t1">
+                        <tr class="a2">
+                            <th width="10%">
+                                <input type="checkbox" />全选
+                            </th>
+                            <th width="10%">序号</th>
+                            <th width="15%">计划编号</th>
+                            <th width="20%">计划名称</th>
+                            <th width="15%">年度</th>
+                            <th width="20%">单位名称</th>
+                            <th width="10%">当前状态</th>
+                        </tr>
+                        <tr align="center">
+                            <td><input type="checkbox" /></td>
+                            <td>1</td>
+                            <td><a href="javascript:void(0)" onclick="showinfo()">DT2012-0120S</a></td>
+                            <td>
+                            	<a href="javascript:void(0)" onclick="showinfo()">大屯能源2012赴台计划</a>
+                            </td>
+                            <td>2012</td>
+                            <td>大屯能源股份有限公司</td>
+                            <td>
+                                待审核
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </td>
+            </tr>
+        </table>
+		
+	</div>
+	<div >
+		<table width="99%" border="1" class="t1">
+			<tr class="a1" onclick="zd('d2','tit2')">
+				<td><img id="tit2" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />已汇总计划</td>
+			</tr>
+		</table>
+	</div>
+	<div id="d2">
+		<table width="99%" class="t1">
+            <tr>
+				<td>
+                	<input type="button" value="批量删除" />
+                </td>
+			</tr>
+			<tr>
+				<td>
+                	<table width="100%" border="1" class="t1">
+                        <tr class="a2">
+                            <th width="10%">
+                                <input type="checkbox" />全选
+                            </th>
+                            <th width="10%">序号</th>
+                            <th width="15%">计划编号</th>
+                            <th width="20%">计划名称</th>
+                            <th width="15%">年度</th>
+                            <th width="20%">单位名称</th>
+                            <th width="10%">当前状态</th>
+                        </tr>
+                        <tr align="center">
+                            <td><input type="checkbox" /></td>
+                            <td>1</td>
+                            <td><a href="javascript:void(0)" onclick="showinfo1()">PS2012-0120S</a></td>
+                            <td><a href="javascript:void(0)" onclick="showinfo1()">平朔煤业2012赴台计划</a></td>
+                            <td>2012</td>
+                            <td>平朔煤业有限责任公司</td>
+                            <td>
+                                已汇总
+                            </td>
+                        </tr>
+                        <tr class="a2" align="center">
+                            <td><input type="checkbox" /></td>
+                            <td>2</td>
+                            <td><a href="javascript:void(0)" onclick="showinfo1()">PS2012-0120S</a></td>
+                            <td><a href="javascript:void(0)" onclick="showinfo1()">平朔股份2012赴台计划</a></td>
+                            <td>2012</td>
+                            <td>平朔股份公司</td>
+                            <td>
+                                已汇总
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+			</tr>
+		</table>
+	</div>
+	<table width="99%" class="t1">
+	<tr class="a1" onclick="zd('d5','tit5')">
+		<td colspan="4"><img id="tit5" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />联系人信息</td>
+	</tr>
+	</table>
+	<div id="d5">
+	<table width="99%" class="t1">
+	<tr class="a2">
+		<td width="15%">联系人</td>
+		<td width="35%"><input type="text" readonly="readonly" style="width:70%;" value="林石"/></td>
+		<td width="15%">电话</td>
+		<td width="35%"><input type="text" readonly="readonly" style="width:70%;" value="13099998888"/></td>
+	</tr>
+	<tr>
+		<td>传真</td>
+		<td><input type="text" readonly="readonly" style="width:70%;" value="010-82256791" /></td>
+		<td>邮箱</td>
+		<td><input type="text" readonly="readonly" style="width:70%;" value="xsgsxx@chinacoal.com" /></td>
+	</tr>
+	</table>
+	</div>
+	<table width="99%" class="t1">
+		<tr align="center">
+			<td><input type="button" onclick="fh()" value="返回" /></td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>实际费用填写</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+	function jiaotong(){
+		window.showModalDialog("../出国管理/交通费.html",window,"dialogWidth:400px;dialogHeight:250px:center:yes");
+	}
+	function zd(id,tit){
+		if(document.getElementById(id).style.display=="none"){
+			document.getElementById(id).style.display="block";
+			document.getElementById(tit).src="../images/tit1.gif";
+		}else{
+			document.getElementById(id).style.display="none";
+			document.getElementById(tit).src="../images/tit.gif";
+		}
+	}
+	function jump(){
+		window.open("../出国管理/费用管理列表.html","_self");
+	}
+	
+	var sum = 0;
+	var num = 0;
+	
+	function getNum(id){
+		
+		num = Number(document.getElementById(id).value);
+
+		sum = Number(document.getElementById("sum").value);
+
+		//document.getElementById("sum").value = "";
+		
+	}
+	
+	function getSum(id){
+
+		var _num = Number(document.getElementById(id).value);
+
+		sum = Number(sum - num + _num);
+
+		document.getElementById("sum").value = sum.toString();
+		
+		sum = 0;
+		num = 0;
+
+	}
+</script>
+</head>
+
+<body>
+<div style="text-align:center;">注：所有费用以人民币为准</div>
+<!--<table width="99%" border="1" class="t1">-->
+<!--	<tr class="a1"  onclick="zd('d1','tit1')">-->
+<!--		<td colspan="4">-->
+<!--			<img id="tit1" src="../images/tit.gif" height="18px" width="18px" align="bottom"/>-->
+<!--			计划信息-->
+<!--		</td>-->
+<!--	</tr>-->
+<!--</table>-->
+<!--<div id="d1" style="display:none">-->
+<!--<table width="99%" class="t1">-->
+<!--	<tr>-->
+<!--  	<td width="15%">计划编号</td>-->
+<!--	<td width="35%"><input type="text" disabled="disabled" width="70" value="123456" /></td>-->
+<!--	<td width="15%">计划名称</td>-->
+<!--	<td class="" width="35%"><input type="text" disabled="disabled" width="70" value="出国考察计划" /></td>-->
+<!--  </tr>-->
+<!--  <tr class="a2">-->
+<!--  	<td>计划类别</td>-->
+<!--	<td><input type="text" disabled="disabled" width="70" value="考察交流" /></td>-->
+<!--	<td>出国人数</td>-->
+<!--	<td><input type="text" disabled="disabled" width="70" value="5" />人</td>-->
+<!--  </tr>-->
+<!--  <tr>-->
+<!--  	<td>出访国家</td>-->
+<!--	<td><input type="text" disabled="disabled" value="美国" /></td>-->
+<!--	<td>预计费用</td>-->
+<!--	<td><input type="text" disabled="disabled" value="20" />万元</td>-->
+<!--  </tr>-->
+<!--  <tr  class="a2">-->
+<!--  	<td>预计出访时间</td>-->
+<!--	<td><input type="text" disabled="disabled" value="2013-2-3" /></td>-->
+<!--	<td>出访天数</td>-->
+<!--	<td><input type="text" disabled="disabled" value="5" />天</td>-->
+<!--  </tr>-->
+<!--  <tr>-->
+<!--  	<td>组团单位</td>-->
+<!--	<td colspan="3"><input type="text" disabled="disabled" size="83%" value="大屯公司" /></td>-->
+<!--	-->
+<!--  </tr>-->
+<!--  <tr  class="a2">-->
+<!--  	<td>出访原因</td>-->
+<!--	<td colspan="3"><input type="text" disabled="disabled" value="出国考察交流" size="83%" /></td>-->
+<!--  </tr>-->
+<!--  <tr>-->
+<!--  	<td>局副领导</td>-->
+<!--	<td colspan="3"><input type="text" disabled="disabled" size="83%" value="" /></td>-->
+<!--  </tr>-->
+<!--  <tr  class="a2">-->
+<!--  	<td>经费来源</td>-->
+<!--	<td><input type="text" disabled="disabled" value="合同支付"  /></td>-->
+<!--	<td>邀请人</td>-->
+<!--	<td><input type="text" disabled="disabled" value="" /></td>-->
+<!--  </tr>-->
+<!--  <tr>-->
+<!--  	<td>上报公司</td>-->
+<!--	<td colspan=""><input type="text" disabled="disabled" size="83%" value="大屯公司" /></td>-->
+<!--  </tr>-->
+<!--  <tr class="a2">-->
+<!--  	<td>备注</td>-->
+<!--	<td colspan="3"><textarea cols="73" rows="3" disabled="disabled"></textarea></td>-->
+<!--  </tr>-->
+<!--  <tr>-->
+<!--	<td>联系人</td>-->
+<!--	<td><input type="text" disabled="disabled" value="林石"/></td>-->
+<!--	<td>电话</td>-->
+<!--	<td><input type="text" disabled="disabled" value="13099998888"/></td>-->
+<!--  </tr>-->
+<!--  <tr class="a2">-->
+<!--	<td>传真</td>-->
+<!--	<td><input type="text" disabled="disabled" value="010-82256791" /></td>-->
+<!--	<td>邮箱</td>-->
+<!--	<td><input type="text" disabled="disabled" value="xsgsxx@chinacoal.com" /></td>-->
+<!--  </tr>-->
+<!--  </table>-->
+<!--  </div>-->
+  <table width="99%" class="t1">
+  <tr class="a1"  onclick="zd('d2','tit2')">
+  	<td colspan="4">
+		<img id="tit2" src="../images/tit.gif" height="18px" width="18px" align="bottom" />
+		申请信息
+	</td>
+  </tr>
+  </table>
+  <div id="d2" style="display:none;">
+  <table width="99%" class="t1">
+  <tr>
+    <td width="15%">申请编号：</td>
+    <td width="35%"><input type="text" disabled="disabled" value="20120102" /></td>
+	<td width="15%">申请名称</td>
+	<td width="35%"><input type="text" disabled="disabled" value="出国考察" /></td>
+  </tr>
+  <tr class="a2">
+  	<td>申请类型</td>
+	<td colspan="3"><input type="text" disabled="disabled" value="计划外" /></td>
+  </tr>
+  <tr>
+  	<td>申请单位</td>
+	<td><input type="text" disabled="disabled" value="大屯公司" /></td>
+	<td>申请人数</td>
+	<td><input type="text" value="5" disabled="disabled" />人</td>
+  </tr>
+  
+  <tr class="a2">
+  	<td>出访国家</td>
+	<td><input type="text" disabled="disabled" value="美国" /></td>
+<!--	<td>预计费用</td>-->
+<!--	<td><input type="text" disabled="disabled" value="20" />万元</td>-->
+  </tr>
+  <tr>
+  	<td>预计出国时间</td>
+	<td><input type="text" disabled="disabled" value="2013-3-4" /></td>
+	<td>出国天数</td>
+	<td><input type="text" disabled="disabled" value="5" />天</td>
+  </tr>
+  <tr class="a2">
+  	<td>经费来源</td>
+	<td><input type="text" disabled="disabled" value="合同支付" /></td>
+	<td>邀请人</td>
+	<td><input type="text" disabled="disabled" value="" /></td>
+  </tr>
+  <tr>
+  	<td>是否途经台湾</td>
+	<td><input type="text" disabled="disabled" value="否" /></td>
+	<td>是否途经港澳</td>
+	<td><input type="text" disabled="disabled" value="否" /></td>
+  </tr>
+  <tr class="a2">
+  	<td>途经国家</td>
+	<td colspan="3"><input type="text" disabled="disabled" value="" size="83%" /></td>
+  </tr>
+  <tr>
+  	<td>组团单位</td>
+	<td colspan="3"><input type="text" size="83%" disabled="disabled" value="大屯公司" /></td>
+  </tr>
+  <tr class="a2">
+  	<td>计划费用</td>
+	<td colspan="3"><input type="text" size="83%" disabled="disabled" value="100000" /></td>
+  </tr>
+<!--  <tr class="a2">-->
+<!--  	<td>申请费用</td>-->
+<!--	<td colspan="3"><input type="text" size="30%"  value="50000" /></td>-->
+<!--	-->
+<!--	<td>实际费用</td>-->
+<!--	<td colspan="3"><input type="text" size="30%"  value="35000" /></td>-->
+<!--  </tr>-->
+<tr>
+  	<td>申请费用</td>
+	<td><input type="text" disabled="disabled" value="50000" /></td>
+	<td>实际费用</td>
+	<td><input type="text" disabled="disabled" value="35000" /></td>
+  </tr>
+  <tr class="a2">
+  	<td>备注</td>
+	<td colspan="3"><textarea rows="3" cols="73" disabled="disabled"></textarea></td>
+  </tr>
+   <tr class="a2">
+  	<td>费用备注</td>
+	<td colspan="3"><input type="text" value="150000"/></td>
+  </tr>
+  </table>
+  </div>
+
+<!--<table width="99%" class="t1">-->
+<!--	<tr class="a1" onclick="zd('d3','tit3')">-->
+<!--		<td><img id="tit3" src="../images/tit1.gif" height="18px" width="18px" align="bottom"/>费用信息</td>-->
+<!--	</tr>-->
+<!--</table>-->
+<!--<div id="d3">-->
+<!--<table width="99%" class="t1">-->
+<!--	<tr>-->
+<!--		<td colspan="2">-->
+<!--			<table width="99%" class="t1">-->
+<!--				<tr class="a2">-->
+<!--					<th width="10%">序号</th>-->
+<!--					<th width="20%">类型</th>-->
+<!--					<th width="25%">费用(元)</th>-->
+<!--					<th width="30%">用途(元)</th>-->
+<!--					<th width="15%">操作</th>-->
+<!--				</tr>-->
+<!--				<tr align="center">-->
+<!--					<td>1</td>-->
+<!--					<td>交通费</td>-->
+<!--					<td align="right">20000</td>-->
+<!--					<td><input id="jiaotong" type="text" style="width:80%;text-align: right;" onfocus="getNum('jiaotong');" onblur="getSum('jiaotong');" /></td>-->
+<!--					<td>-->
+<!--						<a href="javascript:void(0);">查看</a>&nbsp;&nbsp;-->
+<!--						<a href="javascript:void(0);">删除</a>-->
+<!--					</td>-->
+<!--				</tr>-->
+<!--				<tr align="center" class="a2">-->
+<!--					<td>2</td>-->
+<!--					<td>伙食费</td>-->
+<!--					<td align="right">10000</td>-->
+<!--					<td><input id="huoshi" type="text" style="width:80%;text-align: right;" onfocus="getNum('huoshi');" onblur="getSum('huoshi');" /></td>-->
+<!--					<td>-->
+<!--						<a href="javascript:void(0);">查看</a>&nbsp;&nbsp;-->
+<!--						<a href="javascript:void(0);">删除</a>-->
+<!--					</td>-->
+<!--				</tr>-->
+<!--				<tr align="center">-->
+<!--					<td>3</td>-->
+<!--					<td>公杂费</td>-->
+<!--					<td align="right">10000</td>-->
+<!--					<td><input id="gongza" type="text" style="width:80%;text-align: right;"  onfocus="getNum('gongza');" onblur="getSum('gongza');"/></td>-->
+<!--					<td>-->
+<!--						<a href="javascript:void(0);">查看</a>&nbsp;&nbsp;-->
+<!--						<a href="javascript:void(0);">删除</a>-->
+<!--					</td>-->
+<!--				</tr>-->
+<!--				<tr align="center" class="a2">-->
+<!--					<td>4</td>-->
+<!--					<td>置装费</td>-->
+<!--					<td align="right">10000</td>-->
+<!--					<td><input id="zhizhuang" type="text" style="width:80%;text-align: right;" onfocus="getNum('zhizhuang');" onblur="getSum('zhizhuang');" /></td>-->
+<!--					<td>-->
+<!--						<a href="javascript:void(0);">查看</a>&nbsp;&nbsp;-->
+<!--						<a href="javascript:void(0);">删除</a>-->
+<!--					</td>-->
+<!--				</tr>-->
+<!--				<tr align="center">-->
+<!--					<td>5</td>-->
+<!--					<td>通信费</td>-->
+<!--					<td align="right">10000</td>-->
+<!--					<td><input id="tongxin" type="text" style="width:80%;text-align: right;" onfocus="getNum('tongxin');" onblur="getSum('tongxin');" /></td>-->
+<!--					<td>-->
+<!--						<a href="javascript:void(0);">查看</a>&nbsp;&nbsp;-->
+<!--						<a href="javascript:void(0);">删除</a>-->
+<!--					</td>-->
+<!--				</tr>-->
+<!--				<tr align="center" class="a2">-->
+<!--					<td>6</td>-->
+<!--					<td>礼品费</td>-->
+<!--					<td align="right">10000</td>-->
+<!--					<td><input id="lipin" type="text" style="width:80%;text-align: right;" onfocus="getNum('lipin');" onblur="getSum('lipin');" /></td>-->
+<!--					<td>-->
+<!--						<a href="javascript:void(0);">查看</a>&nbsp;&nbsp;-->
+<!--						<a href="javascript:void(0);">删除</a>-->
+<!--					</td>-->
+<!--				</tr>-->
+<!--			</table>-->
+<!--				-->
+<!--		</td>-->
+<!--	</tr>-->
+<!--	<tr>-->
+<!--		<td>计划总计：70000元</td>-->
+<!--		<td>实际总计：<input readonly="readonly" id="sum" type="text" style="width:50%;text-align: right;" value="0" />元</td>-->
+<!--	</tr>-->
+<!--	</table>-->
+<!--	</div>-->
+	<table width="99%" class="t1">
+	<tr align="center">
+		<td colspan="5"><input type="button" value="提交" />&nbsp;&nbsp;<input type="button" value="返回" onclick="jump()" /></td>
+	</tr>
+</table>
+
+
+</body>
+</html>

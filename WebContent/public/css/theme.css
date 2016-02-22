@@ -1,0 +1,148 @@
+/* Left tree styles */
+.sch-ganttpanel .x-grid-cell {
+    height : 28px;
+}
+
+.x-touch .sch-ganttpanel .x-grid-cell {
+    height : 43px;
+}
+
+/* .sch-ganttpanel .x-tree-icon-parent {
+    display : none;
+}
+
+.sch-ganttpanel .x-tree-icon-leaf {
+    display : none;
+} */
+
+.sch-ganttpanel .x-grid-inner-locked .x-grid-cell {
+    border-left-color   : transparent;
+    border-bottom-color : transparent;
+    border-top-color    : transparent;
+    color               : #555;
+}
+
+.x-grid-inner-locked .x-grid-cell,
+.sch-gantt-label {
+    transition : color 0.3s;
+}
+
+.x-grid-inner-locked .x-grid-item-selected .x-grid-cell,
+.x-grid-item-selected .sch-gantt-label {
+    color : #222;
+}
+
+.x-grid-inner-locked :not(.x-grid-item-selected) .x-grid-cell {
+    background-color : transparent;
+}
+
+.x-grid-inner-locked .x-grid-cell-inner,
+.x-grid-inner-locked .x-tree-node-text {
+    line-height : 20px;
+}
+
+.x-touch .x-grid-inner-locked .x-grid-cell-inner,
+.x-touch .x-grid-inner-locked .x-tree-node-text {
+    line-height : 40px;
+}
+
+.x-tree-icon, .x-tree-elbow-img, .x-tree-checkbox {
+    margin-top : 0;
+}
+
+.root-row .x-grid-cell-inner {
+    padding-left : 10px;
+    font-size    : 120%;
+}
+
+.root-row .x-grid-cell {
+    border-bottom : 1px solid #bbb;
+}
+
+/* EOF Left tree styles */
+
+.sch-gantt-task {
+    top    : 10%;
+    height : 80%;
+}
+
+.sch-gantt-task-bar,
+.sch-gantt-task-segment {
+    border-radius : 1px;
+    background    : #5ea6f2;
+    border-width  : 0;
+}
+
+.sch-gantt-progress-bar {
+    color            : #fff;
+    background-image : none;
+    background-color : #117be9;
+    line-height      : 21px;
+    text-align       : right;
+    text-indent      : 3px;
+    font-size        : 0.9em;
+    overflow         : visible;
+}
+
+.x-touch .sch-gantt-progress-bar {
+    line-height : 34px;
+}
+
+.x-touch .x-tree-elbow-img {
+    height : 38px;
+}
+
+.sch-gantt-task-segment .sch-gantt-progress-bar-label {
+    display : none;
+}
+
+.sch-segment-in-progress .sch-gantt-progress-bar-label {
+    display : inline;
+}
+
+.sch-gantt-parenttask-bar {
+    background-color : #ffce2a;
+    border-color     : #ffaa2a !important;
+    border-width     : 0;
+    box-shadow       : 1px 1px 2px rgba(150,150,150,0.3);
+}
+
+.sch-gantt-parenttask-bar .sch-gantt-progress-bar {
+    background-color : #ffaa2a;
+}
+
+.sch-gantt-progress-bar span {
+    margin-right : 2px;
+}
+
+.sch-gantt-milestone-diamond {
+    border-color : #bfa448;
+    background   : #ffca2a;
+}
+
+.Important .sch-gantt-progress-bar {
+    background-image  : url(../images/pattern.png);
+    background-repeat : repeat;
+}
+
+.x-strict div.sch-event-fixed {
+    background : #8b0000;
+}
+
+.CustomerApproval {
+    border           : 2px solid #ddd;
+    background-color : #222;
+}
+
+.sch-gantt-task .sch-gantt-labelct {
+    line-height : 19px;
+}
+
+.sch-gantt-label {
+    color : #bbb;
+}
+
+.sch-dependency,
+.sch-dependency-arrow {
+    border-color : #43b48f;
+}

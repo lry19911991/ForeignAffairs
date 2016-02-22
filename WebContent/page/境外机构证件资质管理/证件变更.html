@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>境外机构资质管理-->证件资质管理-->证件变更</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../My97DatePicker/WdatePicker.js" ></script>
+<script type="text/javascript">
+function change(){
+	var obj = document.getElementById("change");
+	
+	var old = document.getElementById("old");
+	var _new = document.getElementById("new");
+	//alert(obj.value);
+	if(obj.value == "1"){
+		//alert(obj);
+		old.innerHTML="<input type='text' value='平朔公司营业执照' />";
+		_new.innerHTML="<input type='text' />";
+	}else if(obj.value == "2"){
+		old.innerHTML="<input type='text' value='将军' />";
+		_new.innerHTML="<input type='text' />";
+	}else if(obj.value == "3"){
+		old.innerHTML="<textarea cols='70' rows='4'>煤矿开采，能源开发</textarea>";
+		_new.innerHTML="<textarea cols='70' rows='4'></textarea>";
+	}else if(obj.value == "4"){
+		old.innerHTML="<input type='text' value='2011-10-2' />到<input type='text' value='2012-10-2' />";
+		_new.innerHTML="<input type='text' value=''  onclick='WdatePicker();'/>到<input type='text' value=''  onclick='WdatePicker();'/>";
+	}
+}
+</script>
+</head>
+
+<body>
+<div>
+<table width="100%" class="t1">
+	<tr class="a1">
+    	<td>
+        	<img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />变更信息
+        </td>
+    </tr>
+</table>
+</div>
+<table width="100%" class="t1">
+	<tr>
+    	<td width="15%">证件类型</td>
+        <td width="35%">
+        	<select disabled="disabled">
+            	<option>--请选择--</option>
+                <option selected="selected">营业执照</option>
+                <option>开采许可证</option>
+            </select>
+        </td>
+        <td width="15%">证件名称</td>
+        <td width="35%">
+        	<input id="zzmc" type="text" disabled="disabled" value="平朔公司营业执照" />
+        </td>
+    </tr>
+    <tr>
+    	<td>经办部门</td>
+        <td><input type="text" disabled="disabled" value="企业管理部" /></td>
+        <td>经办人</td>
+        <td><input type="text" disabled="disabled" value="林石" /></td>
+    </tr>
+  	<tr>
+    	<td>选择变更项</td>
+        <td>
+        	<select id="change" onchange="change();">
+            	<option value="-1">--请选择--</option>
+                <option value="1">证照名称</option>
+                <option value="2">法定代表人</option>
+                <option value="3">经营范畴</option>
+                <option value="4">营业期限</option>
+            </select>
+        </td>
+        <td>变更日期</td>
+        <td><input type="text" value="2012-5-2"  onclick="WdatePicker();"/></td>
+    </tr>
+    <tr>
+    	<td>变更前信息</td>
+        <td colspan="3">
+        	<div id="old">
+            </div>
+        </td>
+    </tr>
+    <tr>
+    	<td>变更后信息</td>
+    	<td colspan="3">
+        	<div id="new">
+            </div>
+        </td>
+    </tr>
+    <tr align="center">
+    	<td colspan="4">
+        	<input type="button" value="确定" /> &nbsp;&nbsp;
+            <input type="button" value="取消" />
+        </td>
+    </tr>
+</table>
+</body>
+</html>

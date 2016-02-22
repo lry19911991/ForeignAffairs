@@ -1,0 +1,50 @@
+Web Calendar V3.0 使用说明
+
+1.调用方法 
+	<script language="JavaScript" src="WebCalendar.js"></script>
+	<input type="text" onfocus="calendar()">
+	<input id="txtDate" onfocus="calendar()"><input type=button value=calendar onclick="calendar(txtDate)">
+
+2.显示设置
+	下面这段日历定制的 JavaScript 代码你可以一个都不定义，使用其默认值
+	<script language="JavaScript">
+	<!--
+		WebCalendar.yearFall   = 50;           //定义年下拉框的年差值
+		WebCalendar.format     = "yyyy-mm-dd" | "2003-06-07"; //回传日期的格式
+		WebCalendar.timeShow   = false | true; //是否返回时间
+		WebCalendar.drag       = true  | false;//是否允许拖动
+		WebCalendar.darkColor  = "#0000D0";    //控件的暗色
+		WebCalendar.lightColor = "#FFFFFF";    //控件的亮色
+		WebCalendar.btnBgColor = "#FFFFF5";    //控件的按钮背景色
+		WebCalendar.wordColor  = "#000080";    //控件的文字颜色
+		WebCalendar.wordDark   = "#DCDCDC";    //控件的暗文字颜色
+		WebCalendar.dayBgColor = "#E6E6FA";    //日期数字背景色
+		WebCalendar.todayColor = "#FF0000";    //今天在日历上的标示背景色
+		WebCalendar.DarkBorder = "#D4D0C8";    //日期显示的立体表达色
+	//-->
+	</script>
+
+3.函数说明
+	函数名					函数的用途说明（在主页面里自定义函数时请不要与以下的函数名冲突） 
+	calendar()				用户的主调函数 
+	writeIframe()			对iframe进行初始化 
+	WebCalendar()			初始化日历的设置 
+	funMonthSelect()		月份的下拉框 
+	funYearSelect()			年份的下拉框 
+	prevM()					往前翻月份 
+	nextM()					往后翻月份 
+	prevY()					往前翻 Year 
+	nextY()					往后翻 Year 
+	hiddenSelect()　		隐藏年份与月份的下拉框 
+	hiddenCalendar()		隐藏日历控件 
+	appendZero(n)			日期自动补零程序 
+	dayMouseOver()			日历里日期的 onmouseover 事件 
+	dayMouseOut()			日历里日期的 onmouseout  事件 
+	writeCalendar()			对日历显示数据的核心处理程序 
+	returnDate()			根据日期格式等返回用户选定的日期 
+	document.onclick()		if(WebCalendar.eventSrc != window.event.srcElement) hiddenCalendar();
+							若你要使用主网页的 document.onclick() 事件时，请加上上面这句代码（这句代码日历控件里已存在），
+							这句代码是当你点击日历以外的地方时日历自动关闭，若不使用 document.onclick() 事件就不需要再定义了． 
+	全局变量　WebCalendar	日历控件的实例，你可以通过它对日历进行定制 
+ 
+*/

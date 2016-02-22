@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>会见管理--&gt;新建会见</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript">
+function openDw(){
+	window.showModalDialog("../出国管理/组织机构.html",window,"dialogWidth:300px;dialogHeight:620px:center:yes");
+	document.getElementById("bumen").value="办公厅";
+}
+function showAdd(){
+	window.showModalDialog("addcontent.html",window,"dialogWidth=950px;dialogHeight=450px");
+
+}
+function backTab(){
+	window.close();
+}
+function zd(id,tit){
+	if(document.getElementById(id).style.display=="none"){
+		document.getElementById(id).style.display="block";
+		document.getElementById(tit).src="../images/tit1.gif";
+	}else{
+		document.getElementById(id).style.display="none";
+		document.getElementById(tit).src="../images/tit.gif";
+	}
+}
+function shengchengBH(){
+		document.getElementById("bh").value="ZM-C-2012-001-01";
+}
+function showPeple(){
+	window.showModalDialog("../出国管理/人员树.html",window,"dialogWidth:300px;dialogHeight:620px:center:yes");
+}
+</script>
+</head>
+
+<body>
+<table width="99%" class="t1">
+    <tr class="a1" onclick="zd('d2','tit2')">
+     <td colspan="4"><img id="tit2" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />创建人信息</td>
+    </tr>
+</table>
+<div id="d2">
+	<table class="t1" width="99%">
+	<tr class="a2">
+		<td width="15%"><font color="#FF0000">*</font>创建人</td>
+		<td width="35%"><input type="text" value="林石"/></td>
+		<td width="15%"><font color="#FF0000">*</font>电话</td>
+		<td width="35%"><input type="text" value="13099998888"/></td>
+	</tr>
+	<tr>
+		<td>单位</td>
+		<td><input type="text" value="中煤能源集团总部" /></td>
+		<td>部门</td>
+		<td><input type="text" value="办公厅" /></td>
+	</tr>
+    <tr class="a2">
+		<td>科室</td>
+		<td><input type="text" /></td>
+		<td>申请时间</td>
+		<td><input name="text" type="text" value="2012-5-17" onclick = "WdatePicker();" /></td>
+	</tr>
+	</table>
+</div>
+<table class="t1" width="99%">
+	<tr class="a1" onclick="zd('d3','tit3')">
+		<td colspan="4"><img id="tit3" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />来访单位信息</td>
+	</tr>
+</table>
+<div id="d3">
+<table width="99%" class="t1">
+    <tr class="a2">
+       <td width="15%"><font color="#FF0000">*</font>单位名称</td>
+       <td width="35%">
+            <input type="text" style="width:70%" value="" />
+       </td>
+       <td width="15%"><font color="#FF0000">*</font>来访最高领导级别</td>
+       <td width="35%">
+       	   <select>
+       	   		<option>--请选择--</option>
+       	   		<option>国家级正职</option>
+       	   		<option>国家级副职</option>
+       	   		<option>省部级正职</option>
+       	   		<option>省部级副职</option>
+       	   		<option>厅局级正职</option>
+       	   		<option>厅局级副职</option>
+       	   		<option>县处级正职</option>
+       	   		<option>县处级副职</option>
+       	   		<option>乡科级正职</option>
+       	   		<option>乡科级副职</option>
+       	   </select>
+       </td>
+    </tr>
+     <tr>
+      
+       <td><font color="#FF0000">*</font>领导人数</td>
+       <td>
+            <input type="text" style="width:60%" value=""/>&nbsp;&nbsp;人
+       </td>
+       <td><font color="#FF0000">*</font>随行人数</td>
+       <td>
+       		<input type="text" style="width:60%" value=""/>&nbsp;&nbsp;人
+       </td>
+    </tr>
+    <tr class="a2">
+    	<td>备注</td>
+    	<td colspan="3">
+    		 <textarea rows="3" cols="80" title="来访人员备注信息" ></textarea>
+    	</td>
+    </tr>
+</table>
+</div>
+<table class="t1" width="99%">
+	<tr class="a1" onclick="zd('d4','tit4')">
+		<td colspan="4"><img id="tit4" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />接待信息</td>
+	</tr>
+</table>
+<div id="d4">
+<table width="99%" class="t1">
+    <tr class="a2">
+       <td width="15%"><font color="#FF0000">*</font>接待部门</td>
+       <td width="35%">
+            <input id="bumen" type="text" style="width:60%" value="" />&nbsp;
+            <input type="button" value="请选择" onclick="openDw();" />
+       </td>
+       <td width="15%"><font color="#FF0000">*</font>负责人</td>
+       <td width="34%">
+       	 <input type="text" style="width:70%" value="" />
+         <input type="button" value="请选择" onclick="showPeple();" />
+        </td>
+    </tr>
+    <tr>
+    	 <td width="15%"><font color="#FF0000">*</font>接待地点</td>
+   		 <td colspan="3">
+       	 <input type="text" style="width:88%" value="" />
+         </td>
+    </tr>
+    <tr class="a2">
+    	<td width="15%"><font color="#FF0000">*</font>出席公司领导</td>
+    	<td colspan="3">
+             <textarea style="width:80%" rows="4"></textarea>
+             <input type="button" value="请选择" onclick="showPeple();" />
+        </td>
+    </tr>
+    <tr>
+    	<td width="15%"><font color="#FF0000">*</font>陪同人数</td>
+    	<td>
+            <input type="text" style="width:70%" value=""/>&nbsp;&nbsp;人
+        </td>
+        <td>接待时间</td>
+        <td><input name="text" type="text" value="2012-6-17" onclick = "WdatePicker();" /></td>
+    </tr>
+    <tr class="a2">
+    	<td>备注</td>
+    	<td colspan="3">
+    		 <textarea rows="3" cols="80" title="来访人员备注信息"></textarea>
+    	</td>
+    </tr>
+</table>
+</div>
+    <table width="99%" class="t1">
+	<tr class="a1" onclick="zd('d7','tit7')">
+		<td colspan="4"><img id="tit7" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />联系人信息</td>
+	</tr>
+	</table>
+	<div id="d7">
+	<table width="99%" class="t1">
+	<tr class="a2">
+		<td width="15%">联系人</td>
+		<td width="35%"><input type="text" style="width:70%;"  disabled="disabled" value="林石"/></td>
+		<td width="15%">电话</td>
+		<td width="35%"><input type="text" style="width:70%;"  disabled="disabled" value="13099998888"/></td>
+	</tr>
+	<tr>
+		<td>传真</td>
+		<td><input type="text" style="width:70%;" disabled="disabled" value="010-82256791" /></td>
+		<td>邮箱</td>
+		<td><input type="text" style="width:70%;" disabled="disabled" value="bj_ls@chinacoal.com" /></td>
+	</tr>
+	</table>
+	</div>
+    
+	<table width="99%" class="t1">
+    <tr align="center">
+    	<td colspan="4">
+        	<input type="button" value="提交"/>
+             &nbsp;
+            <input type="button" value="取消" onclick="backTab();"/>
+        </td>
+    </tr>
+  
+</table>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>  
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>对外合作项目统计</title>  
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/Style.css" type="text/css" />
+<script language="JavaScript" src="js/FusionCharts.js"></script>
+<script language="JavaScript">
+window.onload=function(){
+	 var chart = new FusionCharts("swf/FCF_MSLine.swf", "ChartId", "700", "500");
+     
+	 var xmldata=
+	 	"<graph showValues='0' showNames='1' showLimits='0' yAxisMinValue='100.0' numberPrefix='﹩' subcaption='（单位 /十万元）' caption='项目资金与费用统计' font>"+
+		"<categories>"+
+		"<category name='美国'/>"+
+		"<category name='日本'/>"+
+		"<category name='英国'/>"+
+		"<category name='法国'/>"+
+		"<category name='德国'/>"+
+		"<category name='加拿大'/>"+
+		"<category name='新西兰'/>"+
+		"<category name='澳大利亚'/>"+
+		"<category name='俄罗斯'/>"+
+		"<category name='南非'/>"+
+		"</categories>"+
+		"<dataset anchorBgColor='1D8BD1' anchorBorderColor='1D8BD1' color='1D8BD1' seriesName='项目费用'>"+
+		"<set value='10.0'/>"+
+		"<set value='18.3'/>"+
+		"<set value='16.99'/>"+
+		"<set value='15.11'/>"+
+		"<set value='100.4'/>"+
+		"<set value='19.57'/>"+
+		"<set value='12.96'/>"+
+		"<set value='22.96'/>"+
+		"<set value='32.96'/>"+
+		"<set value='62.96'/>"+
+		"</dataset>"+
+		"<dataset anchorBgColor='F1683C' anchorBorderColor='F1683C' color='F1683C' seriesName='项目资金'>"+
+		"<set value='204.2'/>"+
+		"<set value='321.0'/>"+
+		"<set value='299.4'/>"+
+		"<set value='311.5'/>"+
+		"<set value='284.4'/>"+
+		"<set value='357.6'/>"+
+		"<set value='186.2'/>"+
+		"<set value='686.2'/>"+
+		"<set value='586.2'/>"+
+		"<set value='860.2'/>"+
+		"</dataset>"+
+		"</graph>";
+		
+		chart.setDataXML(xmldata);
+	 	   
+     chart.render("linechartdiv");
+}
+</script>
+</head>
+
+<body>
+<table width="98%" border="0" cellspacing="0" cellpadding="3" align="center">
+  <tr>
+  	<td align="center">
+    	<div id="linechartdiv">统计数据为空 </div>
+  	</td>
+  </tr>
+  <tr align="center"> 
+    <td>
+    	<div id="taablediv">
+            <table class="t1">
+                <caption>对外合作项目统计</caption>
+                <tr><th>序号</th><th>国家名称</th><th>项目数量</th><th>项目资金</th><th>项目费用</th><th>时间范围</th><th>详细</th></tr>
+                <tr><td>1</td><td>美国</td><td>4</td><td>462</td><td>46.2</td><td>2011-4-10 18:57:36 -- 2012-4-10 18:57:36</td><td><a href="javascript:void(0);">文字查看</a>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);">图表查看</a></td></tr>
+                <tr><td>2</td><td>英国</td><td>6</td><td>857</td><td>46.2</td><td>2011-4-10 18:57:36 -- 2012-4-10 18:57:36</td><td><a href="javascript:void(0);">文字查看</a>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);">图表查看</a></td></tr>
+                <tr><td>3</td><td>法国</td><td>2</td><td>671</td><td>46.2</td><td>2011-4-10 18:57:36 -- 2012-4-10 18:57:36</td><td><a href="javascript:void(0);">文字查看</a>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);">图表查看</a></td></tr>
+                <tr><td>4</td><td>日本</td><td>3</td><td>494</td><td>46.2</td><td>2011-4-10 18:57:36 -- 2012-4-10 18:57:36</td><td><a href="javascript:void(0);">文字查看</a>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);">图表查看</a></td></tr>
+                <tr><td>5</td><td>俄罗斯</td><td>4</td><td>761</td><td>46.2</td><td>2011-4-10 18:57:36 -- 2012-4-10 18:57:36</td><td><a href="javascript:void(0);">文字查看</a>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);">图表查看</a></td></tr>
+                <tr><td>6</td><td>澳大利亚</td><td>2</td><td>960</td><td>46.2</td><td>2011-4-10 18:57:36 -- 2012-4-10 18:57:36</td><td><a href="javascript:void(0);">文字查看</a>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);">图表查看</a></td></tr>
+                <tr><td>7</td><td>新西兰</td><td>5</td><td>629</td><td>46.2</td><td>2011-4-10 18:57:36 -- 2012-4-10 18:57:36</td><td><a href="javascript:void(0);">文字查看</a>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);">图表查看</a></td></tr>
+                <tr><td>8</td><td>加拿大</td><td>3</td><td>622</td><td>46.2</td><td>2011-4-10 18:57:36 -- 2012-4-10 18:57:36</td><td><a href="javascript:void(0);">文字查看</a>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);">图表查看</a></td></tr>
+                <tr><td>9</td><td>德国</td><td>1</td><td>376</td><td>46.2</td><td>2011-4-10 18:57:36 -- 2012-4-10 18:57:36</td><td><a href="javascript:void(0);">文字查看</a>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);">图表查看</a></td></tr>
+                <tr><td>10</td><td>尼日利亚</td><td>2</td><td>494</td><td>46.2</td><td>2011-4-10 18:57:36 -- 2012-4-10 18:57:36</td><td><a href="javascript:void(0);">文字查看</a>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);">图表查看</a></td></tr>
+            </table>
+         </div>
+    </td>
+  	
+  </tr>
+  
+ </table>
+   
+</body>
+</html> 

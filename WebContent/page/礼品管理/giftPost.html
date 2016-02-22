@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>礼品上交</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript">
+	function zd(id,tit){
+		if(document.getElementById(id).style.display=="none"){
+			document.getElementById(id).style.display="block";
+			document.getElementById(tit).src="../images/tit1.gif";
+		}else{
+			document.getElementById(id).style.display="none";
+			document.getElementById(tit).src="../images/tit.gif";
+		}
+	}
+</script>
+</head>
+
+<body>
+	<div>
+		<table width="99%" border="1" class="t1">
+			<tr class="a2">
+				<td width="15%">礼品名称</td>
+				<td width="35%"><input type="text" style="width:70%;" /></td>
+				<td width="15%">礼品类别</td>
+				<td width="35%">
+					<select>
+		       	   		<option>--请选择--</option>
+		       	   		<option>高档礼品</option>
+		       	   		<option>中高档礼品</option>
+		       	   		<option>中档礼品</option>
+		       	   		<option>中低档礼品</option>
+		       	   		<option>低档礼品</option>
+		       	   </select>
+				</td>
+			</tr>
+			<tr>
+				<td>数量</td>
+				<td>
+					<input type="text" style="width:60%;text-align: right;" />&nbsp;件
+				</td>
+				<td>移交部门</td>
+				<td><input type="text" style="width:70%;" />&nbsp;<input type="button" value="请选择" onclick=""/></td>
+			</tr>
+			<tr class="a2">
+				<td>移交人</td>
+				<td><input type="text" style="width:70%;" />&nbsp;<input type="button" value="请选择" onclick=""/></td>
+				<td>接收人</td>
+				<td><input type="text" style="width:70%;" value="林石" /></td>
+			</tr>
+			<tr>
+				<td>上交日期</td>
+				<td><input type="text" style="width:70%;" value="2012-6-4" onclick="WdatePicker();" /></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr align="center">
+				<td colspan="4"><input type="button" value="保存" />&nbsp;&nbsp;<input type="button" value="取消" /></td>
+			</tr>
+		</table>
+	</div>
+	<div style="padding-top:10px;">
+		<table width="99%" border="1" class="t1">
+			<tr class="a1" onclick="zd('d1','tit1')">
+				<td colspan="5"><img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom"/>上交礼品</td>
+			</tr>
+		</table>
+		<div id="d1">
+		<table width="99%" class="t1">
+			<tr align="center" class="a2">
+				<th width="8%">序号</th>
+				<th width="20%">礼品名称</th>
+				<th width="17%">礼品类别</th>
+				<th width="15%">数量</th>
+				<th width="15%">移交部门</th>
+				<th width="15%">移交人</th>
+                <th width="15%">移交时间</th>
+			</tr>
+			<tr align="center">
+				<td>1</td>
+				<td>笔记本电脑</td>
+				<td>中高档礼品</td>
+				<td>1</td>
+                <td>办公厅</td>
+				<td>林石</td>
+				<td>2012-6-4</td>
+			</tr>
+			<tr class="a2" align="center">
+				<td>2</td>
+				<td>笔记本电脑</td>
+				<td>中高档礼品</td>
+				<td>1</td>
+                <td>办公厅</td>
+				<td>林石</td>
+				<td>2012-6-4</td>
+			</tr>
+			<tr align="center">
+				<td>3</td>
+				<td>笔记本电脑</td>
+				<td>中高档礼品</td>
+				<td>1</td>
+                <td>办公厅</td>
+				<td>林石</td>
+				<td>2012-6-4</td>
+			</tr>
+			<tr class="a2" align="center">
+				<td>4</td>
+				<td>笔记本电脑</td>
+				<td>中高档礼品</td>
+				<td>1</td>
+                <td>办公厅</td>
+				<td>林石</td>
+				<td>2012-6-4</td>
+			</tr>
+			<tr align="center">
+				<td>5</td>
+				<td>笔记本电脑</td>
+				<td>中高档礼品</td>
+				<td>1</td>
+                <td>办公厅</td>
+				<td>林石</td>
+				<td>2012-6-4</td>
+			</tr>
+		</table>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新建邀请</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script language="javascript">
+	function zd(id,tit){
+		if(document.getElementById(id).style.display=="none"){
+		document.getElementById(id).style.display="block";
+		document.getElementById(tit).src="../images/tit1.gif";
+		}else{
+		document.getElementById(id).style.display="none";
+		document.getElementById(tit).src="../images/tit.gif";
+		}
+	}
+	function country(){
+	window.showModalDialog("../对外邀请管理/显示国家页.html",window,"dialogWidth:800px;dialogHeight:600px:center:yes");
+	}
+</script>
+</head>
+
+<body>
+	<table width="99%" class="t1">
+		<tr class="a1" onclick="zd('d1','tit1')">
+			<td colspan="4"><img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />来访人信息</td>
+		</tr>
+	</table>
+	<div id="d1">
+	<table width="99%"  border="1" class="t1">
+		<tr class="a2">
+			<td width="15%">来访人</td>
+			<td width="35%"><input type="text" /></td>
+			<td width="15%">职务</td>
+			<td width="35%">
+				<select>
+					<option>职务</option>
+					<option>技术工程师</option>
+				</select>
+			</td>
+		</tr>
+		<tr class="a2">
+			<td width="15%">国家</td>
+			<td width="35%"><input type="text" style="width:70%" />&nbsp;<input type="button" onclick="country()" value="选择国家" /></td>
+			<td width="15%">邀请函</td>
+		  <td width="35%"><input type="text" style="width:70%"/><input type="button" onclick="invite()" value="选择邀请函" /></td>
+		</tr>
+		<tr class="a2">
+			<td>来访原因</td>
+			<td colspan="3"><textarea rows="3" cols="70"></textarea></td>
+		</tr>
+	</table>
+	</div>
+	<table width="99%" class="t1">
+		<tr class="a1" onclick="zd('d2','tit2')">
+			<td colspan="4"><img id="tit2" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />会见人信息</td>
+		</tr>
+	</table>
+	<div id="d2">
+	<table width="99%" border="1" class="t1">
+		<tr class="a2">
+			<td width="15%">会见人</td>
+			<td width="35%"><input type="text" /></td>
+			<td width="15%">职务</td>
+			<td width="35%"><select style="size:100px">
+								<option selected="selected">职务</option>
+								<option>技术工程师</option>
+							</select>
+			</td>
+		</tr>
+	</table>
+	</div>
+	<table width="99%" class="t1">
+		<tr class="a1" onclick="zd('d3','tit3')">
+			<td colspan="4"><img id="tit3" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />会见信息</td>
+		</tr>
+	</table>
+	<div id="d3">
+	<table width="99%" border="1" class="t1">
+		<tr class="a2">
+			<td width="15%">会见地点</td>
+			<td width="35%"><input type="text" /></td>
+			<td width="15%">会见时间</td>
+			<td width="35%"><input type="text" /></td>
+		</tr>
+		<tr class="a2">
+			<td width="15%">会见方案</td>
+			<td colspan="1"><input type="file" style="width:70%;" /><input type="button" value="上传" /></td>
+			<td width="15%">创建时间</td>
+			<td width="35%"><input type="text" value="2012-05-03"/></td>
+		</tr>
+	</table>
+	</div>
+		<table width="99%" class="t1">
+		<tr class="a1" onclick="zd('d4','tit4')">
+			<td colspan="4"><img id="tit3" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />联系人信息</td>
+		</tr>
+	</table>
+	<div id="d4">
+	<table width="99%" border="1" class="t1">
+		<tr class="a2">
+			<td width="15%">联系人</td>
+			<td width="35%"><input type="text" /></td>
+			<td width="15%">联系电话</td>
+			<td width="35%"><input type="text" /></td>
+		</tr>
+	</table>
+	</div>
+	<div>
+	<table width="99%" border="1" class="t1">
+		<tr align="center">
+			<td colspan="4">
+				<input type="button" value="提交" />&nbsp;&nbsp;
+				<input type="button" value="保存" />&nbsp;&nbsp;
+				<input type="button" value="清空" />
+			</td>
+		</tr>
+	</table>
+	</div>
+</body>
+	
+</html>

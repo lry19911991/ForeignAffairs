@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+body{margin:0; padding:0;}
+#all{background:url(image/frame_bg_5.jpg); width:890px; height:599px}
+#nav{height:60px; width:820px; margin:0 auto}
+.nav_shadow_t{height:18px; width:820px; background-image:url(image/nav_sec_top.png)}
+.nav_shadow_b{height:18px; width:820px; background-image:url(image/nav_sec_bottom.png)}
+#nav_word{height:20px; width:550px; margin:0 auto}
+#nav_word ul{list-style:none; margin:0; padding:0; }
+#nav_word ul li{font-size:12px; font-weight:bold; height:20px; width:110px; text-align:center; float:left; line-height:20px;}
+#nav_word ul li a{color:#333; text-decoration:none}
+#nav_word ul li a:hover{color:#FF6600; display:block; background:#b2c4df}

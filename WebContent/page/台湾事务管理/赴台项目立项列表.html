@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+
+function showinfo(){
+	window.showModalDialog("立项管理_立项申请.html",window,"dialogWidth=1024px;dialogHeight=550px");
+}
+function showinfo1(){
+	window.showModalDialog("立项管理_查看详细.html",window,"dialogWidth=1024px;dialogHeight=550px");
+}
+function showinfo2(){
+	window.showModalDialog("立项管理_修改.html",window,"dialogWidth=1024px;dialogHeight=550px");
+}
+</script>
+</head>
+
+<body>
+	<div>
+		<table width="99%">
+			<tr>
+				<td>
+					<input type="button" value="立项申请" onclick="showinfo();">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="padding-top:10px;">
+		<table width="99%" class="t1">
+			<tr class="a2">
+				<td width="15%">项目名称</td>
+				<td width="35%"><input type="text" style="width:70%;" /></td>
+				<td width="15%">申请人</td>
+				<td width="35%"><input type="text" style="width:70%;" /></td>
+			</tr>
+			<tr>
+				<tr>
+					<td>申请时间</td>
+					<td colspan="3"><input type="text" />至<input type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="button" value="筛选" />
+                    </td>
+				</tr>
+			</tr>
+		</table>
+	</div>
+	
+	<div style="padding-top:10px;">
+		<table width="99%" class="t1">
+			<tr class="a1">
+				<td>
+					<img id="tit1" src="../images/tit1.gif" height="18px" width="18px"  align="bottom" />新建项目列表
+				</td>
+			</tr>
+		</table>
+		<table width="99%" id="mytab"  border="1" class="t1">
+		  <tr class="a2">
+			<th width="8%" height="44">序号</th>
+			<th width="16%">项目编号</th>
+			<th width="16%">项目名称</th>
+			<th width="16%">合作单位</th>
+			<th width="13%">申请时间</th>
+			<th width="31%">操作</th>
+		  </tr>
+			<tr>
+				<td>1</td>
+				<td>XMBH20120505</td>
+				<td>XX项目</td>
+				<td>XX公司</td>
+				<td>2012-4-6</td>
+				 <td>
+				   <a href="javascript:void(0)"   onclick="showinfo1();">查看详细</a>&nbsp;&nbsp;
+				   <a href="javascript:void(0)"  onclick="showinfo2();">修改</a>&nbsp;&nbsp;
+				   <a href="javascript:void(0)">提交申请</a>&nbsp;&nbsp;
+				   				 </td>
+			</tr>
+			<tr class="a2">
+				<td>2</td>
+				<td>XMBH20120506</td>
+				<td>XX项目</td>
+				<td>XX公司</td>
+				<td>2012-4-6</td>
+				 <td>
+				   <a href="javascript:void(0)"  onclick="showinfo1();">查看详细</a>&nbsp;&nbsp;
+				   <a href="javascript:void(0)"  onclick="showinfo2();">修改</a>&nbsp;&nbsp;
+				   <a href="javascript:void(0)">提交申请</a>&nbsp;&nbsp;
+			  </td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>XMBH20120507</td>
+				<td>XX项目</td>
+				<td>XX公司</td>
+				<td>2012-4-6</td>
+				 <td>
+				   <a href="javascript:void(0)"  onclick="showinfo1();">查看详细</a>&nbsp;&nbsp;
+				   <a href="javascript:void(0)"  onclick="showinfo2();">修改</a>&nbsp;&nbsp;
+				   <a href="javascript:void(0)">提交申请</a>&nbsp;&nbsp;
+			  </td>
+			</tr>
+			<tr class="a2">
+				<td>4</td>
+				<td>XMBH20120508</td>
+				<td>XX项目</td>
+				<td>XX公司</td>
+				<td>2012-4-6</td>
+				 <td>
+				   <a href="javascript:void(0)"  onclick="showinfo1();">查看详细</a>&nbsp;&nbsp;
+				   <a href="javascript:void(0)"  onclick="showinfo2();">修改</a>&nbsp;&nbsp;
+				   <a href="javascript:void(0)">提交申请</a>&nbsp;&nbsp;
+			  </td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>XMBH20120509</td>
+				<td>XX项目</td>
+				<td>XX公司</td>
+				<td>2012-4-6</td>
+				 <td>
+				   <a href="javascript:void(0)"  onclick="showinfo1();">查看详细</a>&nbsp;&nbsp;
+				   <a href="javascript:void(0)"  onclick="showinfo2();">修改</a>&nbsp;&nbsp;
+				   <a href="javascript:void(0)">提交申请</a>&nbsp;&nbsp;
+			  </td>
+			</tr>
+		</table>
+</div>
+</body>
+</html>

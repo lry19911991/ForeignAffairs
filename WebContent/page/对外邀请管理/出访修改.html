@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>出访修改</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function jump(){
+	window.close();;
+}
+function showCountry(){
+	window.open("../对外邀请管理/显示国家页.html","_blank");
+}
+</script>
+</head>
+
+<body>
+	<div>
+		<table width="99%" id="tztab"  border="1" class="t1">
+			<tr>
+				<td>出访人</td>
+				<td><input type="text" value="王飞"/></td>
+				<td>出访时间</td>
+				<td><input type="text" value="2012-4-26" /></td>
+			</tr>
+			<tr>
+				<td>计划费用</td>
+				<td><input type="text" value="10000" /></td>
+				<td>实际费用</td>
+				<td><input type="text" value="9500" /></td>
+			</tr>
+			<tr>
+				<td>提醒时间</td>
+				<td colspan="3"><input type="text" value="2012-1-5" /></td>
+			</tr>
+			<tr>
+				<td>出访国家</td>
+				<td colspan="3"><input type="text" style="width:50%;" value="美国" /> <input type="button" onclick="showCountry()" value="选择国家" /></td>
+			</tr>
+			<tr>
+				<td>出访原因</td>
+				<td colspan="3"><textarea cols="70" rows="3">出国考察交流</textarea></td>
+			</tr>
+			<tr>
+				<td>出访方案</td>
+				<td colspan="3"><input type="file" style="width:60%;" />&nbsp;&nbsp;<a href="javascript:void(0)">查看原方案</a></td>
+			</tr>
+			<tr>
+				<td>其他资料</td>
+				<td colspan="3"><input type="file" style="width:60%;" />&nbsp;&nbsp;<a href="javascript:void(0)">查看原附件</a></td>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<input type="button" value="提交" />
+					<input type="button" value="修改" />
+					<input type="button" onclick="jump()" value="返回" />
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

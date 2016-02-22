@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>出国管理-->计划管理-->计划信息</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript">
+function colsed(){
+	window.close();
+}
+
+function openDw(){
+	window.showModalDialog("../出国管理/组织机构.html",window,"dialogWidth:300px;dialogHeight:620px:center:yes");
+	document.getElementById("dw").value="中煤建设集团有限公司";
+}
+function zd(id,tit){
+	if(document.getElementById(id).style.display=="none"){
+		document.getElementById(id).style.display="block";
+		document.getElementById(tit).src="../images/tit1.gif";
+	}else{
+		document.getElementById(id).style.display="none";
+		document.getElementById(tit).src="../images/tit.gif";
+	}
+}
+function country(){
+	window.showModalDialog("../出国管理/显示国家页.html",window,"dialogWidth:800px;dialogHeight:600px:center:yes");
+	document.getElementById("gj").value="美国";
+}
+function yincang(id){
+	if(id==1){
+		document.getElementById("d5").style.display='';	
+	}else{
+		document.getElementById("d5").style.display='none';
+	}	
+}
+function leaders(flag){
+	if(flag==1){
+		document.getElementById("leaders").style.display="block";
+	}else if(flag==2){
+		document.getElementById("leaders").style.display="none";
+	}
+}
+
+function showPro(){
+	var s = document.getElementById("proj").value;
+
+	if(s == 4){
+		
+		document.getElementById("context").style.display="none";
+		
+		document.getElementById("project").style.display="block";
+	}else{
+
+	document.getElementById("context").style.display="block";
+		
+		document.getElementById("project").style.display="none";
+	}
+
+}
+
+function showProjects(){
+
+	window.showModalDialog("../出国管理/项目树.html",window,"dialogWidth:300px;dialogHeight:600px:center:yes");
+
+	document.getElementById("projects").value="巴西煤矿开采";
+}
+
+function DateDiff(sDate1, sDate2)    
+{   
+    var aDate, oDate1, oDate2, iDays;    
+    aDate = sDate1.split("-");    
+    oDate1 = new Date(aDate[0],aDate[1]-1,aDate[2]);    
+    aDate = sDate2.split("-");    
+    oDate2 = new Date(aDate[0],aDate[1]-1,aDate[2]);    
+        
+    iDays = parseInt(Math.abs(oDate1 - oDate2) / 1000 / 60 / 60 /24);      
+    if((oDate1 - oDate2)<0){    
+        return -1;    
+    }    
+    return iDays; 
+}
+
+function getDays(){
+
+	var chuguo = document.getElementById("chuguo").value;
+	var huiguo = document.getElementById("huiguo").value;
+if(chuguo==""){
+	alert("请选择出国时间");
+	return false;
+}
+	var days=DateDiff(huiguo, chuguo);
+
+	if(days==-1){
+		alert("时间选择错误(回国时间必须在出国时间之后)!");
+		
+		//document.getElementById("chuguo").value=""
+		document.getElementById("huiguo").value=""
+		document.getElementById("days").value="";
+		
+		return false;
+		
+	}
+	
+	document.getElementById("days").value= days;
+
+}
+function showPeple(){
+	window.showModalDialog("../出国管理/人员树.html",window,"dialogWidth:300px;dialogHeight:620px:center:yes");
+}
+</script>
+</head>
+
+<body>
+<table class="t1" width="100%">
+	<tr class="a1" onclick="zd('d1','tit1')">
+		<td colspan="4"><img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />计划内容</td>
+	</tr>
+</table>
+<div id="d1">
+<table width="100%" class="t1">
+    <tr class="a2">
+       <td width="15%"><font color="#FF0000">*</font>上报单位</td>
+       <td width="35%">
+            <input type="text" style="width:70%" value="大屯公司" />
+       </td>
+        <td width="15%"><font color="#FF0000">*</font>内容类别</td>
+        <td width="35%">
+            <select style="width:100px" id="proj" onchange="showPro();">
+                <option value="-1">--请选择--</option>
+                <option value="1">考察交流</option>
+                <option value="2">国际会议</option>
+                <option value="3">培训</option>
+				<option value="4">项目</option>
+            </select>
+        </td>
+    </tr>
+     <tr id="context">
+       <td width="20%"><font color="#FF0000">*</font>内容名称</td>
+       <td colspan="3">
+            <input type="text" style="width:88%" value="" size="50"/>
+       </td>
+    </tr>
+    <tr id="project" style="display: none;">
+       <td width="20%"><font color="#FF0000">*</font>项目名称</td>
+       <td colspan="3">
+            <input id="projects" type="text" style="width:70%" value="" size="50"/>
+            <input type="button" value="选择项目" onclick="showProjects();" />
+       </td>
+    </tr>
+    <tr class="a2">
+        <td><font color="#FF0000">*</font>预计出访时间</td>
+        <td><input id="chuguo" type="text" style="width:70%" onclick = "WdatePicker()" /></td>
+        <td><font color="#FF0000">*</font>预计回国时间</td>
+        <td><input  id="huiguo" type="text" style="width:70%" onmousedown = "WdatePicker();"  onchange="getDays();" /></td>
+    </tr>
+    <tr>
+    	<td><font color="#FF0000">*</font>出国天数</td>
+        <td><input id="days" type="text" style="width:50%" readonly="readonly" />&nbsp;&nbsp;&nbsp;&nbsp;天</td>
+    </tr>
+    <tr>
+        <td>
+            <font color="#FF0000">*</font>组团单位
+        </td>
+        <td>
+            <input  type="text" style="width:65%" id="dw"/>
+            <input type="button" value="选择单位" onclick="openDw();" />
+        </td>
+        <td>
+            <font color="#FF0000">*</font>团组人数
+        </td>
+        <td>
+            <input type="text" style="width:70%"/>
+        </td>
+    </tr>
+    <tr class="a2">
+        <td>
+            <font color="#FF0000">*</font>是否有局副级领导
+        </td>
+      <td colspan="3">
+            <input name="header" type="radio" checked="checked" onclick="leaders(1)" />是
+            <input name="header" type="radio" class="btn1" id="noLeader" onclick="leaders(2)" />否
+        </td>
+       
+    </tr>
+    <tr id="leaders">
+        <td>局副级领导名单</td>
+        <td colspan="3">
+             <textarea style="width:88%" rows="4" id="leaderList"></textarea>
+             <input type="button" value="请选择" onclick="showPeple();" />
+        </td>
+    </tr>
+    <tr class="a2">
+        <td><font color="#FF0000">*</font>出访国家</td>
+        <td><input type="text" style="width:65%" id="gj"/><input type="button" onclick="country()" value="选择国家" /></td>
+        <td>邀请人</td>
+        <td><input type="text" style="width:70%"/></td>
+    </tr>
+    <tr>
+        <td><font color="#FF0000">*</font>经费</td>
+        <td><input type="text" style="text-align:right"/>
+			<select>
+				<option>￥，人民币元</option>
+				<option>＄，美元</option>
+				<option>€，欧元</option>
+				<option>￡，英镑</option>
+			</select>
+		</td>
+        <td><font color="#FF0000">*</font>经费来源</td>
+        <td>
+             <select style="width:100px">
+                <option value="1">合同支付</option>
+                <option value="2">公司提供</option>
+                <option value="3">对方支付</option>
+                <option value="4">自筹</option>
+				<option value="5">其它</option>
+            </select>
+        </td>
+    </tr>
+    <tr class="a2">
+        <td>备注</td>
+        <td colspan="3">
+            <textarea style="width:88%" rows="3"></textarea>
+        </td>
+    </tr>
+  </table>
+</div>
+	<table width="100%" class="t1">
+   <tr align="center">
+    <td colspan="4">
+        <input type="button" onclick="colsed();" value="确定"/>
+        &nbsp;
+        <input type="button" onclick="colsed();" value="取消"/>
+    </td>
+   </tr>
+</table>
+</body>
+</html>

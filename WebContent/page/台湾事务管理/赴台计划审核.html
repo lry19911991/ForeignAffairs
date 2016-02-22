@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<title>赴台计划审核</title> 
+
+<style type="text/css"> 
+	body{ font-size:12px;} 
+	.sec,.sec1{ cursor:pointer;} 
+	.sec{ color:#FFFFFF; font-weight:bold; text-align:center; background-color:#9DB3C5;}
+	.sec1{ color:#9DB3C5; text-align:center; background-color:#FFFFFF;} 
+	div{ line-height:22px;} 
+</style> 
+
+<script language="javascript"> 
+function $(id){ 
+return document.getElementById(id); 
+} 
+function xxk(num,id,ii,iii) 
+{ 
+//alert(ii); 
+var dq; 
+for(var i=1;i<=num;i++) 
+{ 
+   if(i==id){ 
+	  dq=$(ii+i).className='sec'; //当前选项 
+	  $(iii+i).style.display="block"; 
+   } 
+   else 
+   { 
+	  dq=$(ii+i).className='sec1'; 
+	  $(iii+i).style.display="none"; 
+   } 
+} 
+} 
+</script> 
+
+</head> 
+
+<body> 
+	<div>
+    <table width="100%" border="0" cellpadding="4" cellspacing="1" bordercolor="#FFFFFF" bgcolor="#9DB3C5">
+       <tr> 
+         <td class="sec" id="ts1" onclick="xxk(4,1,'ts','tts')">新建计划</td> 
+         <td bgcolor="#FFFFFF" id="ts2" class="sec1" onclick="xxk(4,2,'ts','tts')">项目管理</td>
+         <td bgcolor="#FFFFFF" id="ts3" class="sec1" onclick="xxk(4,3,'ts','tts')">团组管理</td>
+         <td bgcolor="#FFFFFF" id="ts4" class="sec1" onclick="xxk(4,4,'ts','tts')">费用管理</td>
+       </tr> 
+     <tr> 
+    <td colspan="4" bgcolor="#FFFFFF"> 
+        <div id="tts1">
+			<div>
+				<table width="99%" border="1" class="t1">
+					<tr>
+						<td>计划编号</td>
+						<td colspan="3"><input name="text" type="text" style="width:50%;" value="001002003" /></td>
+					</tr>
+					<tr>
+						<td>出访地区</td>
+						<td colspan="3">
+						台湾
+					</td>
+					</tr>
+					<tr>
+						<td>出访时间</td>
+						<td><input name="text2" type="text" value="2012-1-1" /></td>
+						<td>回国时间</td>
+						<td><input name="text2" type="text" value="2012-1-12" /></td>
+					</tr>
+					<tr>
+						<td>出访原因或任务</td>
+						<td colspan="3"><textarea cols="80%" rows="5">出国考察交流</textarea></td>
+					</tr>
+					<tr>
+						<td>计划年度</td>
+						<td>
+							<select>
+								<option><----请选择----></option>
+								<option selected="selected">2012</option>
+								<option>2013</option>
+							</select>
+						</td>
+						<td>上报文号</td>
+						<td><input type="text" value="001002004" /></td>
+					</tr>
+					<tr>
+						<td colspan="4">联系人信息</td>
+					</tr>
+					<tr>
+						<td>联系人</td>
+						<td><input type="text" value="张三" /></td>
+						<td>电话</td>
+						<td><input type="text" value="13099998888" /></td>
+					</tr>
+					<tr>
+						<td>单位</td>
+						<td><input type="text" value="大屯能源股份有限公司" /></td>
+						<td>部门</td>
+						<td><input type="text" value="行政部" /></td>
+					</tr>
+					<tr>
+						<td>科室</td>
+						<td><input type="text" value="行政科" /></td>
+						<td>填报时间</td>
+						<td><input type="text" value="2012-05-17" /></td>
+					</tr>
+				</table>
+			</div>
+			<div style="padding-top:10px;">
+						<table width="99%" border="1" class="t1">
+							<tr>
+								<td colspan="5">项目列表</td>
+							</tr>
+							<tr>
+								<td>序号</td>
+								<td>项目编号</td>
+								<td>项目名称</td>
+								<td>项目类型</td>
+								<td>地区</td>
+								<td>操作</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>00101</td>
+								<td>项目名称一</td>
+								<td>项目类型一</td>
+								<td>台湾</td>
+								<td><a href="javascript:void(0) " onclick="xxk(4,2,'ts','tts')" >查看</a></td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>00101</td>
+								<td>项目名称一</td>
+								<td>项目类型一</td>
+								<td>台湾</td>
+								<td><a href="javascript:void(0) " onclick="xxk(4,2,'ts','tts')">查看</a></td>
+							</tr>
+						</table>
+					</div>
+				</div> 
+				<div id="tts2" style="display:none;">
+					<div>
+						<table width="99%" border="1" class="t1">
+							<tr>
+								<td>项目编号</td>
+								<td><input type="text" value="123456" /></td>
+								<td>项目名称</td>
+								<td><input type="text" value="项目名称一" /></td>
+							</tr>
+							<tr>
+								<td>项目类型</td>
+								<td colspan="3">
+									<select>
+										<option><----请选择----></option>
+										<option selected="selected">类型一</option>
+										<option>类型二</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>地区</td>
+								<td colspan="3">台湾</td>
+							</tr>
+							<tr>
+								<td>备注</td>
+								<td colspan="3"><textarea cols="80%" rows="5">备注备注。。。。。。</textarea></td>
+							</tr>
+
+						</table>
+					</div>
+					<div style="padding-top:10px;">
+						<table width="99%" border="1" class="t1">
+							<tr>
+								<td colspan="4">团组列表</td>
+							</tr>
+							<tr>
+								<td>序号</td>
+								<td>团组编号</td>
+								<td>计划人数</td>
+								<td>操作</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>001002</td>
+								<td>3</td>
+								<td><a href="javascript:void(0)" onclick="xxk(4,3,'ts','tts')">查看</a></td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>001002</td>
+								<td>3</td>
+								<td><a href="javascript:void(0)" onclick="xxk(4,3,'ts','tts')">查看</a></td>
+							</tr>
+						</table>
+					</div>
+				</div> 
+				<div id="tts3" style="display:none;">
+					<div>
+						<table width="99%" border="1" class="t1">
+						  <tr>
+							<td width="30%;">团组编号</td>
+							<td><input type="text" value="123456" /></td>
+						  </tr>
+						  <tr>
+							<td>计划人数</td>
+							<td><input type="text" value="3" /></td>
+						  </tr>
+						  
+						  <tr>
+							<td>是否有副司局级人员</td>
+							<td><input type="radio" name="radio" />是<input type="radio" name="radio" checked="checked" />否</td>
+						  </tr>
+						  <tr>
+							<td>副司局级以上人员名单</td>
+							<td>
+								<textarea cols="80%" rows="5"></textarea>
+							</td>
+						  </tr>
+						  <tr>
+							<td>备注</td>
+							<td><textarea cols="80%" rows="5">备注备注。。。。。</textarea></td>
+						  </tr>
+
+						</table>
+					</div>
+					
+				</div> 
+				<div id="tts4" style="display:none;">
+					<div>
+						<table width="99%" border="1" class="t1">
+							<tr>
+								<td>项目编号</td>
+								<td><input type="text" value="123456" /></td>
+								<td>团组编号</td>
+								<td><input type="text" value="123456" /></td>
+							</tr>
+							<tr>
+								<td>费用金额</td>
+								<td><input type="text" style="width:110px;" value="10" />（万元）</td>
+								<td>费用来源</td>
+								<td>
+									<select>
+										<option>费用来源</option>
+										<option selected="selected">合同支付</option>
+										<option>外方支付</option>
+										<option>组团单位</option>
+										<option>派员单位</option>
+										<option>自筹</option>
+										<option>其他</option>
+									</select>
+								</td>
+							</tr>	
+							<tr>
+								<td>备注</td>
+								<td colspan="3"><textarea cols="80%" rows="5">备注备注。。。。。。</textarea></td>
+							</tr>
+						</table>
+					</div>
+
+				</div> 
+				<div style="padding-top:2px;">
+					<table width="99%" border="1" class="t1">
+						<tr>
+							<td>审核信息</td>
+							<td colspan="3"><input type="radio" name="randio" />同意<input type="radio" name="randio" />不同意</td>
+						</tr>
+						<tr>
+							<td>审核意见</td>
+							<td colspan="3"><textarea cols="80%" rows="5"></textarea></td>
+						</tr>
+						<tr>
+							<td colspan="4"><input type="button" value="确定" /><input type="button" onclick="jump()" value="取消" /></td>
+						</tr>
+					</table>
+				</div>
+			</td> 
+		  </tr> 
+    </table> 
+	</div>
+	
+</body> 
+</html> 
+<script type="text/javascript">
+function jump(){
+	window.open("../赴台计划审核/赴台计划审核列表.html","_self");
+}
+function showCountry(){
+	window.open("../对外邀请管理/显示国家页.html","_blank");
+}
+</script>

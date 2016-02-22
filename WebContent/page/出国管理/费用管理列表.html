@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>费用管理列表</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+body,div,ul,li{
+ padding:0;
+ text-align:center;
+}
+body{
+ font:12px "宋体";
+ text-align:center;
+}
+a:link{
+ color:#00F;
+ text-decoration:none;
+}
+a:visited {
+ color: #00F;
+ text-decoration:none;
+}
+a:hover {
+ color: #c00;
+ text-decoration:underline;
+}
+ul{ list-style:none;}
+
+/*选项卡2*/
+#Tab2{
+width:100%;
+margin:0px;
+padding:0px;
+margin:0 auto;}
+/*菜单class*/
+.Menubox {
+width:100%;
+height:28px;
+line-height:28px;
+}
+.Menubox ul{
+margin:0px;
+padding:0px;
+}
+.Menubox li{
+ background:url(../images/botton0_a.gif);
+ float:left;
+ display:block;
+ cursor:pointer;
+ width:114px;
+ text-align:center;
+ color:#949694;
+ font-weight:bold;
+ border-left:0px solid #CAD9EA;
+ border-top:0px solid #CAD9EA;
+ border-right:0px solid #CAD9EA;
+ }
+.Menubox li.hover{
+ padding:0px;
+ /*background:#CAD9EA;*/
+ background:url(../images/botton0_hov.gif);
+ width:114px;
+ border-left:1px solid #CAD9EA;
+ border-top:1px solid #CAD9EA;
+ border-right:1px solid #CAD9EA;
+ color:#739242;
+ font-weight:bold;
+ height:27px;
+line-height:27px;
+ border-left:0px solid #CAD9EA;
+ border-top:0px solid #CAD9EA;
+ border-right:0px solid #CAD9EA;
+}
+.Contentbox{
+ clear:both;
+ margin-top:0px;
+ border:1px solid #CAD9EA;
+ height:400px;
+ text-align:center;
+ padding-top:8px;
+}
+
+-->
+</style>
+<script type="text/javascript">
+	function setTab(name,cursel,n){
+ for(i=1;i<=n;i++){
+  var menu=document.getElementById(name+i);
+  var con=document.getElementById("con_"+name+"_"+i);
+  menu.className=i==cursel?"hover":"";
+  con.style.display=i==cursel?"block":"none";
+ }
+}
+
+function showAudit(){
+	window.showModalDialog("audit.html",window,"dialogWidth=950px;dialogHeight=350px");
+}
+
+function show(){
+	window.showModalDialog("show.html",window,"dialogWidth=950px;dialogHeight=350px");
+}
+
+function showInfo(){
+	window.showModalDialog("showinfo.html",window,"dialogWidth=950px;dialogHeight=350px");
+}
+function feiyong(){
+	window.showModalDialog("出国管理_费用管理_申请费用.html",window,"dialogWidth:800px;dialogHeight:700px:center:yes");
+}
+function xiangxi(){
+	window.showModalDialog("费用管理详细.html",window,"dialogWidth:800px;dialogHeight:700px:center:yes");
+}
+function xiangxi1(){
+	window.showModalDialog("费用管理详细1.html",window,"dialogWidth:800px;dialogHeight:700px:center:yes");
+}
+
+function openFee(){
+	window.showModalDialog("计划费用.html",window,"dialogWidth:950px;dialogHeight:450px:center:yes");
+}
+
+function openInfo(){
+	window.showModalDialog("计划费用详细.html",window,"dialogWidth:950px;dialogHeight:450px:center:yes");
+}
+
+function openHuaFeiInfo(){
+	window.showModalDialog("实际费用填写.html",window,"dialogWidth:950px;dialogHeight:450px:center:yes");
+}
+</script>
+</head>
+
+<body>
+<div id="Tab2">
+<div class="Menubox">
+<ul>
+<!--   <li id="two1" onclick="setTab('two',1,4)">待填写费用</li>-->
+<!--   <li id="two2" onclick="setTab('two',2,4)">批复后费用</li>-->
+
+
+   <li id="two1" onclick="setTab('two',1,1)">实际出国费用</li>
+   
+   
+   <!--
+   <li id="two4" onclick="setTab('two',4,4)">已批复费用</li>
+   -->      
+</ul>
+</div>
+ <div class="Contentbox">
+ 
+ 
+ 
+ 	<!--待填费用 -->
+	
+<!--   <div id="con_two_1" >-->
+<!--		<table width="99%" class="t1">-->
+<!--			<tr class="a2">-->
+<!--				<th>序号</th>-->
+<!--				<th>计划名称</th>-->
+<!--				<th>申请名称</th>-->
+<!--				<th>出访国家</th>-->
+<!--				<th>出访人数</th>-->
+<!--				<th>计划费用</th>-->
+<!--				<th>操作</th>-->
+<!--			</tr>-->
+<!--			<tr>-->
+<!--				<td>1</td>-->
+<!--				<td>出国计划</td>-->
+<!--				<td>出国计划申请</td>-->
+<!--				<td>美国</td>-->
+<!--				<td>5</td>-->
+<!--				<td>180000</td>-->
+<!--				<td>-->
+<!--					<a href="javascript:void(0);" onclick="openFee();">填写费用</a>&nbsp;&nbsp;-->
+<!--				</td>-->
+<!--			</tr>-->
+<!--		</table>-->
+<!--   </div>-->
+<!--   批复后费用 -->
+<!--   <div id="con_two_2" style="display:none">-->
+<!--   		<table width="99%" class="t1">-->
+<!--			<table width="99%" class="t1">-->
+<!--			<tr class="a2">-->
+<!--				<th>序号</th>-->
+<!--				<th>计划名称</th>-->
+<!--				<th>申请名称</th>-->
+<!--				<th>出访国家</th>-->
+<!--				<th>出访人数</th>-->
+<!--				<th>批复费用</th>-->
+<!--				<th>操作</th>-->
+<!--			</tr>-->
+<!--			<tr>-->
+<!--				<td>1</td>-->
+<!--				<td>出国计划</td>-->
+<!--				<td>出国计划申请</td>-->
+<!--				<td>美国</td>-->
+<!--				<td>5</td>-->
+<!--				<td>180000</td>-->
+<!--				<td>-->
+<!--					<a href="javascript:void(0);" onclick="openInfo();">费用详细</a>&nbsp;&nbsp;-->
+<!--				</td>-->
+<!--			</tr>-->
+<!--		</table>-->
+<!--   </div>-->
+
+
+   <!--实际费用 -->
+   <div id="con_two_1" style="display:none">
+		<table width="99%" class="t1">
+			<tr class="a2">
+				<th>序号</th>
+				<th>计划名称</th>
+				<th>申请名称</th>
+				<th>出访国家</th>
+				<th>出访人数</th>
+				<th>计划费用</th>
+				<th>申请费用</th>
+				<th>实际费用</th>
+				<th>操作</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>出国计划</td>
+				<td>出国计划申请</td>
+				<td>美国</td>
+				<td>5</td>
+				<td>180000</td>
+				<td>180000</td>
+				<td>180000</td>
+				<td>
+					<a href="javascript:void(0);" onclick="openHuaFeiInfo();">填写费用</a>&nbsp;&nbsp;
+				</td>
+			</tr>
+		</table>
+   </div>
+   
+   
+    <!--已批复费用 -->
+<!--   <div id="con_two_4" style="display:none">-->
+<!--		<table width="99%" class="t1">-->
+<!--			<tr class="a2">-->
+<!--				<th>序号</th>-->
+<!--				<th>计划名称</th>-->
+<!--				<th>申请名称</th>-->
+<!--				<th>出访国家</th>-->
+<!--				<th>出访天数</th>-->
+<!--				<th>出访人数</th>-->
+<!--				<th>申请费用</th>-->
+<!--				<th>状态</th>-->
+<!--				<th>操作</th>-->
+<!--			</tr>-->
+<!--			<tr>-->
+<!--				<td>1</td>-->
+<!--				<td>出国交流计划</td>-->
+<!--				<td>出国交流申请</td>-->
+<!--				<td>美国</td>-->
+<!--				<td>10</td>-->
+<!--				<td>5</td>-->
+<!--				<td>200000</td>-->
+<!--				<td>已批复</td>-->
+<!--				<td>-->
+<!--					<a href="javascript:void(0)" onclick="xiangxi1()">详细费用</a>-->
+<!--				</td>-->
+<!--			</tr>-->
+<!--		</table>-->
+<!--   </div>-->
+
+
+ </div>
+</div>
+
+
+</body>
+</html>

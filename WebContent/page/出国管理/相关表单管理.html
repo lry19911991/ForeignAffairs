@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>相关表单管理</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+	function zd(id,tit){
+		if(document.getElementById(id).style.display=="none"){
+			document.getElementById(id).style.display="block";
+			document.getElementById(tit).src="../images/tit1.gif";
+		}else{
+			document.getElementById(id).style.display="none";
+			document.getElementById(tit).src="../images/tit.gif";
+		}
+	}
+</script>
+</head>
+
+<body>
+	<div>
+		<table width="99%" border="1" class="t1">
+			<tr class="a2">
+				<td width="15%">表单名称</td>
+				<td width="35%"><input type="text" style="width:70%;" /></td>
+				<td width="15%">创建时间</td>
+				<td width="35%"><input type="text"style="width:70%;" /></td>
+			</tr>
+			<tr>
+				<td>表单分类</td>
+				<td colspan="3">
+					<select>
+						<option><----请选择----></option>
+						<option>申请表</option>
+						<option>通知书</option>
+					</select>
+				</td>
+			</tr>
+			<tr class="a2">
+				<td>相关附件</td>
+				<td colspan="3"><input type="file" style="width:70%;" /></td>
+			</tr>
+			<tr align="center">
+				<td colspan="4"><input type="button" value="保存" /><input type="button" value="取消" /></td>
+			</tr>
+		</table>
+	</div>
+	<div style="padding-top:10px;">
+		<table width="99%" border="1" class="t1">
+			<tr class="a1" onclick="zd('d1','tit1')">
+				<td colspan="5"><img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom"/>常用表单</td>
+			</tr>
+		</table>
+		<div id="d1">
+		<table width="99%" class="t1">
+			<tr align="center" class="a2">
+				<th width="8%">序号</th>
+				<th width="30%">表单名称</th>
+				<th width="12%">表单类型</th>
+				<th width="15%">创建时间</th>
+                <th width="10%">创建人</th>
+				<th width="25%">操作</th>
+			</tr>
+			<tr align="center">
+				<td>1</td>
+				<td>因公出国护照申请表</td>
+				<td>申请表</td>
+				<td>2012-3-4</td>
+                <td>林石</td>
+				<td>
+					<a href="javascript:void(0);">查看</a>&nbsp;
+					<a href="javascript:void(0);">打印</a>&nbsp;
+					<a href="javascript:void(0);">下载附件</a>&nbsp;
+					<a href="javascript:void(0);">删除</a>
+				</td>
+			</tr>
+			<tr align="center" class="a2">
+				<td>2</td>
+				<td>出国任务通知书</td>
+				<td>通知书</td>
+				<td>2012-3-4</td>
+                <td>林石</td>
+				<td>
+					<a href="javascript:void(0);">查看</a>&nbsp;
+					<a href="javascript:void(0);">打印</a>&nbsp;
+					<a href="javascript:void(0);">下载附件</a>&nbsp;
+					<a href="javascript:void(0);">删除</a>
+				</td>
+			</tr>
+			<tr align="center">
+				<td>3</td>
+				<td>护照催缴</td>
+				<td>通知书</td>
+				<td>2012-3-4</td>
+                <td>林石</td>
+				<td>
+					<a href="javascript:void(0);">查看</a>&nbsp;
+					<a href="javascript:void(0);">打印</a>&nbsp;
+					<a href="javascript:void(0);">下载附件</a>&nbsp;
+					<a href="javascript:void(0);">删除</a>
+				</td>
+			</tr>
+			<tr align="center" class="a2">
+				<td>4</td>
+				<td>签证申请</td>
+				<td>申请表</td>
+				<td>2012-3-4</td>
+                <td>林石</td>
+				<td>
+					<a href="javascript:void(0);">查看</a>&nbsp;
+					<a href="javascript:void(0);">打印</a>&nbsp;
+					<a href="javascript:void(0);">下载附件</a>&nbsp;
+					<a href="javascript:void(0);">删除</a>
+				</td>
+			</tr>
+			<tr align="center">
+				<td>5</td>
+				<td>签证催缴</td>
+				<td>通知书</td>
+				<td>2012-3-4</td>
+                <td>林石</td>
+				<td>
+					<a href="javascript:void(0);">查看</a>&nbsp;
+					<a href="javascript:void(0);">打印</a>&nbsp;
+					<a href="javascript:void(0);">下载附件</a>&nbsp;
+					<a href="javascript:void(0);">删除</a>
+				</td>
+			</tr>
+		</table>
+		</div>
+	</div>
+</body>
+</html>

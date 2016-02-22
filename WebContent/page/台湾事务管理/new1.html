@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新建申请</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+
+function showAdd(){
+	window.showModalDialog("add.html",window,"dialogWidth=950px;dialogHeight=470px");
+
+}
+function yincang(id){
+	if(id==1){
+		document.getElementById("pfjh").style.display='';	
+	}else{
+		document.getElementById("pfjh").style.display='none';
+	}	
+}
+
+function showJH(){
+	window.showModalDialog("../计划管理/pifu.html",window,"dialogWidth=950px;dialogHeight=300px");
+	
+	document.getElementById("jh").value="大屯公司2012年赴台计划";
+}
+
+function backTab(){
+	window.open("tab.html","content");
+}
+function zd(id,tit){
+	if(document.getElementById(id).style.display=="none"){
+		document.getElementById(id).style.display="block";
+		document.getElementById(tit).src="../images/tit1.gif";
+	}else{
+		document.getElementById(id).style.display="none";
+		document.getElementById(tit).src="../images/tit.gif";
+	}
+}
+</script>
+</head>
+
+<body>
+<table class="t1" width="99%">
+	<tr class="a1" onclick="zd('d1','tit1')">
+		<td colspan="4"><img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />新建申请</td>
+	</tr>
+</table>
+<div id="d1">
+<table width="99%" border="1" class="t1">
+	<tr class="a2" >
+    	<td width="15%"><font color="red">*</font>申请编号</td>
+		<td width="35%">
+			<input type="text" style="width:70%" />
+		</td>
+		<td width="15%"><font color="red">*</font>申请名称</td>
+		<td width="35%"><input type="text" style="width:70%"/></td>
+	</tr>
+	</table>
+	</div>
+	<table width="99%" class="t1">
+    <tr class="a1" onclick="zd('d2','tit2')">
+    	<td colspan="4"><img id="tit2" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />计划信息</td>
+    </tr>
+	</table>
+	<div id="d2">
+	<table width="99%" class="t1">
+    <tr>
+    	<td width="20%">申请类型</td>
+        <td>
+        	<input name="p" type="radio" onclick="yincang(1)" checked="checked"/>计划内 &nbsp;&nbsp;
+            <input name="p" type="radio" onclick="yincang(2)"/>计划外
+        </td>
+        
+    </tr>
+    <tr id="pfjh" style="display:block" class="a2">
+    	<td>已批复计划名称</td>
+        <td>
+        	 <input id="jh" type="text" style="width:70%" /><input type="button" value="请选择" onclick="showJH();" />
+        </td>
+    </tr>
+	</table>
+	</div>
+	<table width="99%" class="t1">
+    <tr class="a1" onclick="zd('d5','tit5')">
+		<td colspan="4"><img id="tit5" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />申请人信息</td>
+	</tr>
+	</table>
+	<div id="d5">
+	<table width="99%" class="t1">
+	<tr>
+		<td width="15%"><font color="red">*</font>申请人</td>
+		<td width="35%"><input type="text" style="width:70%;" value="林石"/></td>
+		<td width="15%"><font color="red">*</font>电话</td>
+		<td width="35%"><input type="text" style="width:70%;" value="13099998888"/></td>
+	</tr>
+	<tr class="a2">
+		<td><font color="red">*</font>单位</td>
+		<td><input type="text" style="width:70%;" value="大屯能源股份有限公司"/></td>
+		<td><font color="red">*</font>部门</td>
+		<td><input type="text" style="width:70%;" value="行政部"/></td>
+	</tr>
+	<tr class="a2">
+		<td><font color="red">*</font>科室</td>
+		<td><input type="text" style="width:70%;" value="行政科"/></td>
+		<td><font color="red">*</font>填报时间</td>
+		<td><input type="text" style="width:70%;" value="2012-05-17"/></td>
+	</tr>
+	</table>
+	</div>
+	<table width="99%" class="t1">
+    <tr class="a1" onclick="zd('d3','tit3')">
+		<td colspan="4"><img id="tit3" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />出访信息</td>
+	</tr>
+	</table>
+	<div id="d3">
+	<table width="99%" class="t1">
+    <tr>
+		<td colspan="4">
+        	<input type="button" value="添加内容" onclick="javascript:showAdd();" />
+            &nbsp; &nbsp;
+            <input type="button" value="删除内容"/>
+            &nbsp; &nbsp;
+            <input type="button" value="导出列表" />
+        </td>
+	</tr>
+    <tr>
+    	<td colspan="4">
+        <div id="proList" style="display:block">
+                <table class="a2" width="100%">
+                    <tr class="a2">
+                        <th width="10%"><input type="checkbox" />全选 </th>
+                        <th width="8%">序号</th>
+                        <th width="15%">出访地区</th>
+                        <th width="12%">出访时间</th>
+                        <th width="15%">组团单位</th>
+                        <th width="15%">团组长</th>
+                        <th width="15%">是否有局副领导</th>
+                        <th width="10%">人数</th>
+                    </tr>
+                    <tr align="center">
+                        <td><input type="checkbox" /></td>
+                        <td>1</td>
+                        <td>美国</td>
+                        <td>2012-4-25</td>
+                        <td>大屯股份公司</td>
+                        <td>林石</td>
+                        <td>否</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+             </div>
+        </td>
+    </tr>
+	</table>
+	</div>
+	<table width="99%" class="t1">
+    <tr class="a1" onclick="zd('d4','tit4')">
+    	<td><img id="tit4" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />附件信息</td>
+    </tr>
+	</table>
+	<div id="d4">
+	<table width="99%" class="t1">
+    <tr class="a2">
+    	<td width="20%">上传附件</td>
+        <td><input type="file" size="45" value="上传附件" /></td>
+    </tr>
+	</table>
+	</div>
+	<table width="99%" class="t1">
+	<tr class="a1" onclick="zd('d9','tit9')">
+		<td colspan="4"><img id="tit5" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />联系人信息</td>
+	</tr>
+	</table>
+	<div id="d9">
+	<table width="99%" class="t1">
+	<tr class="a2">
+		<td width="15%">联系人</td>
+		<td width="35%"><input type="text" readonly="readonly" style="width:70%;" value="林石"/></td>
+		<td width="15%">电话</td>
+		<td width="35%"><input type="text" readonly="readonly" style="width:70%;" value="13099998888"/></td>
+	</tr>
+	<tr>
+		<td>传真</td>
+		<td><input type="text" readonly="readonly" style="width:70%;" value="010-82256791" /></td>
+		<td>邮箱</td>
+		<td><input type="text" readonly="readonly" style="width:70%;" value="xsgsxx@chinacoal.com" /></td>
+	</tr>
+	</table>
+	</div>
+	<table width="99%" class="t1">
+    <tr align="center">
+    	<td colspan="4">
+        	<input type="button" value="提交"/>
+             &nbsp;
+             <input type="button" value="保存"/>
+             &nbsp;
+            <input type="button" value="取消" onclick="backTab();"/>
+        </td>
+    </tr>
+  
+</table>
+</body>
+</html>

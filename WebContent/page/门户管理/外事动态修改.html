@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>外事动态新建</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div>
+	<table width="90%" id="tztab"  border="1" class="t1">
+		<tr>
+			<td>标题</td>
+			<td colspan="3"><input type="text" value="赴美考察团动态" /></td>
+		</tr>
+		<tr>
+			<td>内容</td>
+			<td colspan="3">
+				<textarea cols="70" rows="5">  2012年4月8日，考察团到达美国，与美国专家进行了会面，互相交流了工作经验，同时考察了美国先进的工作方法与思想。达成了一定的共识，并且在业务拓展方面进行了洽谈。
+  最后考察团代表我公司对美国同行发出邀请，希望他们来华访问交流。
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>相关附件</td>
+			<td colspan="3"><input type="file" style=" width:600px;"/></td>
+		</tr>
+		<tr>
+			<td>发布人</td>
+			<td><input type="text" value="张三" /></td>
+			<td>发布时间</td>
+			<td><input type="text" value="2012-4-10" /></td>
+		</tr>
+		<tr>
+			<td colspan="4">
+				<input type="button" value="提交" />
+				<input type="button" onclick="jump()" value="取消" />
+			</td>
+		</tr>
+	</table>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+function jump(){
+	window.open("../门户管理/外事动态列表.html","_self");
+}
+</script>

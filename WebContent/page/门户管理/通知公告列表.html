@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>通知公告列表</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div >
+		<table width="99%" id="tztab"  border="1" class="t1">
+			<tr >
+				<td>标题</td>
+				<td colspan="3"><input type="text" /></td>
+			</tr>
+			<tr>
+				<td>内容</td>
+				<td colspan="3"><textarea rows="3" cols="60"></textarea></td>
+			</tr>
+			<tr>
+				<td>创建人</td>
+				<td><input type="text" value="张三"/></td>
+				<td>创建时间</td>
+				<td><input type="text" value="2012-4-28"/></td>
+			</tr>
+			<tr>
+				<td>发布机构</td>
+				<td><input type="text" value="行政部"/></td>
+				<td>发布时间</td>
+				<td><input type="text" value="2012-4-28"/></td>
+			</tr>
+			<tr>
+				<td colspan="4"><input type="button" value="保存"/><input type="button" value="发布"/><input type="button" onclick="jump()" value="取消"/></td>
+			</tr>
+		</table>
+	</div>
+    <br />
+	<div >
+	<table width="99%" class="t1">
+		<tr>
+			<th width="8%">序号</th>
+			<th width="20%">标题</th>
+			<th width="8%">创建人</th>
+			<th width="12%">创建时间</th>
+			<th width="10%">发布机构</th>
+			<th width="12%">发布时间</th>
+            <th width="8%">状态</th>
+			<th width="22%">操作</th>
+		</tr>
+		<tr  calss="a1">
+			<td>1</td>
+			<td>5.1放假通知</td>
+			<td>张三</td>
+			<td>2012-4-28</td>
+			<td>行政部</td>
+			<td>2012-4-28</td>
+            <td>未发布</td>
+			<td>
+				<a href="../门户管理/通知公告详细.html">查看</a>&nbsp;
+				<a href="../门户管理/修改公告通知.html">变更</a>&nbsp;
+                <a href="../../login/loginAction.action">发布</a>&nbsp;
+				<a href="javascript:void(0);">删除</a>
+			</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>福利发放通知</td>
+			<td>张三</td>
+			<td>2012-5-28</td>
+			<td>行政部</td>
+			<td>2012-5-28</td>
+            <td>已发布</td>
+			<td>
+                <a href="../门户管理/通知公告详细.html">查看</a>&nbsp;
+                <a href="../门户管理/修改公告通知.html">变更</a>&nbsp;
+                <a href="javascript:void(0);">发布</a>&nbsp;
+                <a href="javascript:void(0);">删除</a>
+            </td>
+		</tr>
+		<tr calss="a1">
+			<td>3</td>
+			<td>上级单位来我部门检查指导</td>
+			<td>张三</td>
+			<td>2012-6-12</td>
+			<td>行政部</td>
+			<td>2012-6-12</td>
+            <td>未发布</td>
+			<td>
+                <a href="../门户管理/通知公告详细.html">查看</a>&nbsp;
+                <a href="../门户管理/修改公告通知.html">变更</a>&nbsp;
+                <a href="javascript:void(0);">发布</a>&nbsp;
+                <a href="javascript:void(0);">删除</a>
+            </td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>工资调整通知</td>
+			<td>张三</td>
+			<td>2012-6-20</td>
+			<td>行政部</td>
+			<td>2012-6-20</td>
+            <td>未发布</td>
+			<td>
+             	<a href="../门户管理/通知公告详细.html">查看</a>&nbsp;
+                <a href="../门户管理/修改公告通知.html">变更</a>&nbsp;
+                <a href="javascript:void(0);">发布</a>&nbsp;
+                <a href="javascript:void(0);">删除</a>
+            </td>
+		</tr>
+		<tr calss="a1">
+			<td>5</td>
+			<td>天气炎热注意防暑降温</td>
+			<td>张三</td>
+			<td>2012-6-28</td>
+			<td>行政部</td>
+			<td>2012-6-28</td>
+            <td>未发布</td>
+			<td>
+            	<a href="../门户管理/通知公告详细.html">查看</a>&nbsp;
+                <a href="../门户管理/修改公告通知.html">变更</a>&nbsp;
+                <a href="javascript:void(0);">发布</a>&nbsp;
+                <a href="javascript:void(0);">删除</a>
+            </td>
+		</tr>
+		
+	</table>
+	</div>
+</body>
+</html>

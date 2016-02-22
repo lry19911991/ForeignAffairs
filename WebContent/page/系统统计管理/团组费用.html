@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/Style.css" type="text/css" />
+<title>出国费用统计-->团组费用统计</title>
+<script language="JavaScript" src="js/FusionCharts.js"></script>  
+<script language="JavaScript" type="text/javascript">
+//饼图
+window.onload=function piechart(){
+	var chart = new FusionCharts("swf/FCF_Pie3D.swf", "ChartId", "400", "350");
+	
+	var xmldata=
+		"<graph decimalPrecision='0' showNames='1' caption='出访美国团组统计' subcaption='(单位/万 )' numberPrefix='$'>" +
+		"<set value='31' name='集团本部交流团组'/>" +
+		"<set value='20' name='大屯出国学习团组'/>" +
+		"<set value='15' name='大屯股份项目洽谈团组'/>" +
+		"<set value='60' name='平朔设备采购团'/>" +
+		"</graph>";
+	
+	chart.setDataXML(xmldata);
+	   
+	chart.render("piechartdiv");
+}
+</script>
+</head>
+
+<body>
+
+<table width="99%" border="0" cellspacing="0" cellpadding="3" align="center">
+  <tr align="center"> 
+    <td align="center">
+    	<div id="piechartdiv">统计数据为空</div>
+    </td>
+  </tr>
+  <tr>
+  	<td>
+    	<div id="tablediv">
+            <table width="100%" class="t1">
+                <tr>
+                	<th width="8%">序号</th>
+                    <th width="12%">团组编号</th>
+                    <th width="18%">团组名称</th>
+                    <th width="18%">组团单位</th>
+                    <th width="10%">团组长</th>
+                    <th width="12%">团组人数</th>
+                    <th width="12%">出访时间</th>
+                    <th width="10%">花费</th>
+                </tr>
+                <tr align="center">
+                	<td>1</td>
+                    <td>TZ2012061209</td>
+                    <td>美国技术交流团组</td>
+                    <td>集团本部</td>
+                    <td>林石</td>
+                    <td>3</td>
+                    <td>2012-5-8</td>
+                    <td>31</td>
+                </tr>
+                <tr align="center">
+                	<td>2</td>
+                    <td>TZ2012051199</td>
+                    <td>大屯出国学习团组</td>
+                    <td>大屯公司</td>
+                    <td>林石</td>
+                    <td>1</td>
+                    <td>2012-6-8</td>
+                    <td>15</td>
+                </tr>
+                <tr align="center">
+                	<td>3</td>
+                    <td>TZ2012051199</td>
+                    <td>大屯股份项目洽谈团组</td>
+                    <td>大屯股份</td>
+                    <td>林石</td>
+                    <td>4</td>
+                    <td>2012-3-18</td>
+                    <td>20</td>
+                </tr>
+                <tr align="center">
+                	<td>4</td>
+                    <td>TZ2012051199</td>
+                    <td>平朔设备采购团</td>
+                    <td>平朔股份</td>
+                    <td>林石</td>
+                    <td>3</td>
+                    <td>2012-1-28</td>
+                    <td>60</td>
+                </tr>
+            </table>
+         </div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

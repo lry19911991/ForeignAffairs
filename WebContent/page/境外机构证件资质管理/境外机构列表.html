@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>境外机构列表</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../My97DatePicker/WdatePicker.js" ></script>
+<script type="text/javascript">
+
+function show(){
+	window.showModalDialog("境外机构新建.html",window,"dialogWidth=950px;dialogHeight=500px");
+}
+
+function showinfo(){
+	window.showModalDialog("境外机构详细.html",window,"dialogWidth=950px;dialogHeight=450px");
+}
+
+function showupdate(){
+	window.showModalDialog("境外机构修改.html",window,"dialogWidth=950px;dialogHeight=450px");
+}
+</script>
+
+</head>
+
+<body>
+	<div>
+		<table width="99%">
+			<tr>
+				<td>
+                	<input type="button" value="新建机构" onclick="show();"/>
+                </td>
+			</tr>
+		</table>
+	</div>
+	<div style="padding-top:10px;">
+		<table width="99%" class="t1">
+			<tr>
+				<td width="15%">机构名称</td>
+				<td width="35%"><input type="text" /></td>
+				<td width="15%">机构类型</td>
+				<td width="35%">
+                	<select>
+                    	<option>--请选择--</option>
+                        <option>分公司</option>
+                        <option>办事处</option>
+                        <option>其他</option>
+                    </select>
+                </td>
+			</tr>
+            <tr>
+            	<td>所在国家</td>
+                <td><input type="text" /></td>
+                <td>机构负责人</td>
+                <td><input type="text" /></td>
+            </tr>
+				<tr>
+					<td>设立时间</td>
+					<td colspan="3">
+                        <input type="text" onclick="WdatePicker();" />到<input type="text" onclick="WdatePicker();" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="button" value="筛选" />
+                    </td>
+				</tr>
+		</table>
+	</div>
+	
+	<div style="padding-top:10px;">
+    	<table width="99%" class="t1">
+			<tr class="a1">
+				<td>
+                	<img id="tit1" src="../images/tit1.gif" height="18px" width="18px" align="bottom" />机构列表
+                </td>
+			</tr>
+		</table>
+		<table width="99%" id="tztab"  border="1" class="t1">
+			<tr class="a2">
+					<th width="8%">序号</th>
+					<th width="22%">机构名称</th>
+                    <th width="10%">类型</th>
+                    <th width="13%">所在国家</th>
+                    <th width="13%">设立时间</th>
+					<th width="12%">机构负责人</th>
+					<th width="22%">操作</th>
+			</tr>
+			<tr align="center">
+				<td>1</td>
+				<td>平朔股份美国分公司</td>
+				<td>分公司</td>
+				<td>美国</td>
+                <td>2012-4-28</td>
+                <td>将军</td>
+				<td>
+					<a href="javascript:void(0);" onclick="showinfo();">查看详细</a>&nbsp;&nbsp;
+					<a href="javascript:void(0);" onclick="showupdate();">修改</a>&nbsp;&nbsp;
+					<a href="javascript:void(0);">注销</a>
+				</td>
+			</tr>
+			<tr align="center">
+				<td>2</td>
+				<td>大屯股份新西兰办事处</td>
+				<td>办事处</td>
+				<td>新西兰</td>
+                <td>2012-4-28</td>
+                <td>李勇</td>
+				<td>
+					<a href="javascript:void(0);" onclick="showinfo();">查看详细</a>&nbsp;&nbsp;
+					<a href="javascript:void(0);" onclick="showupdate();">修改</a>&nbsp;&nbsp;
+					<a href="javascript:void(0);">注销</a>
+				</td>
+			</tr>
+            <tr align="center">
+				<td>3</td>
+				<td>大屯集团澳大利亚办事处</td>
+				<td>办事处</td>
+				<td>澳大利亚</td>
+                <td>2012-4-28</td>
+                <td>林石</td>
+				<td>
+					<a href="javascript:void(0);" onclick="showinfo();">查看详细</a>&nbsp;&nbsp;
+					<a href="javascript:void(0);" onclick="showupdate();">修改</a>&nbsp;&nbsp;
+					<a href="javascript:void(0);">注销</a>
+				</td>
+			</tr>
+			
+		</table>
+	</div>
+</body>
+</html>

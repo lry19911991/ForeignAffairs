@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>计划列表</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+body,div,ul,li{
+ padding:0;
+ text-align:center;
+}
+body{
+ font:12px "宋体";
+ text-align:center;
+}
+a:link{
+ color:#00F;
+ text-decoration:none;
+}
+a:visited {
+ color: #00F;
+ text-decoration:none;
+}
+a:hover {
+ color: #c00;
+ text-decoration:underline;
+}
+ul{ list-style:none;}
+
+/*选项卡2*/
+#Tab2{
+width:100%;
+margin:0px;
+padding:0px;
+margin:0 auto;}
+/*菜单class*/
+.Menubox {
+width:100%;
+height:28px;
+line-height:28px;
+}
+.Menubox ul{
+margin:0px;
+padding:0px;
+}
+.Menubox li{
+ background:url(../images/botton0_a.gif);
+ float:left;
+ display:block;
+ cursor:pointer;
+ width:114px;
+ text-align:center;
+ color:#949694;
+ font-weight:bold;
+ border-left:0px solid #CAD9EA;
+ border-top:0px solid #CAD9EA;
+ border-right:0px solid #CAD9EA;
+ padding-right:3px;
+ }
+.Menubox li.hover{
+ padding:0px;
+ /*background:#CAD9EA;*/
+ background:url(../images/botton0_hov.gif);
+ width:114px;
+ color:#739242;
+ font-weight:bold;
+ height:27px;
+ line-height:27px;
+ border-left:0px solid #CAD9EA;
+ border-top:0px solid #CAD9EA;
+ border-right:0px solid #CAD9EA;
+ padding-right:3px;
+}
+.Contentbox{
+ clear:both;
+ margin-top:0px;
+ border:1px solid #CAD9EA;
+ height:400px;
+ text-align:center;
+ padding-top:8px;
+}
+
+-->
+</style>
+<script language="javascript">
+
+/*第一种形式 第二种形式 更换显示样式*/
+function setTab(name,cursel,n){
+	alert(11);
+ for(i=1;i<=n;i++){
+  var menu=document.getElementById(name+i);
+  var con=document.getElementById("con_"+name+"_"+i);
+  menu.className=i==cursel?"hover":"";
+  con.style.display=i==cursel?"block":"none";
+ }
+}
+function showAudit(){
+	window.showModalDialog("audit.html",window,"dialogWidth=950px;dialogHeight=350px");
+}
+
+function show(){
+	window.showModalDialog("show.html",window,"dialogWidth=950px;dialogHeight=350px");
+}
+
+function showInfo(){
+	window.showModalDialog("showinfo.html",window,"dialogWidth=950px;dialogHeight=350px");
+}
+
+function showMsg(){
+	alert("上报成功ﺿ);
+}
+
+function opennew(){
+	window.open("new.html","content");
+}
+
+function opensummary(){
+	window.open("summary.html","content");
+}
+</script>
+</head>
+<body>
+<div style="height:25px; text-align:left">
+	<input type="button" value="新建计划" onclick="opennew();" />&nbsp;&nbsp;
+    <input type="button" value="计划汇总" onclick="opensummary();" />
+</div>
+<div id="Tab2">
+<div class="Menubox">
+<ul>
+   <li id="two1" onclick="setTab('two',1,4);">待审核计划</li>
+   <li id="two2" onclick="setTab('two',2,4);">待上报计划</li>
+   <li id="two3" onclick="setTab('two',3,4);">已上报计划</li>
+   <li id="two4" onclick="setTab('two',4,4);">已批复计划</li>      
+</ul>
+</div>
+ <div class="Contentbox">
+ 	<!--待审核计划-->
+   <div id="con_two_1" >
+        <table width="100%" border="1" class="t1">
+            <tr class="a2">
+                <th width="12%">序号</th>
+                <th width="15%">计划编号</th>
+                <th width="26%">计划名称</th>
+                <th width="10%">年度</th>
+                <th width="20%">单位名称</th>
+                <th width="17%">当前状态</th>
+            </tr>
+            <tr align="center">
+                <td>1</td>
+                <td>
+                	<a href="javascript:void(0)" onclick="showAudit();">DT2012-0120S</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0)" onclick="showAudit();">大屯能源2012赴台计划</a>
+                </td>
+                <td>2012</td>
+                <td>大屯能源股份有限公司</td>
+                <td>
+                    待审核
+                </td>
+            </tr>
+            
+        </table>
+   </div>
+   <!--待上报计划-->
+   <div id="con_two_2" style="display:none">
+         <table width="100%" border="1" class="t1">
+            <tr class="a2">
+                <th width="8%">序号</th>
+                <th width="15%">计划编号</th>
+                <th width="24%">计划名称</th>
+                <th width="8%">年度</th>
+                <th width="20%">单位名称</th>
+                <th width="10%">当前状态</th>
+                <th width="15%">操作</th>
+            </tr>
+            <tr align="center">
+                <td>1</td>
+                <td><a href="javascript:void(0)" onclick="show();">DT2012-0120S</a></td>
+                <td>
+                    <a href="javascript:void(0)" onclick="show();">大屯能源2012赴台计划</a>
+                </td>
+                <td>2012</td>
+                <td>大屯能源股份有限公司</td>
+                <td>
+                    待上报
+                </td>
+                <td>
+                	<a href="javascript:void(0);" onclick="show()">查看</a>&nbsp;&nbsp;
+                	<a href="javascript:void(0);" onclick="showMsg()">上报</a>
+                </td>
+            </tr>
+            
+        </table>
+   </div>
+   <!--已上报计划-->
+   <div id="con_two_3" style="display:none">
+         <table width="100%" border="1" class="t1">
+            <tr class="a2">
+                <th width="12%">序号</th>
+                <th width="15%">计划编号</th>
+                <th width="26%">计划名称</th>
+                <th width="10%">年度</th>
+                <th width="20%">单位名称</th>
+                <th width="17%">当前状态</th>
+            </tr>
+            <tr align="center">
+                <td>1</td>
+                <td><a href="javascript:void(0)" onclick="showInfo();">DT2012-0120S</a></td>
+                <td>
+                    <a href="javascript:void(0)" onclick="showInfo();">大屯能源2012赴台计划</a>
+                </td>
+                <td>2012</td>
+                <td>大屯能源股份有限公司</td>
+                <td>
+                    已上报
+                </td>
+            </tr>
+            
+        </table>
+   </div>
+    <!--已批复计划-->
+   <div id="con_two_4" style="display:none">
+         <table width="100%" border="1" class="t1">
+            <tr class="a2">
+                <th width="12%">序号</th>
+                <th width="15%">计划编号</th>
+                <th width="26%">计划名称</th>
+                <th width="10%">年度</th>
+                <th width="20%">单位名称</th>
+                <th width="17%">当前状态</th>
+            </tr>
+            <tr align="center">
+                <td>1</td>
+                <td><a href="javascript:void(0)" onclick="showInfo();">DT2012-0120S</a></td>
+                <td>
+                    <a href="javascript:void(0)" onclick="showInfo();">大屯能源2012赴台计划</a>
+                </td>
+                <td>2012</td>
+                <td>大屯能源股份有限公司</td>
+                <td>
+                    已批复
+                </td>
+            </tr>
+             <tr class="a2" align="center">
+                <td>2</td>
+                <td><a href="javascript:void(0)" onclick="showInfo();">DT2011-0121S</a></td>
+                <td>
+                    <a href="javascript:void(0)" onclick="showInfo();">大屯能源2011赴台计划</a>
+                </td>
+                <td>2011</td>
+                <td>大屯能源股份有限公司</td>
+                <td>
+                    已批复
+                </td>
+            </tr>
+            
+        </table>
+   </div>
+ </div>
+</div>
+</body>
+</html>

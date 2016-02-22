@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>对外项目管理-->进出口管理-->新建订单</title>
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+	function jump(){
+		window.open("../对外合作项目管理/进出口业务管理_订单列表.html","_self");
+	}
+</script>
+</head>
+
+<body>
+<table width="99%" border="1" class="t1">
+<tr>
+      <td width="18%">订单编号</td>
+      <td width="29%"><input type="text" /> </td>
+	  <td width="18%">订单类型</td>
+      <td width="35%">
+	  	<select>
+			<option>订单类型</option>
+			<option>进口</option>
+			<option>出口</option>
+		</select>
+	  </td>
+</tr>
+<tr>
+	<td>选择项目</td>
+	<td colspan="3"><input type="text" />&nbsp;&nbsp;<input type="button" value="选择项目" /></td>
+</tr>
+<tr>
+	<td>订货物品</td>
+	<td colspan="3">
+		<textarea cols="70" rows="3"></textarea>
+	</td>
+</tr>
+<tr>
+      
+	  <td >货物数量</td>
+    <td  colspan="3"><input type="text" /> </td>
+</tr>
+<tr>
+      <td >收货单位</td>
+    <td ><input type="text" /> </td>
+	  <td >发货方式</td>
+    <td ><input type="text" /> </td>
+</tr>
+<tr>
+      <td >出货单位</td>
+    <td ><input type="text" /> </td>
+	  <td >付款方式</td>
+    <td ><input type="text" /> </td>
+</tr>
+<tr>
+      <td >下单时间</td>
+    <td ><input type="text" /> </td>
+	  <td >发货时间</td>
+    <td ><input type="text" /> </td>
+</tr>
+<tr>
+      <td >合同相关附件上传</td>
+	  <td colspan="3"><input type="file" style="width:50%;" /></td>
+  </tr>
+<tr>
+      <td colspan="4">
+	     <input type="button" value="保存" />
+   		 <input type="button" onclick="jump()" value="返回" />	  </td>
+  </tr>
+</table>
+</body>
+</html>
